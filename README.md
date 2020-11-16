@@ -13,7 +13,7 @@ The website is developed using React.js, Context API, and React Router, levering
 
 - [Some Background](https://github.com/LeonardoMussatto/Connecting/wiki/Some-Background) - Who am I?
 - The Vision - Where am I going?
-- The Process - What was I thinking!?
+- [The Process](https://github.com/LeonardoMussatto/Connecting/wiki/The-Process) - What was I thinking!?
 - The Meaning - Did you get it?
 
 **Follow the links to learn more in the wiki**
