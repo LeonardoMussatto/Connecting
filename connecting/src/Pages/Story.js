@@ -48,7 +48,6 @@ const Story = () => {
           imgHeight = {"600"}
           imgColor  = {"f2D2f2"}
         />
-        {/}
       </main>
     </div>
   )
