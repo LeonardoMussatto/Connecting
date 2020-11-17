@@ -8,7 +8,7 @@ import Landing from "./Pages/Landing"
 function App() {
   return (
     <>
-    <ThemeContext.Provider value={theme.interface}>
+    <ThemeContext.Provider value={theme.landing}>
       <Landing />
     </ThemeContext.Provider>
     </>
