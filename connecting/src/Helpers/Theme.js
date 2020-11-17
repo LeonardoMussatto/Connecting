@@ -8,13 +8,11 @@ import React from "react"
 export const theme = {
   common: {
     general: {
-      fontFamily         :  "Victor Mono",
-      fontSize           :  "1em",
-      fontWeight         :  "200",
-      boxSizing          :  "border-box",
-      padding            :  "2vw",
-      display            :  "grid",
-      gridTemplateColumns :  "repeat(auto-fit, minmax(15rem, 1fr))"
+      fontFamily :  "Victor Mono",
+      fontSize   :  "1em",
+      fontWeight :  "200",
+      boxSizing  :  "border-box",
+      padding    :  "2vw",
     },
     button: {
       
@@ -31,16 +29,19 @@ export const theme = {
 }
 
 theme.landing = {
-  page: {
-    ...theme.common.general,
-    backgroundColor :  "#2a2c2d",
-    color           :  "#E6E6E6"
-  },
-  button: {
+  ...theme.common.general,
+  backgroundColor :  "#2a2c2d",
+  color           :  "#E6E6E6",
+  height          :  "100vh",
+  width           :  "100vw",
+  button          :  {
     ...theme.common.button,
-    backgroundColor: "#3E4250",
-    color: "#FF75B5",
-    borderRadius: "8px",
+    backgroundColor :  "#3E4250",
+    color           :  "#FF75B5",
+    width           :  "5vw",
+    height          :  "5vw",
+    borderRadius    :  "8px",
+    minWidth        :  "44px",
   },
 }
 
