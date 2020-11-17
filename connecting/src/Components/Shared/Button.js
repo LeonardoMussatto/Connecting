@@ -4,6 +4,11 @@ import { ThemeContext } from "../../Helpers/Theme"
 const Button = (props) => {
   const theme = useContext(ThemeContext)
   let style = {
+    //Text
+    fontFamily :  "inherit",
+    lineHeight :  "1.1",
+    textAlign  :  "center",
+
     //Display
     display        :  "inline-flex",
     alignItems     :  "center",
@@ -26,10 +31,9 @@ const Button = (props) => {
     // height: "5vw",
     // borderRadius: "50%",
 
-    //Text
-    fontFamily :  "inherit",
-    lineHeight :  "1.1",
-    textAlign  :  "center",
+    //Position
+    gridArea: props.gridPosition,
+    placeSelf: props.place
 
     // TODO #9 add support for :hover, :focus, :active and relative transitions
     //ENHANCEMENT add solution for Windows High Contrast mode enabled - https://moderncss.dev/css-button-styling-guide/#reset-styles
