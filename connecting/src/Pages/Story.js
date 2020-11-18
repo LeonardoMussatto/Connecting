@@ -22,7 +22,7 @@ const Story = () => {
     ...theme.page,
     padding: "0",
     gridTemplateColumns: "minmax(80px, 14vw) auto",
-    gridTemplateRows: "4rem 90vh",
+    gridTemplateRows: "4rem calc(100vh - 4rem)",
     gridTemplateAreas: `
       "nav header"
       "nav story"
