@@ -50,5 +50,17 @@ theme.interface = {
   color           :  "#f2f2f2",
 }
 
+theme.story = {
+  page:{
+    ...theme.common.general,
+    backgroundColor: "#8466f2",
+    color: "#f2f2f2"
+  },
+  ch1: {
+    backgroundColor: "#3E4250",
+    color: "#FF75B5"
+  }
+}
+
 
 export const ThemeContext = React.createContext(theme.common)

@@ -8,45 +8,74 @@ import Weather from "../Components/Stories/Weather"
 import Time from "../Components/Stories/Time"
 
 //Characters Placeholders
-import { ReactComponent as Ch1 } from "../Media/Icons/Ch1.svg"
-import { ReactComponent as Ch2 } from "../Media/Icons/Ch2.svg"
-import { ReactComponent as Ch3 } from "../Media/Icons/Ch3.svg"
-import { ReactComponent as Ch4 } from "../Media/Icons/Ch4.svg"
+import Ch from "../Components/Shared/ChPlaceholder"
 
 
-// STYLE #10 define the layout - see issue for more info
-
+//ENHANCEMENT #18 make the page responsive - add support for mobile devices
 // TODO #5 find a way to organize content - NOTE it seems to me that the content is to case-related to be actually managed by a component, however I also have to
 // TODO #6 find a way to conditionally display section of content based on timing
 
 
 const Story = () => {
   const theme = useContext(ThemeContext)
+  let page = {
+    ...theme.page,
+    padding: "0",
+    gridTemplateColumns: "minmax(80px, 14vw) auto",
+    gridTemplateRows: "4rem calc(100vh - 4rem)",
+    gridTemplateAreas: `
+      "nav header"
+      "nav story"
+    `
+  }
+  let nav = {
+    padding: "10% 5%",
+    gridArea: "nav",
+    display: "grid",
+    placeItems: "center center"
+  }
+  let header = {
+    backgroundColor: theme.ch1.backgroundColor,
+    gridArea: "header",
+    display: "grid",
+    placeItems: "center center",
+    gridTemplateColumns: "auto-fill",
+    gridAutoFlow: "column"
+  }
+  let story = {
+    backgroundColor: theme.ch1.backgroundColor, //it will actually be a state and change accordingly to the displayed story
+    color: theme.ch1.color,
+    gridArea: "story",
+    display: "grid",
+    placeItems: "center start",
+    padding: "0 5%",
+    overflow: "auto"
+  }
   return (
-    <div style={theme}>
-      <header>
+    <div style={page}>
+      <header style = {header}>
         <Location />
         <Weather />
         <Time />
       </header>
-      <nav>
-        <Ch1 />
-        <Ch2 />
-        <Ch3 />
-        <Ch4 />
+      <nav style={nav}>
+        <Ch width={"60%"}/>
+        <Ch width={"60%"}/>
+        <Ch width={"60%"}/>
+        <Ch width={"60%"}/>
       </nav>
-      <main>
+      <main style={story}>
         <Card
           txtLength = {"long"}
           imgWidth  = {"400"}
           imgHeight = {"200"}
-          imgColor  = {"f2f2f2"}
+          imgColor  = {"8466f2"}
         />
         <Card
           txtLength = {"short"}
           imgWidth  = {"200"}
           imgHeight = {"600"}
-          imgColor  = {"f2D2f2"}
+          imgColor  = {"8466f2"}
         />
       </main>
     </div>
