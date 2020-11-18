@@ -8,7 +8,7 @@ import Story from "./Pages/Story"
 function App() {
   return (
     <>
-    <ThemeContext.Provider value={theme.interface}>
+    <ThemeContext.Provider value={theme.story}>
       <Story />
     </ThemeContext.Provider>
     </>
