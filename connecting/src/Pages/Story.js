@@ -11,6 +11,7 @@ import Time from "../Components/Stories/Time"
 import Ch from "../Components/Shared/ChPlaceholder"
 
 
+//ENHANCEMENT #18 make the page responsive - add support for mobile devices
 // TODO #5 find a way to organize content - NOTE it seems to me that the content is to case-related to be actually managed by a component, however I also have to
 // TODO #6 find a way to conditionally display section of content based on timing
 
