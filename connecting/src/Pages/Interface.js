@@ -5,48 +5,40 @@ import { ThemeContext } from "../Helpers/Theme"
 import PlaceholderText from "../Components/Shared/PlaceholderText"
 import Ch from "../Components/Shared/ChPlaceholder"
 
-
 // TODO #8 create a reusable component for characters icons - they should also contain routes and notification style/logic
-//STYLE #13 work on the layout - at the moment I don't like this layout...it's too rigid, I guess + the text has to be placed somewhere else
-
+//STYLE #23 make Interface page responsive - add support for mobile devices
+//ENHANCEMENT #24 STYLE add subtle y-axis animation to the icons - make the page more lively
 
 const Interface = () => {
   const theme = useContext(ThemeContext)
   let page = {
     ...theme,
-    padding: "0",
-    gridTemplateRows: "7rem calc(100vh - 7rem)",
-    gridTemplateColumns: "100%"
+    padding             :  "0",
+    height              :  "100vh",
+    gridTemplateRows    :  "minmax(min-content, 40vh) minmax(min-content, 90vh)",
+    gridTemplateColumns :  "100vw",
+    overflow: "auto"
   }
   let header = {
-    display: "grid",
-    placeItems: "center"
+    display    :  "grid",
+    placeItems :  "center",
+    visibility :  "visible"  //REM when invisible, the icons have to be re-centred
   }
   let main = {
-    display: "grid",
-    padding: "2%",
-    gridTemplateColumns : "1fr 1fr 1fr 1fr",
-    gridTemplateRows: "repeat(auto-fit, minmax(auto, 1fr))",
-    gridTemplateAreas: `
-      "icon1 . icon3 ."
-      ". icon2 . icon4"
-      `,
-    placeItems: "center"
+    display        :  "flex",
+    justifyContent :  "space-evenly",
+    alignItems     :  "center"
   }
   return (
     <div style={page}>
       <header style={header}>
-        <PlaceholderText length={"short"} />
+        <PlaceholderText marginTB={"2%"} marginLR={"30%"} length={"long"} />
       </header>
       <main style={main}>
-        <Ch gridArea={"icon1"} width={"25vh"}/>
-        <Ch gridArea={"icon2"} width={"25vh"}/>
-        <Ch gridArea={"icon3"} width={"25vh"}/>
-        <Ch gridArea={"icon4"} width={"25vh"}/>
-        {/* <Ch position={"relative"} top={"16vh"} left={"8vw"} width={"25vh"}/>
-        <Ch position={"relative"} top={"32vh"} left={"16vw"} width={"25vh"}/>
-        <Ch position={"relative"} top={"8vh"} left={"24vw"} width={"25vh"}/>
-        <Ch position={"relative"} top={"32vh"} left={"32vw"} width={"25vh"}/> */}
+        <Ch position={"relative"} top={"-10vh"} width={"25vh"} />
+        <Ch position={"relative"} top={"-10vh"} width={"25vh"} />
+        <Ch position={"relative"} top={"-10vh"} width={"25vh"} />
+        <Ch position={"relative"} top={"-10vh"} width={"25vh"} />
       </main>
     </div>
   )
