@@ -1,6 +1,6 @@
 import "./App.css"
 import { ThemeContext, theme } from "./Helpers/Theme"
-import Landing from "./Pages/Landing"
+import Interface from "./Pages/Interface"
 
 //TODO insert actual components
 //ENHANCEMENT - STYLE #12 consider adding responsive effects
@@ -8,8 +8,8 @@ import Landing from "./Pages/Landing"
 function App() {
   return (
     <>
-    <ThemeContext.Provider value={theme.landing}>
-      <Landing />
+    <ThemeContext.Provider value={theme.interface}>
+      <Interface />
     </ThemeContext.Provider>
     </>
   )

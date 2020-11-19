@@ -1,30 +1,44 @@
 import React, { useContext } from "react"
 import { ThemeContext } from "../Helpers/Theme"
 
-//placeholders
+//Placeholders
 import PlaceholderText from "../Components/Shared/PlaceholderText"
-import { ReactComponent as Ch1 } from "../Media/Icons/Ch1.svg"
-import { ReactComponent as Ch2 } from "../Media/Icons/Ch2.svg"
-import { ReactComponent as Ch3 } from "../Media/Icons/Ch3.svg"
-import { ReactComponent as Ch4 } from "../Media/Icons/Ch4.svg"
-
+import Ch from "../Components/Shared/ChPlaceholder"
 
 // TODO #8 create a reusable component for characters icons - they should also contain routes and notification style/logic
-//STYLE #13 work on the layout
-
+//STYLE #23 make Interface page responsive - add support for mobile devices
+//ENHANCEMENT #24 STYLE add subtle y-axis animation to the icons - make the page more lively
 
 const Interface = () => {
   const theme = useContext(ThemeContext)
+  let page = {
+    ...theme,
+    padding             :  "0",
+    height              :  "100vh",
+    gridTemplateRows    :  "minmax(min-content, 40vh) minmax(min-content, 90vh)",
+    gridTemplateColumns :  "100vw",
+    overflow: "auto"
+  }
+  let header = {
+    display    :  "grid",
+    placeItems :  "center",
+    visibility :  "visible"  //REM when invisible, the icons have to be re-centred
+  }
+  let main = {
+    display        :  "flex",
+    justifyContent :  "space-evenly",
+    alignItems     :  "center"
+  }
   return (
-    <div style={theme}>
-      <header>
-        <PlaceholderText length={"short"} />
+    <div style={page}>
+      <header style={header}>
+        <PlaceholderText marginTB={"2%"} marginLR={"30%"} length={"long"} />
       </header>
-      <main>
-        <Ch1 />
-        <Ch2 />
-        <Ch3 />
-        <Ch4 />
+      <main style={main}>
+        <Ch position={"relative"} top={"-10vh"} width={"25vh"} />
+        <Ch position={"relative"} top={"-10vh"} width={"25vh"} />
+        <Ch position={"relative"} top={"-10vh"} width={"25vh"} />
+        <Ch position={"relative"} top={"-10vh"} width={"25vh"} />
       </main>
     </div>
   )
