@@ -5,7 +5,7 @@ import PlaceholderImage from '../Shared/PlaceholderImage'
 const Card = (props) => {
     let card = {
         display: "grid",
-        placeItems: "start center"
+        placeItems: "center"
     }
     return (
         <section style={card}>

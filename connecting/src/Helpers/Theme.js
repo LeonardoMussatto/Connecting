@@ -8,12 +8,12 @@ import React from "react"
 export const theme = {
   common: {
     general: {
-      fontFamily         :  "Victor Mono",
-      fontSize           :  "1em",
-      fontWeight         :  "200",
-      boxSizing          :  "border-box",
-      padding            :  "2vw",
-      display            :  "grid",
+      fontFamily          :  "Victor Mono",
+      fontSize            :  "1em",
+      fontWeight          :  "400",
+      boxSizing           :  "border-box",
+      padding             :  "2vw",
+      display             :  "grid",
       gridTemplateColumns :  "repeat(auto-fit, minmax(15rem, 1fr))"
     },
     button: {
@@ -33,32 +33,44 @@ export const theme = {
 theme.landing = {
   page: {
     ...theme.common.general,
-    backgroundColor :  "#2a2c2d",
-    color           :  "#E6E6E6"
+    backgroundColor :  "#5234BF",
+    color           :  "#F2F2F2"
   },
   button: {
     ...theme.common.button,
-    backgroundColor: "#3E4250",
-    color: "#FF75B5",
-    borderRadius: "8px",
+    backgroundColor :  "#9AAAD9",
+    color           :  "#5234BF",
+    borderRadius    :  "8px",
   },
 }
 
 theme.interface = {
   ...theme.common.general,
-  backgroundColor :  "#8466f2",
-  color           :  "#f2f2f2",
+  backgroundColor :  "#FCFCFC",
+  color           :  "#4059AD",
 }
 
 theme.story = {
   page:{
     ...theme.common.general,
-    backgroundColor: "#8466f2",
-    color: "#f2f2f2"
+    backgroundColor :  "#f2f2f2",
+    color           :  "#3E4250"
   },
   ch1: {
-    backgroundColor: "#3E4250",
-    color: "#FF75B5"
+    backgroundColor :  "#A0D9CE",
+    color           :  "#3E4250"
+  },
+  ch2: {
+    backgroundColor :  "#F2D0E3",
+    color           :  "#3E4250"
+  },
+  ch3: {
+    backgroundColor :  "#9AAAD9",
+    color           :  "#3E4250"
+  },
+  ch4: {
+    backgroundColor :  "#FFCB77",
+    color           :  "#3E4250"
   }
 }
 

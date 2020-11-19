@@ -35,7 +35,7 @@ const Story = () => {
     placeItems: "center center"
   }
   let header = {
-    backgroundColor: theme.ch1.backgroundColor,
+    backgroundColor: theme.ch3.backgroundColor,
     gridArea: "header",
     display: "grid",
     placeItems: "center center",
@@ -43,11 +43,12 @@ const Story = () => {
     gridAutoFlow: "column"
   }
   let story = {
-    backgroundColor: theme.ch1.backgroundColor, //it will actually be a state and change accordingly to the displayed story
-    color: theme.ch1.color,
+    backgroundColor: theme.ch3.backgroundColor, //it will actually be a state and change accordingly to the displayed story
+    color: theme.ch3.color,
     gridArea: "story",
     display: "grid",
     placeItems: "center start",
+    rowGap: "10vh",
     padding: "0 5%",
     overflow: "auto"
   }
@@ -69,13 +70,19 @@ const Story = () => {
           txtLength = {"long"}
           imgWidth  = {"400"}
           imgHeight = {"200"}
-          imgColor  = {"8466f2"}
+          imgColor  = {"f2f2f2"}
         />
         <Card
           txtLength = {"short"}
-          imgWidth  = {"200"}
+          imgWidth  = {"1000"}
+          imgHeight = {"500"}
+          imgColor  = {"f2f2f2"}
+        />
+        <Card
+          txtLength = {"long"}
+          imgWidth  = {"600"}
           imgHeight = {"600"}
-          imgColor  = {"8466f2"}
+          imgColor  = {"f2f2f2"}
         />
       </main>
     </div>

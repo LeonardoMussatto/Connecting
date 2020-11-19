@@ -12,30 +12,32 @@ const Landing = () => {
   let page = {
     ...theme.page,
     padding             :  "0 2vw",
-    gridTemplateRows    :  "100vh 100vh",
+    gridTemplateRows    :  "100vh 85vh",
     gridTemplateAreas   :  `
       'header header'
       'main side'
       `,
   }
   let title = {
-    placeSelf :  "center center",
-    gridArea  :  "header",
-    fontSize: "7vw",
-    fontVariantCaps: "petite-caps"
+    placeSelf       :  "center center",
+    gridArea        :  "header",
+    fontSize        :  "7vw",
+    fontVariantCaps :  "petite-caps",
+    position        :  "sticky",
+    top             :  "2vh"
   }
   let text = {
     gridArea     :  "main",
     placeSelf    :  "center center",
     justifyItems :  "center",
-    width: "auto"
+    width        :  "auto"
   }
   return (
     <main  style = {page}>
       <h1  style = {title}>Connecting...</h1>
       <div style = {text}>
-        <PlaceholderText marginSides={"10%"} length={"long"} />
-        <PlaceholderText marginSides={"10%"} length={"short"} />
+        <PlaceholderText marginTB={"5%"} marginLR={"10%"} length={"long"} />
+        <PlaceholderText marginTB={"5%"} marginLR={"10%"} length={"short"} />
       </div>
       <Button
         gridPosition = {"side"}
