@@ -1,8 +1,9 @@
 import React, { useContext } from "react"
-import { ThemeContext } from "../Helpers/Theme"
+import { ThemeContext }      from "../Helpers/Theme"
+import { useHistory }        from "react-router-dom"
 
 //Components
-import Button from "../Components/Shared/Button"
+import Button          from "../Components/Shared/Button"
 import PlaceholderText from "../Components/Shared/PlaceholderText"
 
 //ENHANCEMENT #17 make the page responsive - support for mobile devices
@@ -32,6 +33,11 @@ const Landing = () => {
     justifyItems :  "center",
     width        :  "auto"
   }
+  
+  const history = useHistory()
+  const handleClick = () => {
+    history.push('/app')
+  }
   return (
     <main  style = {page}>
       <h1  style = {title}>Connecting...</h1>
@@ -43,6 +49,7 @@ const Landing = () => {
         gridPosition = {"side"}
         place        = {"center center"}
         text         = {"Test Button"}
+        onClick      = {handleClick}
       />
     </main>
   )

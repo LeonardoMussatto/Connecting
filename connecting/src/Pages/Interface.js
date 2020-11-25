@@ -3,7 +3,7 @@ import { ThemeContext } from "../Helpers/Theme"
 
 //Placeholders
 import PlaceholderText from "../Components/Shared/PlaceholderText"
-import Ch from "../Components/Shared/ChPlaceholder"
+import Ch              from "../Components/Shared/ChPlaceholder"
 
 // TODO #8 create a reusable component for characters icons - they should also contain routes and notification style/logic
 //STYLE #23 make Interface page responsive - add support for mobile devices
@@ -35,10 +35,30 @@ const Interface = () => {
         <PlaceholderText marginTB={"2%"} marginLR={"30%"} length={"long"} />
       </header>
       <main style={main}>
-        <Ch position={"relative"} top={"-10vh"} width={"25vh"} />
-        <Ch position={"relative"} top={"-10vh"} width={"25vh"} />
-        <Ch position={"relative"} top={"-10vh"} width={"25vh"} />
-        <Ch position={"relative"} top={"-10vh"} width={"25vh"} />
+        <Ch
+          position = {"relative"}
+          top      = {"-10vh"}
+          width    = {"25vh"}
+          link     = {"/story#1"}
+        />
+        <Ch
+          position = {"relative"}
+          top      = {"-10vh"}
+          width    = {"25vh"}
+          link     = {"/story#2"}
+        />
+        <Ch
+          position = {"relative"}
+          top      = {"-10vh"}
+          width    = {"25vh"}
+          link     = {"/story#3"}
+        />
+        <Ch
+          position = {"relative"}
+          top      = {"-10vh"}
+          width    = {"25vh"}
+          link     = {"/story#4"}
+        />
       </main>
     </div>
   )
