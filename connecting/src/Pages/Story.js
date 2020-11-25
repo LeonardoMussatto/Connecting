@@ -1,14 +1,15 @@
-import React, { useContext } from "react"
+import React, { useContext,useState, useEffect } from "react"
+import { useLocation }  from "react-router-dom"
 import { ThemeContext } from "../Helpers/Theme"
-import Card from "../Components/Stories/Card"
 
 //Header
 import Location from "../Components/Stories/Location"
-import Weather from "../Components/Stories/Weather"
-import Time from "../Components/Stories/Time"
+import Weather  from "../Components/Stories/Weather"
+import Time     from "../Components/Stories/Time"
 
-//Characters Placeholders
-import Ch from "../Components/Shared/ChPlaceholder"
+//Placeholders
+import Ch   from "../Components/Shared/ChPlaceholder"
+import Card from "../Components/Stories/Card"
 
 
 //ENHANCEMENT #18 make the page responsive - add support for mobile devices
@@ -18,39 +19,63 @@ import Ch from "../Components/Shared/ChPlaceholder"
 
 const Story = () => {
   const theme = useContext(ThemeContext)
+  const [story, setStory] = useState(theme.ch3)
+
+  let location = useLocation()
+  useEffect(() => {
+    switch (location.hash) {
+      case "#1":
+        setStory(theme.ch1)
+        break
+      case "#2":
+        setStory(theme.ch2)
+        break
+      case "#3":
+        setStory(theme.ch3)
+        break
+      case "#4":
+        setStory(theme.ch4)
+        break
+
+      default:
+        break
+    }
+  }, [location.hash])
+
   let page = {
     ...theme.page,
-    padding: "0",
-    gridTemplateColumns: "minmax(80px, 14vw) auto",
-    gridTemplateRows: "4rem calc(100vh - 4rem)",
-    gridTemplateAreas: `
+    padding             :  "0",
+    display             :  "grid",
+    gridTemplateColumns :  "minmax(80px, 14vw) auto",
+    gridTemplateRows    :  "4rem calc(100vh - 4rem)",
+    gridTemplateAreas   :  `
       "nav header"
       "nav story"
     `
   }
   let nav = {
-    padding: "10% 5%",
-    gridArea: "nav",
-    display: "grid",
-    placeItems: "center center"
+    padding    :  "10% 5%",
+    gridArea   :  "nav",
+    display    :  "grid",
+    placeItems :  "center center"
   }
   let header = {
-    backgroundColor: theme.ch3.backgroundColor,
-    gridArea: "header",
-    display: "grid",
-    placeItems: "center center",
-    gridTemplateColumns: "auto-fill",
-    gridAutoFlow: "column"
+    backgroundColor     :  story.backgroundColor,
+    gridArea            :  "header",
+    display             :  "grid",
+    placeItems          :  "center center",
+    gridTemplateColumns :  "auto-fill",
+    gridAutoFlow        :  "column"
   }
-  let story = {
-    backgroundColor: theme.ch3.backgroundColor, //it will actually be a state and change accordingly to the displayed story
-    color: theme.ch3.color,
-    gridArea: "story",
-    display: "grid",
-    placeItems: "center start",
-    rowGap: "10vh",
-    padding: "0 5%",
-    overflow: "auto"
+  let content = {
+    backgroundColor :  story.backgroundColor,   //it will actually be a state and change accordingly to the displayed story
+    color           :  story.color,
+    gridArea        :  "story",
+    display         :  "grid",
+    placeItems      :  "center start",
+    rowGap          :  "10vh",
+    padding         :  "0 5%",
+    overflow        :  "auto"
   }
   return (
     <div style={page}>
@@ -60,12 +85,12 @@ const Story = () => {
         <Time />
       </header>
       <nav style={nav}>
-        <Ch width={"60%"}/>
-        <Ch width={"60%"}/>
-        <Ch width={"60%"}/>
-        <Ch width={"60%"}/>
+        <Ch width={"60%"} link={location.hash === "#1" ? "/app" : "/story#1"} />
+        <Ch width={"60%"} link={location.hash === "#2" ? "/app" : "/story#2"} />
+        <Ch width={"60%"} link={location.hash === "#3" ? "/app" : "/story#3"} />
+        <Ch width={"60%"} link={location.hash === "#4" ? "/app" : "/story#4"} />
       </nav>
-      <main style={story}>
+      <main style={content}>
         <Card
           txtLength = {"long"}
           imgWidth  = {"400"}

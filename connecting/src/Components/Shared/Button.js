@@ -40,7 +40,7 @@ const Button = (props) => {
     //REM read article on accessibility https://www.sarasoueidan.com/blog/accessible-icon-buttons/
 
   }
-  return <button style={style}>{props.text}</button>
+  return <button style={style} onClick={props.onClick}>{props.text}</button>
 }
 
 export default Button

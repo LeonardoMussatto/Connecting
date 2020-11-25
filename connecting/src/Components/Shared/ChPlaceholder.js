@@ -1,5 +1,6 @@
 import React from "react"
 import { ReactComponent as Ch } from "../../Media/Icons/user.svg"
+import { Link } from "react-router-dom"
 
 const ChPlaceholder = (props) => {
   let icon = {
@@ -8,9 +9,9 @@ const ChPlaceholder = (props) => {
     top      :  props.top,
   }
   return (
-    <div style={icon}>
+    <Link to={props.link} style={icon}>
       <Ch />
-    </div>
+    </Link>
   )
 }
 
