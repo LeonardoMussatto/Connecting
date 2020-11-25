@@ -40,6 +40,7 @@ const Story = () => {
       default:
         break
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.hash])
 
   let page = {
