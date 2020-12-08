@@ -48,9 +48,8 @@ const Story = () => {
     padding             :  "0",
     display             :  "grid",
     gridTemplateColumns :  "minmax(80px, 14vw) auto",
-    gridTemplateRows    :  "4rem calc(100vh - 4rem)",
+    gridTemplateRows: "100vh",
     gridTemplateAreas   :  `
-      "nav header"
       "nav story"
     `
   }
@@ -60,57 +59,79 @@ const Story = () => {
     display    :  "grid",
     placeItems :  "center center"
   }
-  let header = {
-    backgroundColor     :  story.backgroundColor,
-    gridArea            :  "header",
-    display             :  "grid",
-    placeItems          :  "center center",
-    gridTemplateColumns :  "auto-fill",
-    gridAutoFlow        :  "column"
-  }
   let content = {
-    backgroundColor :  story.backgroundColor,   //it will actually be a state and change accordingly to the displayed story
-    color           :  story.color,
-    gridArea        :  "story",
-    display         :  "grid",
-    placeItems      :  "center start",
-    rowGap          :  "10vh",
-    padding         :  "0 5%",
-    overflow        :  "auto"
+    div: {
+      display: "grid",
+      gridTemplateRows    :  "4rem calc(100vh - 4rem)",
+      gridTemplateColumns :  "1fr",
+      gridTemplateAreas   : `
+        "header"
+        "cards"
+        `,
+      margin          :  "2%",
+      borderRadius    :  "18px",
+      backgroundColor :  story.backgroundColor,
+      color           :  story.color,
+      overflow        :  "auto"
+    },
+    header: {
+      backgroundColor     :  story.backgroundColor,
+      margin              :  "0 2%",
+      gridArea            :  "header",
+      display             :  "grid",
+      placeItems          :  "center center",
+      gridTemplateColumns :  "repeat(1fr)",
+      gridAutoFlow        :  "column",
+      position            :  "sticky",
+      top                 :  "2%",
+      borderRadius        :  "18px",
+      borderStyle         :  "solid",
+      borderWidth         :  "4px",
+      borderColor         :  story.borderColor,
+    },
+    cards: {
+      gridArea        :  "cards",
+      display         :  "grid",
+      placeItems      :  "center start",
+      rowGap          :  "10vh",
+      padding         :  "0 5%",
+    },
   }
   return (
     <div style={page}>
-      <header style = {header}>
-        <Location />
-        <Weather />
-        <Time />
-      </header>
       <nav style={nav}>
-        <Ch width={"60%"} link={location.hash === "#1" ? "/app" : "/story#1"} />
-        <Ch width={"60%"} link={location.hash === "#2" ? "/app" : "/story#2"} />
-        <Ch width={"60%"} link={location.hash === "#3" ? "/app" : "/story#3"} />
-        <Ch width={"60%"} link={location.hash === "#4" ? "/app" : "/story#4"} />
+        <Ch width={"60%"} link={location.hash === "#1" ? "/app" : "/story#1"} selected={location.hash === "#1" ? story.backgroundColor : theme.page.backgroundColor}/>
+        <Ch width={"60%"} link={location.hash === "#2" ? "/app" : "/story#2"} selected={location.hash === "#2" ? story.backgroundColor : theme.page.backgroundColor}/>
+        <Ch width={"60%"} link={location.hash === "#3" ? "/app" : "/story#3"} selected={location.hash === "#3" ? story.backgroundColor : theme.page.backgroundColor}/>
+        <Ch width={"60%"} link={location.hash === "#4" ? "/app" : "/story#4"} selected={location.hash === "#4" ? story.backgroundColor : theme.page.backgroundColor}/>
       </nav>
-      <main style={content}>
-        <Card
-          txtLength = {"long"}
-          imgWidth  = {"400"}
-          imgHeight = {"200"}
-          imgColor  = {"f2f2f2"}
-        />
-        <Card
-          txtLength = {"short"}
-          imgWidth  = {"1000"}
-          imgHeight = {"500"}
-          imgColor  = {"f2f2f2"}
-        />
-        <Card
-          txtLength = {"long"}
-          imgWidth  = {"600"}
-          imgHeight = {"600"}
-          imgColor  = {"f2f2f2"}
-        />
-      </main>
+      <div style={content.div}>
+        <header style={content.header}>
+          <Location />
+          <Weather />
+          <Time />
+        </header>
+        <main style={content.cards}>
+          <Card
+            txtLength = {"long"}
+            imgWidth  = {"400"}
+            imgHeight = {"200"}
+            imgColor  = {"f2f2f2"}
+          />
+          <Card
+            txtLength = {"short"}
+            imgWidth  = {"1000"}
+            imgHeight = {"500"}
+            imgColor  = {"f2f2f2"}
+          />
+          <Card
+            txtLength = {"long"}
+            imgWidth  = {"60%"}
+            imgHeight = {"60%"}
+            imgColor  = {"f2f2f2"}
+          />
+        </main>
+      </div>
     </div>
   )
 }

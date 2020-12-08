@@ -54,22 +54,27 @@ theme.story = {
   page:{
     ...theme.common.general,
     backgroundColor :  "#f2f2f2",
+    borderColor     :  "#f2f2f2", //each story will probably have a different border color, maybe a gradient - page background is not bad though
     color           :  "#3E4250"
   },
   ch1: {
     backgroundColor :  "#A0D9CE",
+    borderColor     :  "#f2f2f2",
     color           :  "#3E4250"
   },
   ch2: {
     backgroundColor :  "#F2D0E3",
+    borderColor     :  "#f2f2f2",
     color           :  "#3E4250"
   },
   ch3: {
     backgroundColor :  "#9AAAD9",
+    borderColor     :  "#f2f2f2",
     color           :  "#3E4250"
   },
   ch4: {
     backgroundColor :  "#FFCB77",
+    borderColor     :  "#f2f2f2",
     color           :  "#3E4250"
   }
 }
