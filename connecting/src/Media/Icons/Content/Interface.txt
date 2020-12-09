@@ -1,0 +1,14 @@
+//REM Related to #19 - Interface carousel and welcome animation
+
+//landing
+Welcome to $APPNAME
+
+//intro
+Thank you for ... the evaluation program
+You are joining $APPNAME community as an observer
+
+You will be able to watch the streams from some of our full members
+get to know hobbies, works, struggles,... the life of some of ours full members
+
+//guide
+click on the icons to see the stories
