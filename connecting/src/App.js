@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import { ThemeContext, theme } from "./Helpers/Theme"
+import { Switch, Route }       from "react-router-dom"
+
+//Pages
+import Interface from "./Pages/Interface"
+import Story     from "./Pages/Story"
+import Landing   from "./Pages/Landing"
+
+//TODO insert actual components
+//ENHANCEMENT - STYLE #12 consider adding responsive effects
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Switch>
+      <Route path="/app">
+        <ThemeContext.Provider value={theme.interface}>
+          <Interface />
+        </ThemeContext.Provider>
+      </Route>
+      <Route path="/story">
+        <ThemeContext.Provider value={theme.story}>
+          <Story />
+        </ThemeContext.Provider>
+      </Route>
+      <Route>
+        <ThemeContext.Provider value={theme.landing}>
+          <Landing path="/" />
+        </ThemeContext.Provider>
+      </Route>
+    </Switch>
+  )
 }
 
-export default App;
+export default App
