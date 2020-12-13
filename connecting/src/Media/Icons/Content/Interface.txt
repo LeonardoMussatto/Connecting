@@ -4,11 +4,13 @@
 Welcome to $APPNAME
 
 //intro
-Thank you for ... the evaluation program
+Thank you for participating in the evaluation program
 You are joining $APPNAME community as an observer
 
-You will be able to watch the streams from some of our full members
-get to know hobbies, works, struggles,... the life of some of ours full members
-
 //guide
-click on the icons to see the stories
+Click on the icons to watch the streams from some of our full members
+Follow them in their everyday life, get to know their hobbies, their struggles, their successes... and much more! 
+
+?? maybe more active verbs would be better suited 
+ * (e.g. discover new passions while following them in their hobbies, struggle with them overcoming obstacles,...) 
+ * but the sentences might become too long
