@@ -1,0 +1,29 @@
+Name:
+Age:
+Nationality: 
+Residence: Thailand
+Work: illustrator
+Hobby: 
+Relation: create illustrations used by the web developer, uses a train constructed by the engineer
+
+//ideas
+ 
+
+
+//MORNING
+ - wakes up
+ 
+
+//COMMUTING
+ 
+
+//WORK
+ 
+ 
+ - LUNCH
+ 
+
+//COMMUTING
+ 
+
+//EVENING

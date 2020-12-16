@@ -1,0 +1,40 @@
+Name:
+Age: 25
+Nationality: 
+Residence: ?
+Work: Web Programmer
+Hobby: 
+Relation: programs this webapp - fixes user-story bug, uses the illustration by the illustrator
+
+//ideas
+ - travels to Work through city
+ - makes a video call
+
+//MORNING
+ - wakes up
+ - mirror
+ - cup of ...
+
+//COMMUTING
+ Vehicles:
+ Travel time:
+ Surroundings:through the city
+ Others:
+
+//WORK
+ Location:
+ Company: Startup
+ Workplace Characteristics: open, green, wood, white, well built, modern, warm but professional
+ 
+ - repairs a bug in a website
+ - updates products
+ - writes with co-workers
+ - uses references and Stackoverflow
+ 
+ - LUNCH
+
+//COMMUTING
+ - goes back home
+
+//EVENING
+ - cooks something
