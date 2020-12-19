@@ -1,10 +1,11 @@
 Name:
 Age:
 Nationality: 
-Residence: America
-Work: ?
-Hobby: 
-Relation: ?
+Residence: India
+Work: Engineer
+Hobby: Photography
+Relation:
+
 //ideas
  
 

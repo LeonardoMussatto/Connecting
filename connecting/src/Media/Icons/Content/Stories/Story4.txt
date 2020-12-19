@@ -1,10 +1,10 @@
 Name:
 Age:
 Nationality: 
-Residence: India
-Work: Engineer
-Hobby: Photography
-Relation: Works on the train project
+Residence:
+Work:
+Hobby:
+Relation:
 
 //ideas
  
