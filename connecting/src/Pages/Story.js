@@ -9,12 +9,16 @@ import Time     from "../Components/Stories/Time"
 
 //Placeholders
 import Ch   from "../Components/Shared/ChPlaceholder"
-import Card from "../Components/Stories/Card"
+import Card from "../Components/Shared/Card"
+
+//Content
+import Content from "../Content/storyContentPlaceholder.json"
 
 
 //ENHANCEMENT #18 make the page responsive - add support for mobile devices
-// TODO #5 find a way to organize content - NOTE it seems to me that the content is to case-related to be actually managed by a component, however I also have to
-// TODO #6 find a way to conditionally display section of content based on timing
+//FIX cardIndex has to be restored individually for each story - probably stored in a parent component (/state management?)
+// TODO allow different interval between card content
+// TODO synch cards between stories
 
 
 const Story = () => {
@@ -26,15 +30,19 @@ const Story = () => {
     switch (location.hash) {
       case "#1":
         setStory(theme.ch1)
+        setCardIndex(0)
         break
       case "#2":
         setStory(theme.ch2)
+        setCardIndex(0)
         break
       case "#3":
         setStory(theme.ch3)
+        setCardIndex(0)
         break
       case "#4":
         setStory(theme.ch4)
+        setCardIndex(0)
         break
 
       default:
@@ -42,6 +50,18 @@ const Story = () => {
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.hash])
+
+  const [cardIndex, setCardIndex] = useState(0)
+  let cardContent = Content[cardIndex]
+  useEffect(() => {
+    if (cardIndex === Content.length - 1) {
+      setCardIndex(Content.length - 1)
+    } else if (cardIndex < Content.length - 1) {
+      setTimeout(() => {
+        setCardIndex(cardIndex + 1)
+      }, 3000)
+    }
+  }, [cardIndex])
 
   let page = {
     ...theme.page,
@@ -100,10 +120,42 @@ const Story = () => {
   return (
     <div style={page}>
       <nav style={nav}>
-        <Ch width={"60%"} link={location.hash === "#1" ? "/app" : "/story#1"} selected={location.hash === "#1" ? story.backgroundColor : theme.page.backgroundColor}/>
-        <Ch width={"60%"} link={location.hash === "#2" ? "/app" : "/story#2"} selected={location.hash === "#2" ? story.backgroundColor : theme.page.backgroundColor}/>
-        <Ch width={"60%"} link={location.hash === "#3" ? "/app" : "/story#3"} selected={location.hash === "#3" ? story.backgroundColor : theme.page.backgroundColor}/>
-        <Ch width={"60%"} link={location.hash === "#4" ? "/app" : "/story#4"} selected={location.hash === "#4" ? story.backgroundColor : theme.page.backgroundColor}/>
+        <Ch
+          width={"60%"}
+          link={location.hash === "#1" ? "/app" : "/story#1"}
+          selected={
+            location.hash === "#1"
+              ? story.backgroundColor
+              : theme.page.backgroundColor
+          }
+        />
+        <Ch
+          width={"60%"}
+          link={location.hash === "#2" ? "/app" : "/story#2"}
+          selected={
+            location.hash === "#2"
+              ? story.backgroundColor
+              : theme.page.backgroundColor
+          }
+        />
+        <Ch
+          width={"60%"}
+          link={location.hash === "#3" ? "/app" : "/story#3"}
+          selected={
+            location.hash === "#3"
+              ? story.backgroundColor
+              : theme.page.backgroundColor
+          }
+        />
+        <Ch
+          width={"60%"}
+          link={location.hash === "#4" ? "/app" : "/story#4"}
+          selected={
+            location.hash === "#4"
+              ? story.backgroundColor
+              : theme.page.backgroundColor
+          }
+        />
       </nav>
       <div style={content.div}>
         <header style={content.header}>
@@ -113,23 +165,20 @@ const Story = () => {
         </header>
         <main style={content.cards}>
           <Card
-            txtLength = {"long"}
-            imgWidth  = {"400"}
-            imgHeight = {"200"}
-            imgColor  = {"f2f2f2"}
+            key={cardContent.id}
+            text={cardContent.text.text}
+            src={cardContent.media.src}
+            alt={cardContent.media.alt}
           />
-          <Card
-            txtLength = {"short"}
-            imgWidth  = {"1000"}
-            imgHeight = {"500"}
-            imgColor  = {"f2f2f2"}
-          />
-          <Card
-            txtLength = {"long"}
-            imgWidth  = {"60%"}
-            imgHeight = {"60%"}
-            imgColor  = {"f2f2f2"}
-          />
+          <p>index: {cardIndex}</p>
+          {/* {Content.map(card => (
+            <Card 
+              key={card.id}
+              text={card.text.text}
+              src={card.media.src}
+              alt={card.media.alt}
+            />
+          ))} */}
         </main>
       </div>
     </div>
