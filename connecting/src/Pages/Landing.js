@@ -36,7 +36,7 @@ const Landing = () => {
   
   const history = useHistory()
   const handleClick = () => {
-    history.push('/app')
+    history.push('App/Interface')
   }
   return (
     <main  style = {page}>

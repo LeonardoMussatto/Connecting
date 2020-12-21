@@ -39,25 +39,25 @@ const Interface = () => {
           position = {"relative"}
           top      = {"-10vh"}
           width    = {"25vh"}
-          link     = {"/story#1"}
+          link     = {"/App/Story#1"}
         />
         <Ch
           position = {"relative"}
           top      = {"-10vh"}
           width    = {"25vh"}
-          link     = {"/story#2"}
+          link     = {"/App/Story#2"}
         />
         <Ch
           position = {"relative"}
           top      = {"-10vh"}
           width    = {"25vh"}
-          link     = {"/story#3"}
+          link     = {"/App/Story#3"}
         />
         <Ch
           position = {"relative"}
           top      = {"-10vh"}
           width    = {"25vh"}
-          link     = {"/story#4"}
+          link     = {"/App/Story#4"}
         />
       </main>
     </div>

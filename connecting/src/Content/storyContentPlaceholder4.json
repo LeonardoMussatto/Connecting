@@ -1,0 +1,54 @@
+[
+    {
+        "id": "7",
+        "text": {
+            "text": "[Placeholder 7] But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth",
+            "position": ""
+        },
+        "media": {
+            "src": "https://fakeimg.pl/500x1000/f2f2f2",
+            "alt": "placeholder image",
+            "position": "",
+            "size": ""
+        }
+    },
+    {
+        "id": "9",
+        "text": {
+            "text": "[Placeholder 9] But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain",
+            "position": ""
+        },
+        "media": {
+            "src": "https://fakeimg.pl/500x1000/f2f2f2",
+            "position": "placeholder image",
+            "size": "",
+            "alt": "placeholder image"
+        }
+    },
+    {
+        "id": "15",
+        "text": {
+            "text": "[Placeholder 15] But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth",
+            "position": ""
+        },
+        "media": {
+            "src": "https://fakeimg.pl/500x1000/f2f2f2",
+            "alt": "placeholder image",
+            "position": "",
+            "size": ""
+        }
+    },
+    {
+        "id": "20",
+        "text": {
+            "text": "[Placeholder 20] But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth",
+            "position": ""
+        },
+        "media": {
+            "src": "https://fakeimg.pl/500x1000/f2f2f2",
+            "alt": "placeholder image",
+            "position": "",
+            "size": ""
+        }
+    }
+]
