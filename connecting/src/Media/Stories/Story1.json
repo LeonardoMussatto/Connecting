@@ -1,379 +1,379 @@
 [
-    {
-        "id": "1",
-        "text": {
-            "text": "It's probably a bit cheese...yet it is inspiring...now let's get out of this bed",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
+  {
+    "id": "12:0",
+    "text": {
+      "text": "It's probably a bit cheese...yet it is inspiring...now let's get out of this bed",
+      "position": ""
     },
-    {
-        "id": "2",
-        "text": {
-            "text": "You would be scared of my face in the mirror right now.",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "3",
-        "text": {
-            "text": "By the way, yesterday I finally finished my interactive mirror.",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "4",
-        "text": {
-            "text": "Maybe later I'll show you how i did it in detail. Here are some schematics for those who'd like to give it a try.",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "5",
-        "text": {
-            "text": "'Another day another challenge' eh...let's see what do I have to work on today. Perhaps the new the feature?",
-            "position": ""
-        },
-        "media": {
-            "src": "",
-            "alt": "",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "6",
-        "text": {
-            "text": "Yup, today is a 'new feature day' ahahah...let's go!! =)",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "7",
-        "text": {
-            "text": "What would I do without these references ?!? Thank you to whoever mantains them",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "8",
-        "text": {
-            "text": "Time for a break",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "9",
-        "text": {
-            "text": "Some say it might be an illusion...well, give that developer a rise then because this ** is really good!!",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "10",
-        "text": {
-            "text": "Let's get back to work. I'd really like to release the new feature today...",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "11",
-        "text": {
-            "text": "(co-worker) always has a good eye, but this time was really evident. I forgot to add the user Icon!! oops ':)",
-            "position": ""
-        },
-        "media": {
-            "src": "",
-            "alt": "",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "12",
-        "text": {
-            "text": "For this project we found a great 3d avatar's library, let's see if I can find some new character...",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "13",
-        "text": {
-            "text": "This one seems to be the right one for our testing users",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "14",
-        "text": {
-            "text": "That's all for today. The update should be released **",
-            "position": ""
-        },
-        "media": {
-            "src": "",
-            "alt": "",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "15",
-        "text": {
-            "text": "Time to head back home: there's a new project I want to work on!",
-            "position": ""
-        },
-        "media": {
-            "src": "",
-            "alt": "",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "16",
-        "text": {
-            "text": "I love to read and sketch, but I always end up in the dark because I'm to lazy to get to the switch",
-            "position": ""
-        },
-        "media": {
-            "src": "",
-            "alt": "",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "17",
-        "text": {
-            "text": "or because I don't have a lamp with me.",
-            "position": ""
-        },
-        "media": {
-            "src": "",
-            "alt": "",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "18",
-        "text": {
-            "text": "And you know how paranoid I am with creating the right ambient with lights. So I decided to build my own portable lamp.",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "19",
-        "text": {
-            "text": "Ok, the design is not mine actually. Yet is such a great design I have to try and rebuild it! I want to use tunable white led because you know...",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "20",
-        "text": {
-            "text": "Let's get to work",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "21",
-        "text": {
-            "text": "Now some schematics",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "22",
-        "text": {
-            "text": "I need some kind of interface...Perhaps capacitive sensors??",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "23",
-        "text": {
-            "text": "I finished everything with my last project...but that's an issue for another day: let's eat something now",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "24",
-        "text": {
-            "text": "Now some schematics",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "25",
-        "text": {
-            "text": "Today's recipe: **",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "26",
-        "text": {
-            "text": "What better way to finish the day than watching a movie ?!?",
-            "position": ""
-        },
-        "media": {
-            "src": "",
-            "alt": "",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "27",
-        "text": {
-            "text": "Ok there are many, but I'm going for the movie tonight",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "28",
-        "text": {
-            "text": "What a great movie!",
-            "position": ""
-        },
-        "media": {
-            "src": "",
-            "alt": "",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "29",
-        "text": {
-            "text": "Time to get some rest",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/400x200/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
     }
+  },
+  {
+    "id": "12:10",
+    "text": {
+      "text": "You would be scared of my face in the mirror right now.",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "12:12",
+    "text": {
+      "text": "By the way, yesterday I finally finished my interactive mirror.",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "12:14",
+    "text": {
+      "text": "Maybe later I'll show you how i did it in detail. Here are some schematics for those who'd like to give it a try.",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "12:30",
+    "text": {
+      "text": "A fresh shower, some music and a cup of **: that's my trick to get ready for the day",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "14:0",
+    "text": {
+      "text": "'Another day another challenge'...let's see what do I have to work on today. Perhaps the new the feature?",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "14:5",
+    "text": {
+      "text": "Yup, today is a 'new feature day' ahahah...let's go!! =)",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "16:0",
+    "text": {
+      "text": "What would I do without these references ?!? Thank you to whoever mantains them",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "18:0",
+    "text": {
+      "text": "Time for a break",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "18:10",
+    "text": {
+      "text": "Some say it might be an illusion...well, give that developer a rise then because this ** is really good!!",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "19:0",
+    "text": {
+      "text": "Let's get back to work. I'd really like to release the new feature today...",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "19:15",
+    "text": {
+      "text": "(co-worker) always has a good eye, but this time was really evident. I forgot to add the user Icon!! oops ':)",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "19:20",
+    "text": {
+      "text": "For this project we found a great 3d avatar's library, let's see if I can find some new character...",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "19:40",
+    "text": {
+      "text": "This one seems to be the right one for our testing users",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "22:0",
+    "text": {
+      "text": "That's all for today. The update should be released **",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "22.10",
+    "text": {
+      "text": "Time to head back home: there's a new project I want to work on!",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "0:0",
+    "text": {
+      "text": "I love to read and sketch, but I always end up in the dark because I'm to lazy to get to the switch",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "0:02",
+    "text": {
+      "text": "or because I don't have a lamp with me.",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "0:5",
+    "text": {
+      "text": "And you know how paranoid I am with creating the right ambient with lights. So I decided to build my own portable lamp.",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "0:15",
+    "text": {
+      "text": "Ok, the design is not mine actually. Yet is such a great design I have to try and rebuild it! I want to use tunable white led because you know...",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "0:20",
+    "text": {
+      "text": "Let's get to work",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "1:0",
+    "text": {
+      "text": "Now some schematics",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "1:30",
+    "text": {
+      "text": "I need some kind of interface...Perhaps capacitive sensors??",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "2:0",
+    "text": {
+      "text": "I finished everything with my last project...but that's an issue for another day: let's eat something now",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "2:10",
+    "text": {
+      "text": "Today's recipe: **",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "3:0",
+    "text": {
+      "text": "What better way to finish the day than watching a movie ?!?",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "3:5",
+    "text": {
+      "text": "Ok there are many, but I'm going for the movie tonight",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "4:40",
+    "text": {
+      "text": "What a great movie!",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "5:0",
+    "text": {
+      "text": "Time to get some rest",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  }
 ]

@@ -1,60 +1,73 @@
 [
   {
+    "id": "0:0",
+    "text": {
+      "text": "It's probably a bit cheese...yet it is inspiring...now let's get out of this bed",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "0:10",
+    "text": {
+      "text": "You would be scared of my face in the mirror right now.",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "0:12",
+    "text": {
+      "text": "By the way, yesterday I finally finished my interactive mirror.",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "0:14",
+    "text": {
+      "text": "Maybe later I'll show you how i did it in detail. Here are some schematics for those who'd like to give it a try.",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "0:30",
+    "text": {
+      "text": "A fresh shower, some music and a cup of **: that's my trick to get ready for the day",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
     "id": "2:0",
     "text": {
-      "text": "",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "Alarm clock ringing",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "2:10",
-    "text": {
-      "text": "",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "Taking a shower",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "2:20",
-    "text": {
-      "text": "",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "Cutting the beard",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "2:30",
-    "text": {
-      "text": "I really am not one of those people who talks a lot in the morning...",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "2:32",
-    "text": {
-      "text": "Actually I don't talk a lot...maybe this is why I love so much illustrations",
+      "text": "'Another day another challenge'...let's see what do I have to work on today. Perhaps the new the feature?",
       "position": ""
     },
     "media": {
@@ -65,9 +78,9 @@
     }
   },
   {
-    "id": "2:40",
+    "id": "2:5",
     "text": {
-      "text": "Time to work on some characters for the library",
+      "text": "Yup, today is a 'new feature day' ahahah...let's go!! =)",
       "position": ""
     },
     "media": {
@@ -78,27 +91,14 @@
     }
   },
   {
-    "id": "2:45",
+    "id": "4:0",
     "text": {
-      "text": "I definitely need a cup of tea before starting",
+      "text": "What would I do without these references ?!? Thank you to whoever mantains them",
       "position": ""
     },
     "media": {
-      "src": "",
-      "alt": "",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "3:0",
-    "text": {
-      "text": "",
-      "position": ""
-    },
-    "media": {
-      "src": "",
-      "alt": "Working on 3d illustrations",
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
       "position": "",
       "size": ""
     }
@@ -106,7 +106,20 @@
   {
     "id": "6:0",
     "text": {
-      "text": "I always forget to eat...don't do this kids",
+      "text": "Time for a break",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "6:10",
+    "text": {
+      "text": "Some say it might be an illusion...well, give that developer a rise then because this ** is really good!!",
       "position": ""
     },
     "media": {
@@ -119,72 +132,7 @@
   {
     "id": "7:0",
     "text": {
-      "text": "",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "working on more 3d icons",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "8:0",
-    "text": {
-      "text": "I should really take some breaks more often",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "break",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "8:15",
-    "text": {
-      "text": "",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "back to work",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "9:0",
-    "text": {
-      "text": "",
-      "position": ""
-    },
-    "media": {
-      "src": "",
-      "alt": "break",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "9:15",
-    "text": {
-      "text": "",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "back to work",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "11:0",
-    "text": {
-      "text": "These characters are not realistic at all, but I like their 'softness'...",
+      "text": "Let's get back to work. I'd really like to release the new feature today...",
       "position": ""
     },
     "media": {
@@ -195,9 +143,9 @@
     }
   },
   {
-    "id": "11:10",
+    "id": "9:15",
     "text": {
-      "text": "I tend to always design them happy. I should really implement more expressions in the library.",
+      "text": "(co-worker) always has a good eye, but this time was really evident. I forgot to add the user Icon!! oops ':)",
       "position": ""
     },
     "media": {
@@ -208,9 +156,9 @@
     }
   },
   {
-    "id": "11:30",
+    "id": "9:20",
     "text": {
-      "text": "It's time to make some food",
+      "text": "For this project we found a great 3d avatar's library, let's see if I can find some new character...",
       "position": ""
     },
     "media": {
@@ -221,9 +169,126 @@
     }
   },
   {
-    "id": "11:40",
+    "id": "9:40",
     "text": {
-      "text": "",
+      "text": "This one seems to be the right one for our testing users",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "10:0",
+    "text": {
+      "text": "That's all for today. The update should be released **",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "10.10",
+    "text": {
+      "text": "Time to head back home: there's a new project I want to work on!",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "11:0",
+    "text": {
+      "text": "I love to read and sketch, but I always end up in the dark because I'm to lazy to get to the switch",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "11:02",
+    "text": {
+      "text": "or because I don't have a lamp with me.",
+      "position": ""
+    },
+    "media": {
+      "src": "",
+      "alt": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "11:5",
+    "text": {
+      "text": "And you know how paranoid I am with creating the right ambient with lights. So I decided to build my own portable lamp.",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "11:15",
+    "text": {
+      "text": "Ok, the design is not mine actually. Yet is such a great design I have to try and rebuild it! I want to use tunable white led because you know...",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "11:20",
+    "text": {
+      "text": "Let's get to work",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "12:0",
+    "text": {
+      "text": "Now some schematics",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "12:30",
+    "text": {
+      "text": "I need some kind of interface...Perhaps capacitive sensors??",
       "position": ""
     },
     "media": {
@@ -236,7 +301,33 @@
   {
     "id": "13:0",
     "text": {
-      "text": "I want to work on today's characters a bit more",
+      "text": "I finished everything with my last project...but that's an issue for another day: let's eat something now",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "13:10",
+    "text": {
+      "text": "Today's recipe: **",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "14:0",
+    "text": {
+      "text": "What better way to finish the day than watching a movie ?!?",
       "position": ""
     },
     "media": {
@@ -247,9 +338,9 @@
     }
   },
   {
-    "id": "15:30",
+    "id": "14:5",
     "text": {
-      "text": "I lost track of time once more... let's save the work and get some rest",
+      "text": "Ok there are many, but I'm going for the movie tonight",
       "position": ""
     },
     "media": {
@@ -260,61 +351,9 @@
     }
   },
   {
-    "id": "16:15",
+    "id": "16:40",
     "text": {
-      "text": "I love reading. Be it novels, poems or drama - even essays - I always get carried away in another dimension...which in the end is often not far from ours...",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "16:20",
-    "text": {
-      "text": "",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "reading",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "17:00",
-    "text": {
-      "text": "Sometimes people ask me what my favourite book is. Who knows me asks me what my favourite book _is at the moment_ : how am I supposed to choose an overall winner??",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "17:5",
-    "text": {
-      "text": "There are so many interesting books! And often they are so different it doesn't make any sense to compare them !!",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "17:10",
-    "text": {
-      "text": "At the moment two are the titles that come immediately to my mind:",
+      "text": "What a great movie!",
       "position": ""
     },
     "media": {
@@ -325,22 +364,9 @@
     }
   },
   {
-    "id": "17:20",
+    "id": "17:0",
     "text": {
-      "text": "but don't give me to much time to answer or I will overthink it and in the end I won't give any answer at all ahahah",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "18:10",
-    "text": {
-      "text": "It's getting late. Tomorrow I'll get up late again I guess...",
+      "text": "Time to get some rest",
       "position": ""
     },
     "media": {
