@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "text": "Welcome to $APPNAME"
+    },
+    {
+        "id": "2",
+        "text": "Thank you for participating in the evaluation program"
+    },
+    {
+        "id": "3",
+        "text": "You are joining $APPNAME community as an observer"
+    },
+    {
+        "id": "4",
+        "text": "Follow them in their everyday life, get to know their hobbies, their struggles, their successes... and much more!"
+    },
+    {
+        "id": "5",
+        "text": "Click on the icons to watch the streams from random picked full members"
+    }
+]
