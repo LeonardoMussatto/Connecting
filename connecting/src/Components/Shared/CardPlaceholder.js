@@ -1,8 +1,8 @@
-import React from 'react'
-import PlaceholderText from './PlaceholderText'
-import PlaceholderImage from './PlaceholderImage'
+import React from "react"
+import PlaceholderText from "./PlaceholderText"
+import PlaceholderImage from "./PlaceholderImage"
 
-const Card = (props) => {
+const CardPlaceholder = (props) => {
     let card = {
         display: "grid",
         placeItems: "center"
@@ -15,4 +15,4 @@ const Card = (props) => {
     )
 }
 
-export default Card
+export default CardPlaceholder

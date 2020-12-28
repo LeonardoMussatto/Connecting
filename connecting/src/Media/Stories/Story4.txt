@@ -1,0 +1,32 @@
+Name:
+Age:
+Nationality: 
+Residence:
+Work:
+Hobby:
+Relation:
+
+//ideas
+ 
+
+
+//MORNING
+ - wakes up
+ 
+
+//COMMUTING
+ Vehicles:
+ Travel time:
+ Surroundings
+ Others:
+
+//WORK
+ 
+ 
+ - LUNCH
+ 
+
+//COMMUTING
+ 
+
+//EVENING
