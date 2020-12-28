@@ -5,7 +5,7 @@ import { ThemeContext } from "../Helpers/Theme"
 //Header
 import Location from "../Components/Stories/Location"
 import Weather  from "../Components/Stories/Weather"
-// import Time     from "../Components/Stories/Time"
+import Time     from "../Components/Stories/Time"
 
 //Placeholders
 import Ch   from "../Components/Shared/ChPlaceholder"
@@ -13,12 +13,17 @@ import Card from "../Components/Shared/Card"
 
 
 //ENHANCEMENT #18 make the page responsive - add support for mobile devices
+//FIX STYLE center cards, avoid overflow and text under the header
+//STYLE #12 add side bar animation - selected icon
+//STYLE #12 add card exit animation
+//ENHANCEMENT STYLE create a more contemporary look
 
 
 const Story = (props) => {
   const theme = useContext(ThemeContext)
   const [character, setCharacter] = useState(theme.ch3)
   const [CardContent, setCardContent] = useState(character.story[0]) //REM choose a def. state
+  const [timeZone, setTimeZone] = useState(0)
 
   let location = useLocation()
   useEffect(() => {
@@ -26,25 +31,29 @@ const Story = (props) => {
       case "#1":
         setCharacter(theme.ch1)
         setCardContent(props.story1)
+        setTimeZone(0)
         break
       case "#2":
         setCharacter(theme.ch2)
         setCardContent(props.story2)
+        setTimeZone(+3)
         break
       case "#3":
         setCharacter(theme.ch3)
         setCardContent(props.story3)
+        setTimeZone(+5)
         break
       case "#4":
         setCharacter(theme.ch4)
         setCardContent(props.story4)
+        setTimeZone(-3)
         break
 
       default:
         break
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.hash, props.seconds])
+  }, [location.hash, props.minutes])
 
   let page = {
     ...theme.page,
@@ -144,8 +153,11 @@ const Story = (props) => {
         <header style={content.header}>
           <Location />
           <Weather />
-          <p>{props.minutes}:{props.seconds}</p>
-          {/* <Time /> */}
+          <Time 
+            hours={props.hours}
+            minutes={props.minutes}
+            timeZone={timeZone}
+          />
         </header>
         <main style={content.cards}>
           <Card

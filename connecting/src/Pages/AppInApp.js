@@ -4,10 +4,13 @@ import { Switch, Route } from "react-router-dom"
 import Interface from "./Interface"
 import Story from "./Story"
 
+// TODO synch initial clock position with user's local time
+// TODO decide for a reasonable clock speed ~ experience's max duration
+
 const AppInApp = () => {
   const theme = useContext(ThemeContext)
-  const [Seconds, setSeconds] = useState(0)
   const [Minutes, setMinutes] = useState(0)
+  const [Hours, setHours] = useState(0)
   const [Story1, setStory1] = useState(theme.story.ch1.story[0])
   const [Story2, setStory2] = useState(theme.story.ch2.story[0])
   const [Story3, setStory3] = useState(theme.story.ch3.story[0])
@@ -15,14 +18,17 @@ const AppInApp = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      if (Seconds === 60) {
-        setSeconds(0)
-        setMinutes(Minutes + 1)
+      if (Minutes === 60) {
+        setMinutes(0)
+        setHours(Hours + 1)
       } else {
-        setSeconds(Seconds + 1)
+        setMinutes(Minutes + 1)
       }
-    }, 100)
-  }, [Seconds, Minutes])
+      if (Hours === 24){
+        setHours(0)
+      }
+    }, 417) // 24h in 10min, as milliseconds
+  }, [Minutes, Hours])
 
   function useUpdateContent(target, time) {
     useEffect(() => {
@@ -55,10 +61,11 @@ const AppInApp = () => {
       // }
     }, [target, time])
   }
-  useUpdateContent(theme.story.ch1, Minutes)
-  useUpdateContent(theme.story.ch2, Minutes)
-  useUpdateContent(theme.story.ch3, Minutes)
-  useUpdateContent(theme.story.ch4, Minutes)
+
+  useUpdateContent(theme.story.ch1, Hours)
+  useUpdateContent(theme.story.ch2, Hours)
+  useUpdateContent(theme.story.ch3, Hours)
+  useUpdateContent(theme.story.ch4, Hours)
 
   return (
     <Switch>
@@ -70,8 +77,8 @@ const AppInApp = () => {
       <Route path={"/App/Story"}>
         <ThemeContext.Provider value={theme.story}>
           <Story
+            hours={Hours}
             minutes={Minutes}
-            seconds={Seconds}
             story1={Story1}
             story2={Story2}
             story3={Story3}

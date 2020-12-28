@@ -1,8 +1,8 @@
 import React from "react"
-import Story1 from "../Content/storyContentPlaceholder.json"
-import Story2 from "../Content/storyContentPlaceholder2.json"
-import Story3 from "../Content/storyContentPlaceholder3.json"
-import Story4 from "../Content/storyContentPlaceholder4.json"
+import Story1 from "../Media/Stories/Placeholders/storyContentPlaceholder.json"
+import Story2 from "../Media/Stories/Placeholders/storyContentPlaceholder2.json"
+import Story3 from "../Media/Stories/Placeholders/storyContentPlaceholder3.json"
+import Story4 from "../Media/Stories/Placeholders/storyContentPlaceholder4.json"
 
 
 //STYLE #14 replicate wireframe styling - it won't be definitive, but al least we'll be working on a fac-simile

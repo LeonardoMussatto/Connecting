@@ -7,9 +7,6 @@ import AppInApp from "./Pages/AppInApp"
 import Landing   from "./Pages/Landing"
 
 
-//ENHANCEMENT - STYLE #12 consider adding responsive effects
-
-
 function App() {
   return (
     <Switch>

@@ -6,7 +6,9 @@ import { useHistory }        from "react-router-dom"
 import Button          from "../Components/Shared/Button"
 import PlaceholderText from "../Components/Shared/PlaceholderText"
 
+
 //ENHANCEMENT #17 make the page responsive - support for mobile devices
+// TODO #29 add text and display logic
 
 const Landing = () => {
   const theme = useContext(ThemeContext)

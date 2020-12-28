@@ -1,6 +1,6 @@
 import React from 'react'
 
-//ENHANCEMENT consider using Geolocation - https://github.com/public-apis/public-apis#geocoding
+//ENHANCEMENT consider using Geolocation for user position - https://github.com/public-apis/public-apis#geocoding
 
 const Location = (props) => {
     return (

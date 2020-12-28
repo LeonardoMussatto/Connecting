@@ -5,9 +5,12 @@ import { ThemeContext } from "../Helpers/Theme"
 import PlaceholderText from "../Components/Shared/PlaceholderText"
 import Ch              from "../Components/Shared/ChPlaceholder"
 
+
+// TODO #30 add text and display logic
 // TODO #8 create a reusable component for characters icons - they should also contain routes and notification style/logic
 //STYLE #23 make Interface page responsive - add support for mobile devices
 //ENHANCEMENT #24 STYLE add subtle y-axis animation to the icons - make the page more lively
+
 
 const Interface = () => {
   const theme = useContext(ThemeContext)
