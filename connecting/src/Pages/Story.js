@@ -9,7 +9,7 @@ import Time     from "../Components/Stories/Time"
 
 //Placeholders
 import Ch   from "../Components/Shared/ChPlaceholder"
-import Card from "../Components/Stories/Card"
+import Card from "../Components/Shared/CardPlaceholder"
 
 
 //ENHANCEMENT #18 make the page responsive - add support for mobile devices
