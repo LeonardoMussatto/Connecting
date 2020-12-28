@@ -15,6 +15,7 @@ const Landing = () => {
     ...theme.page,
     padding             :  "0 2vw",
     gridTemplateRows    :  "100vh 85vh",
+    gridTemplateColumns: "minmax(500px, 60vw) minmax(max-content, 40vw)",
     gridTemplateAreas   :  `
       'header header'
       'main side'
@@ -26,13 +27,13 @@ const Landing = () => {
     fontSize        :  "7vw",
     fontVariantCaps :  "petite-caps",
     position        :  "sticky",
-    top             :  "2vh"
+    top             :  "7vh"
   }
   let text = {
     gridArea     :  "main",
     placeSelf    :  "center center",
     justifyItems :  "center",
-    width        :  "auto"
+    padding: "2vh 0 0 5vw"
   }
   
   const history = useHistory()
