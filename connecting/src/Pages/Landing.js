@@ -5,9 +5,11 @@ import { useHistory }        from "react-router-dom"
 //Components
 import Button          from "../Components/Shared/Button"
 
+
 //ENHANCEMENT #17 make the page responsive - support for mobile devices
 //ENHANCEMENT add animations to landing text
 //STYLE the page definitely need some restyling
+
 
 const Landing = () => {
   const theme = useContext(ThemeContext)
@@ -38,7 +40,7 @@ const Landing = () => {
   
   const history = useHistory()
   const handleClick = () => {
-    history.push('/app')
+    history.push('App/Interface')
   }
   return (
     <main  style = {page}>

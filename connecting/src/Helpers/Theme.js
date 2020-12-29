@@ -1,4 +1,8 @@
 import React from "react"
+import Story1 from "../Media/Stories/Placeholders/storyContentPlaceholder.json"
+import Story2 from "../Media/Stories/Placeholders/storyContentPlaceholder2.json"
+import Story3 from "../Media/Stories/Placeholders/storyContentPlaceholder3.json"
+import Story4 from "../Media/Stories/Placeholders/storyContentPlaceholder4.json"
 
 
 //STYLE #14 replicate wireframe styling - it won't be definitive, but al least we'll be working on a fac-simile
@@ -28,6 +32,7 @@ export const theme = {
       //for icon-button tricks see https://moderncss.dev/icon-button-css-styling-guide/
     },
   },
+  app: {}
 }
 
 theme.landing = {
@@ -44,13 +49,13 @@ theme.landing = {
   },
 }
 
-theme.interface = {
+theme.app.interface = {
   ...theme.common.general,
   backgroundColor :  "#FCFCFC",
   color           :  "#4059AD",
 }
 
-theme.story = {
+theme.app.story = {
   page:{
     ...theme.common.general,
     backgroundColor :  "#f2f2f2",
@@ -58,24 +63,32 @@ theme.story = {
     color           :  "#3E4250"
   },
   ch1: {
-    backgroundColor :  "#A0D9CE",
-    borderColor     :  "#f2f2f2",
-    color           :  "#3E4250"
+    backgroundColor     :  "#A0D9CE",
+    borderColor         :  "#f2f2f2",
+    color               :  "#3E4250",
+    textBackgroundColor :  "",
+    story               :  Story1
   },
   ch2: {
-    backgroundColor :  "#F2D0E3",
-    borderColor     :  "#f2f2f2",
-    color           :  "#3E4250"
+    backgroundColor     :  "#F2D0E3",
+    borderColor         :  "#f2f2f2",
+    color               :  "#3E4250",
+    textBackgroundColor :  "",
+    story               :  Story2
   },
   ch3: {
-    backgroundColor :  "#9AAAD9",
-    borderColor     :  "#f2f2f2",
-    color           :  "#3E4250"
+    backgroundColor     :  "#9AAAD9",
+    borderColor         :  "#f2f2f2",
+    color               :  "#3E4250",
+    textBackgroundColor :  "",
+    story               :  Story3
   },
   ch4: {
-    backgroundColor :  "#FFCB77",
-    borderColor     :  "#f2f2f2",
-    color           :  "#3E4250"
+    backgroundColor     :  "#FFCB77",
+    borderColor         :  "#f2f2f2",
+    color               :  "#3E4250",
+    textBackgroundColor :  "",
+    story               :  Story4
   }
 }
 
