@@ -30,22 +30,22 @@ const Story = (props) => {
       case "#1":
         setCharacter(theme.ch1)
         setCardContent(props.story1)
-        setTimeZone(0)
+        setTimeZone(-5)
         break
       case "#2":
         setCharacter(theme.ch2)
         setCardContent(props.story2)
-        setTimeZone(+3)
+        setTimeZone(+7)
         break
       case "#3":
         setCharacter(theme.ch3)
         setCardContent(props.story3)
-        setTimeZone(+5)
+        setTimeZone(-5)
         break
       case "#4":
         setCharacter(theme.ch4)
         setCardContent(props.story4)
-        setTimeZone(-3)
+        setTimeZone(+7)
         break
 
       default:
