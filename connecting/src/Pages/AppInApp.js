@@ -15,6 +15,31 @@ const AppInApp = () => {
   const [Story2, setStory2]   = useState(theme.story.ch2.story[0])
   const [Story3, setStory3]   = useState(theme.story.ch3.story[0])
   const [Story4, setStory4]   = useState(theme.story.ch4.story[0])
+  let   time                  = `${Hours}:${Minutes}`
+
+  useEffect(() => {
+    theme.story.ch1.story.forEach((element) => {
+      if (element.id === time || element.timespan === Hours) {
+        setStory1(element)
+      }
+    })
+    theme.story.ch2.story.forEach((element) => {
+      if (element.id === time || element.timespan === Hours) {
+        setStory2(element)
+      }
+    })
+    theme.story.ch3.story.forEach((element) => {
+      if (element.id === time || element.timespan === Hours) {
+        setStory3(element)
+      }
+    })
+    theme.story.ch4.story.forEach((element) => {
+      if (element.id === time || element.timespan === Hours) {
+        setStory4(element)
+      }
+    })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(() => {
     setTimeout(() => {
@@ -57,7 +82,6 @@ const AppInApp = () => {
       })
     }, [target, time])
   }
-  let time = `${Hours}:${Minutes}`
   useUpdateContent(theme.story.ch1, time)
   useUpdateContent(theme.story.ch2, time)
   useUpdateContent(theme.story.ch3, time)

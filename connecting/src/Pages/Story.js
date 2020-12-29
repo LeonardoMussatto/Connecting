@@ -159,7 +159,7 @@ const Story = (props) => {
         </header>
         <main style={content.cards}>
           <Card
-            key                 = {CardContent.id}
+            key                 = {CardContent.text.text}
             text                = {CardContent.text.text}
             textPosition        = {CardContent.text.position}
             textBottom          = {CardContent.text.bottom}
