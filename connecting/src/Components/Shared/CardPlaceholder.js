@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 import PlaceholderText from "./PlaceholderText"
-import PlaceholderImage from './PlaceholderImage'
+import PlaceholderImage from "./PlaceholderImage"
 
 const CardPlaceholder = (props) => {
     let card = {

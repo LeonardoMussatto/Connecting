@@ -1,0 +1,83 @@
+Name:
+Age:
+Nationality: 
+Residence: Peru/Thailand
+Work: Junior Illustrator
+Hobby: Reading
+Relation: Creates illustrations used by the web developer
+
+//ideas
+ - listens to low-fi music (maybe from YouTube using an API)
+
+
+//MORNING
+ - wakes up (10.00 AM)
+    {//FIX [3d alarm clock]
+ - takes a shower and cuts his beard
+     //FIX [3d shower]
+     //FIX [plays BBC World News Podcast]
+     //FIX [3d beard cutting]
+     "Well, I might be getting awake...now there's only one thing missing..."}
+ - makes a coffee/tea
+    {//FIX [3d Mug]
+     "I really am not one of those people who talks a lot in the morning eh..."
+     "Actually I don't talk a lot...maybe this is why I love so much illustrations"
+
+//?? COMMUTING
+ Vehicles:
+ Travel time:
+ Surroundings:
+ Others:
+
+//WORK (11.00AM)
+ - starts working on characters
+    {//FIX [3d clock]
+     "Time to work on some characters for the library..."
+     //FIX [working on some characters - time-lapse]
+     ?? "it's the first time for me working on such a large project but I'm getting better as I keep working on it..."}
+     //FIX [working on some characters - time-lapse]
+
+ - LUNCH (3.00PM)
+    {//FIX [3d food]
+     "I always forget to eat...don't do this kids"}
+ 
+ - works on the character that's going to be used by the web dev.
+    {//FIX [working on some characters - time-lapse]
+     //FIX [3d Mug]
+     "I should really take some breaks more often"
+     //FIX [working on the character - time-lapse]
+     //FIX [3d Mug]
+     "These characters are not realistic at all, but I like their "softness"..."
+     "I tend to always design them happy. I should really implement more expressions in the library.}
+ 
+
+//COMMUTING
+ 
+
+//EVENING
+ - cooks
+    {//FIX [campfire]
+    "It's time to make some food"}
+
+ - reads before going to sleep
+    {//FIX [3d clock spinning, night coming]
+    "I lost track of time once more... let's save the work and get some rest"
+    //FIX [3d library upload]
+    //FIX [3d book]
+    "I love reading. Be it novels, poems or drama - even essays - I always get carried away in another dimension...which in the end is often not far from ours..."
+    //FIX [3d book]
+    //FIX [3d question mark]
+    "Sometimes people ask me what my favourite book is. Who knows me asks me what my favourite book _is at the moment_ : how am I supposed to choose an overall winner??"
+    "There are so many interesting books! And often they are so different it doesn't make any sense to compare them !!"
+    //FIX [3d book]
+    "At the moment two are the titles that come immediately to my mind:"
+    //FIX [Borges and Calvino]
+    ?? starts to overthink it and give other titles
+    "but don't give me to much time to answer or I will overthink it and in the end I won't give any answer at all ahahah"}
+    //FIX [3d book]
+ 
+ - goes to sleep
+    {"It's getting late. Tomorrow I'll get up late again I guess..."
+    ?? [3d moon]}
+
+// TODO [handleNight]

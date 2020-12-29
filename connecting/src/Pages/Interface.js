@@ -1,8 +1,11 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { ThemeContext } from "../Helpers/Theme"
+// import { AnimatePresence } from "framer-motion"
+
+import Card from "../Components/Shared/Card"
+import Content from "../Media/Content/Interface.json"
 
 //Placeholders
-import PlaceholderText from "../Components/Shared/PlaceholderText"
 import Ch              from "../Components/Shared/ChPlaceholder"
 
 
@@ -14,11 +17,19 @@ import Ch              from "../Components/Shared/ChPlaceholder"
 
 const Interface = () => {
   const theme = useContext(ThemeContext)
+  const [Index, setIndex] = useState(0)
+  
+  if (Index < Content.length - 1){
+    setTimeout(() => {
+      setIndex(Index + 1)
+  }, 2000);
+  }
+
   let page = {
     ...theme,
     padding             :  "0",
     height              :  "100vh",
-    gridTemplateRows    :  "minmax(min-content, 40vh) minmax(min-content, 90vh)",
+    gridTemplateRows    :  "minmax(min-content, 30vh) minmax(min-content, 70vh)",
     gridTemplateColumns :  "100vw",
     overflow: "auto"
   }
@@ -35,7 +46,10 @@ const Interface = () => {
   return (
     <div style={page}>
       <header style={header}>
-        <PlaceholderText marginTB={"2%"} marginLR={"30%"} length={"long"} />
+          <Card 
+            key={Content[Index].id}
+            text={Content[Index].text}
+          />
       </header>
       <main style={main}>
         <Ch

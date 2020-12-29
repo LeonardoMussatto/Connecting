@@ -1,0 +1,99 @@
+Name:
+Age: 25
+Nationality: 
+Residence: Peru/Thailand
+Work: Web Programmer
+Hobby: Electronics
+Relation: programs this webapp - fixes user-story bug, uses the illustration by the illustrator
+
+//ideas
+ - travels to Work through city
+ - makes a video call
+
+//MORNING
+ - wakes up (7.00 AM)
+    {// FIX [beeping alarm clock]
+     // FIX [inspiring programmer quote] 
+     "it's probably a bit cheese...yet it is inspiring...now let's get out of this bed"}
+ - mirror
+    {"You would be scared of my face in the mirror right now."
+     // FIX [sketch of the interactive mirror] 
+     "By the way, yesterday I finally finished my interactive mirror." 
+     "Maybe later I'll show you how i did it in detail. Here are some schematics for those who'd like to give it a try." 
+     //FIX [schematics]}
+ - cup of ...
+
+// TODO COMMUTING 1
+ Vehicles:
+ Travel time:
+ Surroundings:
+ Others:
+
+//WORK
+ Location:
+ Company: Startup
+ Workplace Characteristics: open, green, wood, white, well built, modern, warm but professional
+ 
+ - Arrives (9.00 AM)
+    {""Another day another challenge" eh...let's see what do I have to work on today. Perhaps the new the feature?"}
+
+ - New feature: user story missing
+    {// FIX [tasks] 
+    "Yup, today is a "new feature day" ahahah...let's go!! =) 
+     // FIX [working on the new feature - time-lapse]
+     // FIX [(while woking) chats with co-workers] [GitHub issues page (maybe)]
+     // FIX [(while woking) uses references] 
+     "What would I do without these references ?!? Thank you to whoever mantains them"}
+     // FIX [working on the new feature - time-lapse]
+
+ - LUNCH (1.00 PM)
+    {"Time for a break"
+     // FIX [food] 
+     "Some say it might be an illusion...well, give that developer a rise then because this ** is really good!! #cringejokesmaster //REM insert the correct food
+     // FIX [Matrix steak scene]}
+
+ - fixes bug: avatar not displayed (2.00 PM)
+    {Let's get back to work. I'd really like to release the new feature today...
+     // FIX [working on the new feature - time-lapse]
+     // FIX [Notification: (co-worker) found a bug] 
+     "(co-worker) always has a good eye, but this time was really evident. I forgot to add the user Icon!! oops ':\
+     "For this project we found a great 3d avatar's library, let's see if I can find some new character...
+     // FIX [Library]
+     This one seems to be the right one for our testing users
+     // FIX [Coding]
+     "That's all for today. The update should be released **"
+     "Time to head back home: there's a new project I want to work on!" //REM decide when to release the user story
+     
+// TODO COMMUTING 2 (5.00 PM)
+ Vehicles:
+ Travel time:
+ Surroundings:
+ Others:
+
+//EVENING
+ - electronics (6.00PM)
+    {"I love to read and sketch, but I always end up in the dark because I'm to lazy to get to the switch; or because I don't have a lamp with me. And you know how paranoid I am with creating the right ambient with lights. So I decided to build my own portable lamp.
+     //FIX [Lumio lamp]
+     "Ok, the design is not mine actually. Yet is such a great design I have to try and rebuild it! I want to use tunable white led because you know..."
+     //?? [lamp kelvin meme]
+     "Let's get to work"
+     //FIX [SketchUp]
+     "Now some schematics"
+     //FIX [Lamp schematics]
+     "Now I need some kind of interface...Perhaps capacitive sensors??"
+     //FIX [Research, Arduino Library, Schematics Update]
+     //FIX [Gru "in terms of materials..we got none" meme]
+     "Finished everything with my last project...but that's an issue for another day: let's eat something now"}
+ - cooks something (8.00PM)
+    {//FIX [food recipe]
+     "Today's recipe: **"}
+ - watches a film (9.00 PM)
+    {[What better way to finish the day than watching a movie ?!?" 
+     "Ok there are many, but I'm going for the movie tonight"
+     //FIX [sadly this is off limits...Become full member to watch movies with others users!!]}
+ - goes to sleep (11.30 PM)
+    {"What a great movie!"
+     ?? [meme about getting to sleep]
+     "Time to get some rest"}
+
+// TODO [handleNight]
