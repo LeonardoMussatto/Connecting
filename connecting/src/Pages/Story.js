@@ -13,17 +13,16 @@ import Card from "../Components/Shared/Card"
 
 
 //ENHANCEMENT #18 make the page responsive - add support for mobile devices
-//FIX STYLE center cards, avoid overflow and text under the header
 //STYLE #12 add side bar animation - selected icon
 //STYLE #12 add card exit animation
 //ENHANCEMENT STYLE create a more contemporary look
 
 
 const Story = (props) => {
-  const theme = useContext(ThemeContext)
-  const [character, setCharacter] = useState(theme.ch3)
-  const [CardContent, setCardContent] = useState(character.story[0]) //REM choose a def. state
-  const [timeZone, setTimeZone] = useState(0)
+  const theme                         = useContext(ThemeContext)
+  const [character, setCharacter]     = useState(theme.ch3)
+  const [CardContent, setCardContent] = useState(character.story[0])  //REM choose a def. state
+  const [timeZone, setTimeZone]       = useState(0)
 
   let location = useLocation()
   useEffect(() => {
@@ -52,7 +51,7 @@ const Story = (props) => {
       default:
         break
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.hash, props.minutes])
 
   let page = {
@@ -60,7 +59,7 @@ const Story = (props) => {
     padding             :  "0",
     display             :  "grid",
     gridTemplateColumns :  "minmax(80px, 14vw) auto",
-    gridTemplateRows: "100vh",
+    gridTemplateRows    :  "100vh",
     gridTemplateAreas   :  `
       "nav story"
     `
@@ -73,10 +72,10 @@ const Story = (props) => {
   }
   let content = {
     div: {
-      display: "grid",
+      display             :  "grid",
       gridTemplateRows    :  "4rem calc(100vh - 4rem)",
       gridTemplateColumns :  "1fr",
-      gridTemplateAreas   : `
+      gridTemplateAreas   :  `
         "header"
         "cards"
         `,
@@ -84,7 +83,7 @@ const Story = (props) => {
       borderRadius    :  "18px",
       backgroundColor :  character.backgroundColor,
       color           :  character.color,
-      overflow        :  "auto"
+      overflow        :  "clip"
     },
     header: {
       backgroundColor     :  character.backgroundColor,
@@ -95,7 +94,7 @@ const Story = (props) => {
       gridTemplateColumns :  "repeat(1fr)",
       gridAutoFlow        :  "column",
       position            :  "sticky",
-      top                 :  "2%",
+      top                 :  "6%",
       borderRadius        :  "18px",
       borderStyle         :  "solid",
       borderWidth         :  "4px",
@@ -104,9 +103,8 @@ const Story = (props) => {
     cards: {
       gridArea        :  "cards",
       display         :  "grid",
-      placeItems      :  "center start",
-      rowGap          :  "10vh",
-      padding         :  "0 5%",
+      placeItems      :  "center",
+      padding         :  "0 5% 5%",
     },
   }
   return (
@@ -153,18 +151,27 @@ const Story = (props) => {
         <header style={content.header}>
           <Location />
           <Weather />
-          <Time 
-            hours={props.hours}
-            minutes={props.minutes}
-            timeZone={timeZone}
+          <Time
+            hours    = {props.hours}
+            minutes  = {props.minutes}
+            timeZone = {timeZone}
           />
         </header>
         <main style={content.cards}>
           <Card
-            key={CardContent.id}
-            text={CardContent.text.text}
-            src={CardContent.media.src}
-            alt={CardContent.media.alt}
+            key                 = {CardContent.id}
+            text                = {CardContent.text.text}
+            textPosition        = {CardContent.text.position}
+            textBottom          = {CardContent.text.bottom}
+            textLeft            = {CardContent.text.left}
+            src                 = {CardContent.media.src}
+            alt                 = {CardContent.media.alt}
+            width               = {CardContent.media.width}
+            height              = {CardContent.media.height}
+            mediaPosition       = {CardContent.media.position}
+            mediaBottom         = {CardContent.media.bottom}
+            mediaLeft           = {CardContent.media.left}
+            textBackgroundColor = {character.textBackgroundColor}
           />
         </main>
       </div>

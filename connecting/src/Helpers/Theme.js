@@ -63,28 +63,32 @@ theme.app.story = {
     color           :  "#3E4250"
   },
   ch1: {
-    backgroundColor :  "#A0D9CE",
-    borderColor     :  "#f2f2f2",
-    color           :  "#3E4250",
-    story: Story1
+    backgroundColor     :  "#A0D9CE",
+    borderColor         :  "#f2f2f2",
+    color               :  "#3E4250",
+    textBackgroundColor :  "",
+    story               :  Story1
   },
   ch2: {
-    backgroundColor :  "#F2D0E3",
-    borderColor     :  "#f2f2f2",
-    color           :  "#3E4250",
-    story: Story2
+    backgroundColor     :  "#F2D0E3",
+    borderColor         :  "#f2f2f2",
+    color               :  "#3E4250",
+    textBackgroundColor :  "",
+    story               :  Story2
   },
   ch3: {
-    backgroundColor :  "#9AAAD9",
-    borderColor     :  "#f2f2f2",
-    color           :  "#3E4250",
-    story: Story3
+    backgroundColor     :  "#9AAAD9",
+    borderColor         :  "#f2f2f2",
+    color               :  "#3E4250",
+    textBackgroundColor :  "",
+    story               :  Story3
   },
   ch4: {
-    backgroundColor :  "#FFCB77",
-    borderColor     :  "#f2f2f2",
-    color           :  "#3E4250",
-    story: Story4
+    backgroundColor     :  "#FFCB77",
+    borderColor         :  "#f2f2f2",
+    color               :  "#3E4250",
+    textBackgroundColor :  "",
+    story               :  Story4
   }
 }
 

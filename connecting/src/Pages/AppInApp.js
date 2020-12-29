@@ -1,20 +1,20 @@
 import React, { useContext, useState, useEffect } from "react"
-import { ThemeContext } from "../Helpers/Theme"
+import { ThemeContext }  from "../Helpers/Theme"
 import { Switch, Route } from "react-router-dom"
 import Interface from "./Interface"
-import Story from "./Story"
-
-// TODO synch initial clock position with user's local time
-// TODO decide for a reasonable clock speed ~ experience's max duration
+import Story     from "./Story"
 
 const AppInApp = () => {
-  const theme = useContext(ThemeContext)
-  const [Minutes, setMinutes] = useState(0)
-  const [Hours, setHours] = useState(0)
-  const [Story1, setStory1] = useState(theme.story.ch1.story[0])
-  const [Story2, setStory2] = useState(theme.story.ch2.story[0])
-  const [Story3, setStory3] = useState(theme.story.ch3.story[0])
-  const [Story4, setStory4] = useState(theme.story.ch4.story[0])
+  const theme                 = useContext(ThemeContext)
+  let   d                     = new Date()
+  let   h                     = d.getUTCHours()
+  let   m                     = d.getUTCMinutes()
+  const [Hours, setHours]     = useState(h)
+  const [Minutes, setMinutes] = useState(m)
+  const [Story1, setStory1]   = useState(theme.story.ch1.story[0])
+  const [Story2, setStory2]   = useState(theme.story.ch2.story[0])
+  const [Story3, setStory3]   = useState(theme.story.ch3.story[0])
+  const [Story4, setStory4]   = useState(theme.story.ch4.story[0])
 
   useEffect(() => {
     setTimeout(() => {
@@ -24,7 +24,7 @@ const AppInApp = () => {
       } else {
         setMinutes(Minutes + 1)
       }
-      if (Hours === 24){
+      if (Hours === 24) {
         setHours(0)
       }
     }, 417) // 24h in 10min, as milliseconds
@@ -33,8 +33,7 @@ const AppInApp = () => {
   function useUpdateContent(target, time) {
     useEffect(() => {
       target.story.forEach((element) => {
-        //eslint-disable-next-line
-        if (element.id == time) {
+        if (element.id === time) {
           switch (target) {
             case theme.story.ch1:
               setStory1(element)
@@ -56,16 +55,13 @@ const AppInApp = () => {
           }
         }
       })
-      // return () => {
-      //   cleanup
-      // }
     }, [target, time])
   }
-
-  useUpdateContent(theme.story.ch1, Hours)
-  useUpdateContent(theme.story.ch2, Hours)
-  useUpdateContent(theme.story.ch3, Hours)
-  useUpdateContent(theme.story.ch4, Hours)
+  let time = `${Hours}:${Minutes}`
+  useUpdateContent(theme.story.ch1, time)
+  useUpdateContent(theme.story.ch2, time)
+  useUpdateContent(theme.story.ch3, time)
+  useUpdateContent(theme.story.ch4, time)
 
   return (
     <Switch>
@@ -77,12 +73,12 @@ const AppInApp = () => {
       <Route path={"/App/Story"}>
         <ThemeContext.Provider value={theme.story}>
           <Story
-            hours={Hours}
-            minutes={Minutes}
-            story1={Story1}
-            story2={Story2}
-            story3={Story3}
-            story4={Story4}
+            hours   = {Hours}
+            minutes = {Minutes}
+            story1  = {Story1}
+            story2  = {Story2}
+            story3  = {Story3}
+            story4  = {Story4}
           />
         </ThemeContext.Provider>
       </Route>

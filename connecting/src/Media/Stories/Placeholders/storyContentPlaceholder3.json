@@ -1,54 +1,54 @@
 [
-    {
-        "id": "0",
-        "text": {
-            "text": "[Placeholder 5] But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/1000x500/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
+  {
+    "id": "0",
+    "text": {
+      "text": "[Placeholder 5] But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth",
+      "position": ""
     },
-    {
-        "id": "5",
-        "text": {
-            "text": "[Placeholder 10] But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/1000x500/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-    "id": "20",
-        "text": {
-            "text": "[Placeholder 1] But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/1000x500/f2f2f2",
-            "alt": "placeholder image",
-            "position": "",
-            "size": ""
-        }
-    },
-    {
-        "id": "21",
-        "text": {
-            "text": "[Placeholder 2] But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain",
-            "position": ""
-        },
-        "media": {
-            "src": "https://fakeimg.pl/1000x500/f2f2f2",
-            "position": "placeholder image",
-            "size": "",
-            "alt": "placeholder image"
-        }
+    "media": {
+      "src": "https://fakeimg.pl/1000x500/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
     }
+  },
+  {
+    "id": ["1", "2", "3", "4", "5"],
+    "text": {
+      "text": "[Placeholder 10] But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/1000x500/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "20",
+    "text": {
+      "text": "[Placeholder 1] But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/1000x500/f2f2f2",
+      "alt": "placeholder image",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "21",
+    "text": {
+      "text": "[Placeholder 2] But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain",
+      "position": ""
+    },
+    "media": {
+      "src": "https://fakeimg.pl/1000x500/f2f2f2",
+      "position": "placeholder image",
+      "size": "",
+      "alt": "placeholder image"
+    }
+  }
 ]
