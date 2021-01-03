@@ -4,9 +4,11 @@ import { Link } from "react-router-dom"
 
 const ChPlaceholder = (props) => {
   let icon = {
+    display         :  "inline-block",
     width           :  props.width,
     position        :  props.position,
     top             :  props.top,
+    left            :  props.left,
     borderRadius    :  "100%",
     backgroundColor :  props.selected
   }

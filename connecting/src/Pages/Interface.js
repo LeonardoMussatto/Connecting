@@ -74,7 +74,7 @@ const Interface = () => {
           position = {"relative"}
           top      = {"-10vh"}
           width    = {"25vh"}
-          link     = {"/App/Story#4"}
+          link     = {"/App/User"}
         />
       </main>
     </div>

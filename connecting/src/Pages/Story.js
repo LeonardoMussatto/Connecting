@@ -20,11 +20,11 @@ import Card from "../Components/Shared/Card"
 
 const Story = (props) => {
   const theme                         = useContext(ThemeContext)
+  let   location                      = useLocation()
   const [character, setCharacter]     = useState(theme.ch3)
   const [CardContent, setCardContent] = useState(character.story[0])  //REM choose a def. state
   const [timeZone, setTimeZone]       = useState(0)
 
-  let location = useLocation()
   useEffect(() => {
     switch (location.hash) {
       case "#1":
