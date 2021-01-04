@@ -1,51 +1,61 @@
 import React, { useContext, useState, useEffect, useRef } from "react"
 import { ThemeContext }  from "../Helpers/Theme"
 import { Switch, Route, useLocation } from "react-router-dom"
+import Content   from "../Media/Content/Interface.json"
 import Interface from "./Interface"
 import Story     from "./Story"
 import User from "./User.js"
 
 const AppInApp = () => {
-  const theme                             = useContext(ThemeContext)
-  let   location                          = useLocation()
-  let   d                                 = new Date()
-  let   h                                 = d.getUTCHours()
-  let   m                                 = d.getUTCMinutes()
-  let   z                                 = d.getTimezoneOffset()/60
-  const [Hours, setHours]                 = useState(h)
-  const [Minutes, setMinutes]             = useState(m)
-  const [Story1, setStory1]               = useState(theme.story.ch1.story[0])
-  const [Story2, setStory2]               = useState(theme.story.ch2.story[0])
-  const [Story3, setStory3]               = useState(theme.story.ch3.story[0])
-  const [Story4, setStory4]               = useState(theme.story.ch4.story[0])
-  let   time                              = `${Hours}:${Minutes}`
-  let   userTime                          = `${Hours - z}:${Minutes}`
-  let   ch1Name                           = "ch1"
-  let   ch2Name                           = "ch2"
+  const theme                 = useContext(ThemeContext)
+  let   location              = useLocation()
+  let   d                     = new Date()
+  let   h                     = d.getUTCHours()
+  let   m                     = d.getUTCMinutes()
+  let   z                     = d.getTimezoneOffset()/60
+  const [Hours, setHours]     = useState(h)
+  const [Minutes, setMinutes] = useState(m)
+  const [Story1, setStory1]   = useState(theme.story.ch1.storyContent[0])
+  const [Story2, setStory2]   = useState(theme.story.ch2.storyContent[0])
+  const [Story3, setStory3]   = useState(theme.story.ch3.storyContent[0])
+  const [Story4, setStory4]   = useState(theme.story.ch4.storyContent[0])
+  const [Index, setIndex]     = useState(0)
+  let   time                  = `${Hours}:${Minutes}`
+  let   userTime              = `${Hours - z}:${Minutes}`
+  let   ch1Name               = "ch1"
+  let   ch2Name               = "ch2"
   const [HistoryRecord, setHistoryRecord] = useState([{id: userTime, text: "The user started the demo"}])
 
   useEffect(() => {
-    theme.story.ch1.story.forEach((element) => {
+    if (Index < Content.length - 1) {
+      setTimeout(() => {
+        setIndex(Index + 1)
+      }, 4000)
+    }
+  })
+
+  useEffect(() => {
+    theme.story.ch1.storyContent.forEach((element) => {
       if (element.id === time || element.timespan === Hours) {
         setStory1(element)
       }
     })
-    theme.story.ch2.story.forEach((element) => {
+    theme.story.ch2.storyContent.forEach((element) => {
       if (element.id === time || element.timespan === Hours) {
         setStory2(element)
       }
     })
-    theme.story.ch3.story.forEach((element) => {
+    theme.story.ch3.storyContent.forEach((element) => {
       if (element.id === time || element.timespan === Hours) {
         setStory3(element)
       }
     })
-    theme.story.ch4.story.forEach((element) => {
+    theme.story.ch4.storyContent.forEach((element) => {
       if (element.id === time || element.timespan === Hours) {
         setStory4(element)
       }
     })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -64,7 +74,7 @@ const AppInApp = () => {
 
   function useUpdateContent(target, time) {
     useEffect(() => {
-      target.story.forEach((element) => {
+      target.storyContent.forEach((element) => {
         if (element.id === time) {
           switch (target) {
             case theme.story.ch1:
@@ -155,14 +165,14 @@ const AppInApp = () => {
   ])
 
   return (
-    <Switch>
-      <Route path={"/App/Interface"}>
-        <ThemeContext.Provider value={theme.interface}>
-          <Interface />
-        </ThemeContext.Provider>
-      </Route>
-      <Route path={"/App/Story"}>
-        <ThemeContext.Provider value={theme.story}>
+    <ThemeContext.Provider value={theme}>
+      <Switch>
+        <Route path={"/App/Interface"}>
+          <Interface 
+            content = {Content[Index]}
+          />
+        </Route>
+        <Route path={"/App/Story"}>
           <Story
             hours   = {Hours}
             minutes = {Minutes}
@@ -171,14 +181,12 @@ const AppInApp = () => {
             story3  = {Story3}
             story4  = {Story4}
           />
-        </ThemeContext.Provider>
-      </Route>
-      <Route path={"/App/User"}>
-        <ThemeContext.Provider value={theme.story.page}>
+        </Route>
+        <Route path={"/App/User"}>
           <User history={HistoryRecord} />
-        </ThemeContext.Provider>
-      </Route>
-    </Switch>
+        </Route>
+      </Switch>
+    </ThemeContext.Provider>
   )
 }
 

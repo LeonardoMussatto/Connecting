@@ -5,7 +5,9 @@ const Button = (props) => {
   const theme = useContext(ThemeContext)
   let style = {
     //Text
-    fontFamily :  "inherit",
+    fontFamily :  theme.button.fontFamily,
+    fontSize   :  theme.button.fontSize,
+    fontWeight :  theme.button.fontWeight,
     lineHeight :  "1.1",
     textAlign  :  "center",
 

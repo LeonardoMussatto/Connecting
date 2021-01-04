@@ -1,18 +1,21 @@
 import React from "react"
-import Story1 from "../Media/Stories/Story1.json"
-import Story2 from "../Media/Stories/Story2.json"
-import Story3 from "../Media/Stories/Story1.2.json"
-import Story4 from "../Media/Stories/Story2.2.json"
+// import Story1 from "../Media/Stories/Story1.json"
+// import Story2 from "../Media/Stories/Story2.json"
+// import Story3 from "../Media/Stories/Story1.2.json"
+// import Story4 from "../Media/Stories/Story2.2.json"
+import Story1 from "../Media/Stories/Placeholders/storyContentPlaceholder3.json"
+import Story2 from "../Media/Stories/Placeholders/storyContentPlaceholder2.json"
+import Story3 from "../Media/Stories/Placeholders/storyContentPlaceholder3.json"
+import Story4 from "../Media/Stories/Placeholders/storyContentPlaceholder4.json"
 
 
-//STYLE #14 replicate wireframe styling - it won't be definitive, but al least we'll be working on a fac-simile
 //REM it might be useful to use the common as a "fail-safe theme"
 
 
 export const theme = {
   common: {
     general: {
-      fontFamily          :  "Victor Mono",
+      fontFamily          :  "sans-serif",
       fontSize            :  "1em",
       fontWeight          :  "400",
       boxSizing           :  "border-box",
@@ -31,64 +34,102 @@ export const theme = {
 
       //for icon-button tricks see https://moderncss.dev/icon-button-css-styling-guide/
     },
+    text:{
+      fontFamily :  "Quicksand, sans-serif",
+      fontWeight :  "400",
+      lineHeight :  "1.5",
+      fontSize   :  "100%"
+    },
+    header:{
+      fontFamily: "Montserrat, sans-serif",
+      fontWeight: "200"
+    },
   },
-  app: {}
 }
 
 theme.landing = {
   page: {
     ...theme.common.general,
-    backgroundColor :  "#5234BF",
-    color           :  "#F2F2F2"
+    backgroundColor :  "#4D426D",
+    color           :  "#F5FFFE",
   },
   button: {
     ...theme.common.button,
-    backgroundColor :  "#9AAAD9",
-    color           :  "#5234BF",
+    ...theme.common.header,
+    fontWeight      :  "400",
+    backgroundColor :  "#FB925B",
+    color           :  "#3B3156",
     borderRadius    :  "8px",
   },
+  title:{
+    ...theme.common.header,
+    fontSize: "2em"
+  },
+  text:{
+    ...theme.common.text,
+    backgroundColor: "#3B3156"
+  }
 }
 
-theme.app.interface = {
-  ...theme.common.general,
-  backgroundColor :  "#FCFCFC",
-  color           :  "#4059AD",
+theme.app = {
+  page: {
+    ...theme.common.general,
+    backgroundColor     :  "#3B3156",
+    borderColor         :  "#F5FFFE",                   //each story will probably have a different border color, maybe a gradient - page background is not bad though
+    color               :  "#3E4250",
+    padding             :  "0",
+    display             :  "grid",
+    gridTemplateColumns :  "minmax(80px, 20vw) auto",
+    gridTemplateRows    :  "10vh 90vh",
+    gridTemplateAreas   :  `
+      "logo logo"
+      "nav story"
+    `
+  },
+  nav: {
+    padding    :  "30% 5%",
+    gridArea   :  "nav",
+    display    :  "grid",
+    placeItems :  "center center"
+  },
+  text: {
+    ...theme.common.text,
+    lineHeight: "2em",
+    color :  "#F5FFFE",
+    textBackgroundColor :  "#4D426D" // #4059AD
+  }
 }
 
 theme.app.story = {
-  page:{
-    ...theme.common.general,
-    backgroundColor :  "#f2f2f2",
-    borderColor     :  "#f2f2f2", //each story will probably have a different border color, maybe a gradient - page background is not bad though
-    color           :  "#3E4250"
-  },
   ch1: {
-    backgroundColor     :  "#A0D9CE",
-    borderColor         :  "#f2f2f2",
-    color               :  "#3E4250",
-    textBackgroundColor :  "",
-    story               :  Story1
+    text: {...theme.common.text},
+    backgroundColor     :  "#4D426D",
+    borderColor         :  "#F5FFFE",
+    color               :  "#1C1B3A",
+    textBackgroundColor :  "#01D2CD",
+    storyContent        :  Story1
   },
   ch2: {
-    backgroundColor     :  "#F2D0E3",
-    borderColor         :  "#f2f2f2",
-    color               :  "#3E4250",
-    textBackgroundColor :  "",
-    story               :  Story2
+    text: {...theme.common.text},
+    backgroundColor     :  "#4D426D",
+    borderColor         :  "#F5FFFE",
+    color               :  "#1C1B3A",
+    textBackgroundColor :  "#F98063",
+    storyContent        :  Story2
   },
   ch3: {
     backgroundColor     :  "#9AAAD9",
-    borderColor         :  "#f2f2f2",
-    color               :  "#3E4250",
+    borderColor         :  "#F5FFFE",
+    color               :  "#1C1B3A",
     textBackgroundColor :  "",
-    story               :  Story3
+    storyContent        :  Story3
   },
   ch4: {
     backgroundColor     :  "#FFCB77",
-    borderColor         :  "#f2f2f2",
-    color               :  "#3E4250",
+    borderColor         :  "#F5FFFE",
+    color               :  "#1C1B3A",
     textBackgroundColor :  "",
-    story               :  Story4
+    storyContent        :  Story4
   }
 }
 
