@@ -20,30 +20,30 @@ import Card from "../Components/Shared/Card"
 
 const Story = (props) => {
   const theme                         = useContext(ThemeContext)
-  const [character, setCharacter]     = useState(theme.ch3)
-  const [CardContent, setCardContent] = useState(character.story[0])  //REM choose a def. state
+  const [character, setCharacter]     = useState(theme.story.ch3)
+  const [CardContent, setCardContent] = useState(character.storyContent[0])  //REM choose a def. state
   const [timeZone, setTimeZone]       = useState(0)
 
   let location = useLocation()
   useEffect(() => {
     switch (location.hash) {
       case "#1":
-        setCharacter(theme.ch1)
+        setCharacter(theme.story.ch1)
         setCardContent(props.story1)
         setTimeZone(-5)
         break
       case "#2":
-        setCharacter(theme.ch2)
+        setCharacter(theme.story.ch2)
         setCardContent(props.story2)
         setTimeZone(+7)
         break
       case "#3":
-        setCharacter(theme.ch3)
+        setCharacter(theme.story.ch3)
         setCardContent(props.story3)
         setTimeZone(-5)
         break
       case "#4":
-        setCharacter(theme.ch4)
+        setCharacter(theme.story.ch4)
         setCardContent(props.story4)
         setTimeZone(+7)
         break
@@ -55,31 +55,22 @@ const Story = (props) => {
   }, [location.hash, props.minutes])
 
   let page = {
-    ...theme.page,
-    padding             :  "0",
-    display             :  "grid",
-    gridTemplateColumns :  "minmax(80px, 14vw) auto",
-    gridTemplateRows    :  "100vh",
-    gridTemplateAreas   :  `
-      "nav story"
-    `
+    ...theme.page
   }
   let nav = {
-    padding    :  "10% 5%",
-    gridArea   :  "nav",
-    display    :  "grid",
-    placeItems :  "center center"
+    ...theme.nav
   }
   let content = {
     div: {
+      gridArea            :  "story",
       display             :  "grid",
-      gridTemplateRows    :  "4rem calc(100vh - 4rem)",
+      gridTemplateRows    :  "6rem calc(100% - 6rem)",
       gridTemplateColumns :  "1fr",
       gridTemplateAreas   :  `
         "header"
         "cards"
         `,
-      margin          :  "2%",
+      margin          :  "3% 3% 3% 0",
       borderRadius    :  "18px",
       backgroundColor :  character.backgroundColor,
       color           :  character.color,
@@ -87,24 +78,27 @@ const Story = (props) => {
     },
     header: {
       backgroundColor     :  character.backgroundColor,
-      margin              :  "0 2%",
+      margin              :  "2% 2% 0",
       gridArea            :  "header",
       display             :  "grid",
-      placeItems          :  "center center",
-      gridTemplateColumns :  "repeat(1fr)",
+      placeItems          :  "center",
+      gap                 :  "1%",
+      gridTemplateColumns :  "1fr 1fr 1fr",
       gridAutoFlow        :  "column",
       position            :  "sticky",
-      top                 :  "6%",
+      top                 :  "7%",
       borderRadius        :  "18px",
       borderStyle         :  "solid",
       borderWidth         :  "4px",
       borderColor         :  character.borderColor,
+      ...theme.text,
     },
     cards: {
       gridArea        :  "cards",
       display         :  "grid",
-      placeItems      :  "center",
-      padding         :  "0 5% 5%",
+      placeItems      :  "center center",
+      padding         :  "3%",
+      ...character.text
     },
   }
   return (
@@ -115,7 +109,7 @@ const Story = (props) => {
           link={location.hash === "#1" ? "/App/Interface" : "/App/Story#1"}
           selected={
             location.hash === "#1"
-              ? character.backgroundColor
+              ? character.textBackgroundColor
               : theme.page.backgroundColor
           }
         />
@@ -124,11 +118,11 @@ const Story = (props) => {
           link={location.hash === "#2" ? "/App/Interface" : "/App/Story#2"}
           selected={
             location.hash === "#2"
-              ? character.backgroundColor
+              ? character.textBackgroundColor
               : theme.page.backgroundColor
           }
         />
-        <Ch
+        {/* <Ch
           width={"60%"}
           link={location.hash === "#3" ? "/App/Interface" : "/App/Story#3"}
           selected={
@@ -136,16 +130,7 @@ const Story = (props) => {
               ? character.backgroundColor
               : theme.page.backgroundColor
           }
-        />
-        <Ch
-          width={"60%"}
-          link={location.hash === "#4" ? "/App/Interface" : "/App/Story#4"}
-          selected={
-            location.hash === "#4"
-              ? character.backgroundColor
-              : theme.page.backgroundColor
-          }
-        />
+        /> */}
       </nav>
       <div style={content.div}>
         <header style={content.header}>
@@ -162,15 +147,12 @@ const Story = (props) => {
             key                 = {CardContent.text.text}
             text                = {CardContent.text.text}
             textPosition        = {CardContent.text.position}
-            textBottom          = {CardContent.text.bottom}
-            textLeft            = {CardContent.text.left}
+            padding             = {CardContent.text.padding}
             src                 = {CardContent.media.src}
             alt                 = {CardContent.media.alt}
             width               = {CardContent.media.width}
             height              = {CardContent.media.height}
             mediaPosition       = {CardContent.media.position}
-            mediaBottom         = {CardContent.media.bottom}
-            mediaLeft           = {CardContent.media.left}
             textBackgroundColor = {character.textBackgroundColor}
           />
         </main>
