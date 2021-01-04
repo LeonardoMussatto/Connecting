@@ -1,15 +1,18 @@
-import React, { useContext, useState, useEffect } from "react"
+import React, { useContext, useState, useEffect, useRef } from "react"
 import { ThemeContext }  from "../Helpers/Theme"
-import { Switch, Route } from "react-router-dom"
+import { Switch, Route, useLocation } from "react-router-dom"
 import Content   from "../Media/Content/Interface.json"
 import Interface from "./Interface"
 import Story     from "./Story"
+import User from "./User.js"
 
 const AppInApp = () => {
   const theme                 = useContext(ThemeContext)
+  let   location              = useLocation()
   let   d                     = new Date()
   let   h                     = d.getUTCHours()
   let   m                     = d.getUTCMinutes()
+  let   z                     = d.getTimezoneOffset()/60
   const [Hours, setHours]     = useState(h)
   const [Minutes, setMinutes] = useState(m)
   const [Story1, setStory1]   = useState(theme.story.ch1.storyContent[0])
@@ -18,6 +21,10 @@ const AppInApp = () => {
   const [Story4, setStory4]   = useState(theme.story.ch4.storyContent[0])
   const [Index, setIndex]     = useState(0)
   let   time                  = `${Hours}:${Minutes}`
+  let   userTime              = `${Hours - z}:${Minutes}`
+  let   ch1Name               = "ch1"
+  let   ch2Name               = "ch2"
+  const [HistoryRecord, setHistoryRecord] = useState([{id: userTime, text: "The user started the demo"}])
 
   useEffect(() => {
     if (Index < Content.length - 1) {
@@ -97,6 +104,66 @@ const AppInApp = () => {
   useUpdateContent(theme.story.ch3, time)
   useUpdateContent(theme.story.ch4, time)
 
+  function usePrevious(value) {
+    const ref = useRef();
+    useEffect(() => {
+      ref.current = value;
+    });
+    return ref.current;
+  }
+
+  let prevStory1 = usePrevious(Story1)
+  let prevStory2 = usePrevious(Story2)
+  let prevLocation = usePrevious(location.pathname)
+  
+  useEffect(() => {
+    if (location.pathname === "/App/Story") {
+      switch (location.hash) {
+        case "#1":
+          if (prevLocation !== location.pathname || prevStory1 !== Story1) {
+            let newHistory = [
+              ...HistoryRecord,
+              {
+                id: userTime,
+                text: `The user learned that ${ch1Name} was ${Story1.media.alt}`,
+              },
+            ]
+            setHistoryRecord(newHistory)
+          }
+          break
+        case "#2":
+          if (prevLocation !== location.pathname || prevStory2 !== Story2) {
+            let newHistory = [
+              ...HistoryRecord,
+              {
+                id: userTime,
+                text: `The user learned that ${ch2Name} was ${Story2.media.alt}`,
+              },
+            ]
+            setHistoryRecord(newHistory)
+          }
+          break
+
+        default:
+          break
+      }
+    }
+  }, [
+    HistoryRecord,
+    Story1,
+    Story1.media.alt,
+    Story2,
+    Story2.media.alt,
+    ch1Name,
+    ch2Name,
+    location.hash,
+    location.pathname,
+    prevLocation,
+    prevStory1,
+    prevStory2,
+    userTime,
+  ])
+
   return (
     <ThemeContext.Provider value={theme}>
       <Switch>
@@ -114,6 +181,9 @@ const AppInApp = () => {
             story3  = {Story3}
             story4  = {Story4}
           />
+        </Route>
+        <Route path={"/App/User"}>
+          <User history={HistoryRecord} />
         </Route>
       </Switch>
     </ThemeContext.Provider>

@@ -40,7 +40,7 @@ const Interface = (props) => {
         />
         {/* <Ch
           width = {"60%"}
-          link  = {"/App/Story#3"}
+          link  = {"/App/User"}
         /> */}
       </nav>
       <main style={main}>
