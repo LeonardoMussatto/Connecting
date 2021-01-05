@@ -1,5 +1,4 @@
 import React from "react"
-import { ReactComponent as Ch } from "../../Media/Icons/user.svg"
 import { Link } from "react-router-dom"
 
 const ChPlaceholder = (props) => {
@@ -10,16 +9,15 @@ const ChPlaceholder = (props) => {
     top             :  props.top,
     left            :  props.left,
     borderRadius    :  "100%",
-    backgroundColor :  props.selected
+    backgroundColor :  props.selected,
+    borderStyle     :  props.isChanged,
+    borderWidth     :  "4px",
+    borderColor     :  props.borderColor
   }
-  // let style={
-  //   props.isChanged
-  //     ? { backgroundColor: "#4059AD" }
-  //     : { backgroundColor: "" }
-  // }
+
   return (
     <Link to={props.link} style={icon}>
-      <Ch />
+      <img src={props.src} alt={"avatar"} />
     </Link>
   )
 }

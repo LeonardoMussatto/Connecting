@@ -23,10 +23,9 @@ const AppInApp = () => {
   let   userTime              = `${Hours - z}:${Minutes}`
   let   ch1Name               = "ch1"
   let   ch2Name               = "ch2"
-
-  const [Story1IsChanged, setStory1IsChanged]   = useState(false)
-  const [Story2IsChanged, setStory2IsChanged]   = useState(false)
-  const [HistoryIsChanged, setHistoryIsChanged] = useState(true)
+  const [Story1IsChanged, setStory1IsChanged]   = useState("transparent") // false = transparent; true = solid
+  const [Story2IsChanged, setStory2IsChanged]   = useState("transparent")
+  const [HistoryIsChanged, setHistoryIsChanged] = useState("solid")
   const [UserIsVisible, setUserIsVisible]       = useState(false)
   const [HistoryRecord, setHistoryRecord]       = useState([{id: userTime, text: "The user started the demo", media: { src: "https://fakeimg.pl/800x500/f2f2f2", alt: "placeholder image" }}])
 
@@ -49,8 +48,7 @@ const AppInApp = () => {
         setStory2(element)
       }
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  })
 
   useEffect(() => {
     setTimeout(() => {
@@ -73,12 +71,12 @@ const AppInApp = () => {
           switch (target) {
             case theme.story.ch1:
               setStory1(element)
-              setStory1IsChanged(true)
+              setStory1IsChanged("solid")
               break
 
             case theme.story.ch2:
               setStory2(element)
-              setStory2IsChanged(true)
+              setStory2IsChanged("solid")
               break
 
             default:
@@ -112,7 +110,7 @@ const AppInApp = () => {
               ...HistoryRecord,
               {
                 id: userTime,
-                text: `The user learned that ${ch1Name} was ${Story1.media.message}`,
+                text: `The user learned that ${ch1Name} ${Story1.media.message}`,
                 media: {
                   src: Story1.media.src,
                   alt: Story1.media.alt,
@@ -120,10 +118,7 @@ const AppInApp = () => {
               },
             ]
             setHistoryRecord(newHistory)
-            setHistoryIsChanged(true)
-          }
-          if (Story1IsChanged) {
-            setStory1IsChanged(false)
+            setHistoryIsChanged("solid")
           }
           break
         case "#2":
@@ -132,7 +127,7 @@ const AppInApp = () => {
               ...HistoryRecord,
               {
                 id: userTime,
-                text: `The user learned that ${ch2Name} was ${Story2.media.message}`,
+                text: `The user learned that ${ch2Name} ${Story2.media.message}`,
                 media: {
                   src: Story2.media.src,
                   alt: Story2.media.alt,
@@ -140,10 +135,7 @@ const AppInApp = () => {
               },
             ]
             setHistoryRecord(newHistory)
-            setHistoryIsChanged(true)
-          }
-          if (Story2IsChanged) {
-            setStory2IsChanged(false)
+            setHistoryIsChanged("solid")
           }
           break
 
@@ -169,13 +161,39 @@ const AppInApp = () => {
     userTime,
   ])
 
+  useEffect(()=>{
+    if (location.pathname === "/App/Story"){
+    switch (location.hash) {
+        case "#1":
+          setStory1IsChanged("transparent")
+          break;
+          
+          case "#2":
+            setStory2IsChanged("transparent")
+         break;
+      
+        default:
+          break;
+      }
+    } else if (location.pathname === "/App/User"){
+      setHistoryIsChanged("transparent")
+    }
+  }, [location.hash, location.pathname])
+
+  useEffect(() => {
+    time === "7:0" && setUserIsVisible(true) 
+  }, [time])
+
   return (
     <ThemeContext.Provider value={theme}>
       <Switch>
         <Route path={"/App/Interface"}>
           <Interface 
-            userIsVisible = {UserIsVisible}
-            content       = {Content[Index]}
+            content          = {Content[Index]}
+            story1IsChanged  = {Story1IsChanged}
+            story2IsChanged  = {Story2IsChanged}
+            historyIsChanged = {HistoryIsChanged}
+            userIsVisible    = {UserIsVisible}
           />
         </Route>
         <Route path={"/App/Story"}>

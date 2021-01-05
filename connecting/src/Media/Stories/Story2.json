@@ -1,15 +1,15 @@
-
 [
   {
-    "id": "2:0",
+    "id": "2:5",
     "text": {
       "text": "",
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "Alarm clock ringing",
-      "message": "woke up",
+      "message": "heard the alarm",
       "position": "",
       "size": ""
     }
@@ -17,55 +17,47 @@
   {
     "id": "2:10",
     "text": {
-      "text": "",
-      "position": ""
+      "text": "yaaaaawn",
+      "position": "",
+      "padding": "3%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "Taking a shower",
-      "message": "took a shower",
-      "position": "",
-      "size": ""
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-41.png",
+      "alt": "window",
+      "message": "woke up",
+      "position": "right",
+      "width": "60%"
     }
   },
   {
     "id": "2:20",
     "text": {
       "text": "",
-      "position": ""
+      "position": "",
+      "padding": ""
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "podcast",
-      "message": "stated listening to a podcast",
-      "position": "",
-      "size": ""
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-41.png",
+      "alt": "slippers",
+      "message": "went to the kitchen",
+      "position": "right",
+      "width": "60%"
     }
   },
   {
     "id": "2:30",
+    "timespan": "2",
     "text": {
-      "text": "I really am not one of those people who talks a lot in the morning...",
+      "text": "I really am not one of those people who talks a lot in the morning... Actually I don't talk a lot...maybe this is why I love so much illustrations",
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
-      "message": "doesn't talk much in the morning",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "2:32",
-    "text": {
-      "text": "Actually I don't talk a lot...maybe this is why I love so much illustrations",
-      "position": ""
-    },
-    "media": {
-      "src": "",
-      "alt": "",
-      "message": "loves to create illustration more than talking",
+      "message": "doesn't talk much in the morning and loves to create illustration",
       "position": "",
       "size": ""
     }
@@ -74,37 +66,44 @@
     "id": "2:40",
     "text": {
       "text": "Time to work on some characters for the library",
-      "position": ""
+      "position": "end",
+      "padding": "3%",
+      "width": "21vw"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-36.png",
+      "alt": "man watching the clock",
       "message": "was about to start working on the 3d icons library",
-      "position": "",
-      "size": ""
+      "position": "center",
+      "width": "50%"
     }
   },
   {
-    "id": "2:45",
+    "id": "3:5",
     "text": {
       "text": "I definitely need a cup of tea before starting",
-      "position": ""
+      "position": "",
+      "padding": "3%"
     },
     "media": {
-      "src": "",
-      "alt": "",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/tea_S_1k.gif",
+      "alt": "cup of tea",
       "message": "decided to make a cup of tea",
-      "position": "",
-      "size": ""
+      "position": "right",
+      "width": "60%"
     }
   },
   {
-    "id": "3:0",
+    "id": "3:15",
+    "timespan": "3",
     "text": {
       "text": "",
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "",
       "alt": "Working on 3d illustrations",
       "message": "was working on illustrations",
@@ -116,14 +115,16 @@
     "id": "6:0",
     "text": {
       "text": "I always forget to eat...don't do this kids",
-      "position": ""
+      "position": "",
+      "padding": "3%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-279.png",
+      "alt": "burger",
       "message": "ate lunch late, as usual",
-      "position": "",
-      "size": ""
+      "position": "right",
+      "width": "70%"
     }
   },
   {
@@ -133,6 +134,7 @@
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "working on more 3d icons",
       "message": "was working on illustrations",
@@ -141,26 +143,30 @@
     }
   },
   {
-    "id": "8:0",
+    "id": "8:5",
     "text": {
       "text": "I should really take some breaks more often",
-      "position": ""
+      "position": "start",
+      "padding": "2%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-134.png",
       "alt": "break",
       "message": "took a break",
-      "position": "",
-      "size": ""
+      "position": "center",
+      "height": "60%"
     }
   },
   {
     "id": "8:15",
+    "timespan": "8",
     "text": {
       "text": "",
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "back to work",
       "message": "started working again",
@@ -171,24 +177,43 @@
   {
     "id": "9:0",
     "text": {
-      "text": "",
-      "position": ""
+      "text": "I need some coffee",
+      "position": "",
+      "padding": "5%"
     },
     "media": {
-      "src": "",
-      "alt": "break",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/Mug_Shadows.png",
+      "alt": "mug",
       "message": "took another break",
-      "position": "",
-      "size": ""
+      "position": "right",
+      "width": "90%"
     }
   },
   {
     "id": "9:15",
+    "timespan": "9",
     "text": {
       "text": "",
       "position": ""
     },
     "media": {
+      "isImg": "true",
+      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "alt": "back to work",
+      "message": "kept on working",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "10:0",
+    "text": {
+      "text": "",
+      "position": ""
+    },
+    "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "back to work",
       "message": "kept on working",
@@ -203,8 +228,9 @@
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "alt": "characters",
       "message": "likes to design soft characters",
       "position": "",
       "size": ""
@@ -213,29 +239,33 @@
   {
     "id": "11:10",
     "text": {
-      "text": "I tend to always design them happy. I should really implement more expressions in the library.",
-      "position": ""
+      "text": "I tend to always design them happy. I should really implement more expressions in the library... still I like them happy",
+      "position": "start",
+      "padding": "3%"
     },
     "media": {
-      "src": "",
-      "alt": "",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/Avatars/Man_Eyebrows_MCU.png",
+      "alt": "happy face",
       "message": "often designs happy characters",
-      "position": "",
-      "size": ""
+      "position": "center",
+      "width": "25%"
     }
   },
   {
     "id": "11:30",
     "text": {
-      "text": "It's time to make some food",
-      "position": ""
+      "text": "It's time to cook some food",
+      "position": "",
+      "padding": "5%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/Firepit.png",
+      "alt": "campfire",
       "message": "started cooking dinner",
-      "position": "",
-      "size": ""
+      "position": "right",
+      "width": "90%"
     }
   },
   {
@@ -245,6 +275,7 @@
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
       "message": "ate dinner",
@@ -253,12 +284,30 @@
     }
   },
   {
-    "id": "13:0",
+    "id": "12:0",
+    "timespan": "13",
     "text": {
       "text": "I want to work on today's characters a bit more",
       "position": ""
     },
     "media": {
+      "isImg": "true",
+      "src": "",
+      "alt": "decided to work again on the characters",
+      "message": "",
+      "position": "",
+      "size": ""
+    }
+  },
+  {
+    "id": "13:0",
+    "timespan": "14",
+    "text": {
+      "text": "I want to work on today's characters a bit more",
+      "position": ""
+    },
+    "media": {
+      "isImg": "true",
       "src": "",
       "alt": "decided to work again on the characters",
       "message": "",
@@ -270,28 +319,32 @@
     "id": "15:30",
     "text": {
       "text": "I lost track of time once more... let's save the work and get some rest",
-      "position": ""
+      "position": "end",
+      "padding": "1%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-design.png",
+      "alt": "man looking at the clock while drawing on a tablet",
       "message": "lost track of time and decided stop working for today",
-      "position": "",
-      "size": ""
+      "position": "center",
+      "width": "60%"
     }
   },
   {
-    "id": "16:15",
+    "id": "16:00",
     "text": {
       "text": "I love reading. Be it novels, poems or drama - even essays - I always get carried away in another dimension...which in the end is often not far from ours...",
-      "position": ""
+      "position": "end",
+      "padding": "1%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-109.png",
       "alt": "placeholder image",
       "message": "loves reading",
-      "position": "",
-      "size": ""
+      "position": "center",
+      "width": "60%"
     }
   },
   {
@@ -301,6 +354,7 @@
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "reading",
       "message": "was reading",
@@ -311,27 +365,14 @@
   {
     "id": "17:00",
     "text": {
-      "text": "Sometimes people ask me what my favourite book is. Who knows me asks me what my favourite book is at the moment : how am I supposed to choose an overall winner??",
+      "text": "Sometimes people ask me what my favourite book is. Who knows me asks me what my favourite book is at the moment : how am I supposed to choose an overall winner?? here are so many interesting books! And often they are so different it doesn't make any sense to compare them !!",
       "position": ""
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/Book.png",
+      "alt": "pile of books",
       "message": "can't choose a favourite book",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "17:5",
-    "text": {
-      "text": "There are so many interesting books! And often they are so different it doesn't make any sense to compare them !!",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
-      "message": "",
       "position": "",
       "size": ""
     }
@@ -340,42 +381,66 @@
     "id": "17:10",
     "text": {
       "text": "At the moment two are the titles that come immediately to my mind:",
-      "position": ""
+      "position": "",
+      "padding": "3%",
+      "width": "70%"
     },
     "media": {
-      "src": "",
-      "alt": "",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-111.png",
+      "alt": "books",
       "message": "at the moment his the favourite books are by Calvino and Borges",
-      "position": "",
-      "size": ""
+      "position": "right",
+      "width": "70%"
     }
   },
   {
     "id": "17:20",
     "text": {
       "text": "but don't give me to much time to answer or I will overthink it and in the end I won't give any answer at all ahahah",
+      "position": "",
+      "padding": "3%",
+      "width": "70%"
+    },
+    "media": {
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-111.png",
+      "alt": "books",
+      "message": "tends to overthink everything",
+      "position": "right",
+      "width": "70%"
+    }
+  },
+  {
+    "id": "17:30",
+    "timespan": "17",
+    "text": {
+      "text": "",
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
-      "message": "",
+      "alt": "reading",
+      "message": "was reading",
       "position": "",
       "size": ""
     }
   },
   {
-    "id": "18:10",
+    "id": "18:0",
     "text": {
       "text": "It's getting late. Tomorrow I'll get up late again I guess...",
-      "position": ""
+      "position": "end",
+      "padding": "2%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/mirage-searching.png",
+      "alt": "telescope and starts illustration",
       "message": "went to sleep",
-      "position": "",
-      "size": ""
+      "position": "center",
+      "width": "50%"
     }
   }
 ]

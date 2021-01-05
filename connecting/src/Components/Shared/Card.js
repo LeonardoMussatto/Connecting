@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-// import img from "../../Media/Images/logo512.png"
+import VideoJS from "./VideoJS"
 
 const Card = (props) => {
   const [CardStyle, setCardStyle] = useState()
@@ -13,11 +13,12 @@ const Card = (props) => {
       }
       setCardStyle(card)
       let media = {
-        gridArea     :  "right",
-        position     :  `${props.mediaPosition} center`,
-        height       :  "55vh",
-        width        :  "80%",
-        borderRadius :  "18px",
+        gridArea        :  "right",
+        position        :  "center center",
+        height          :  props.height,
+        width           :  props.width,
+        borderRadius    :  "18px",
+        backgroundColor :  props.backgroundColor
       }
       setMediaStyle(media)
     } else {
@@ -31,14 +32,14 @@ const Card = (props) => {
       setCardStyle(card)
       let media = {
         gridArea     :  "right",
-        position     :  `${props.mediaPosition} center`,
-        width        :  "100%",
+        position     :  "center center",
+        width        :  props.width,
         height       :  props.height,
         borderRadius :  "18px",
       }
       setMediaStyle(media)
     }
-  }, [props.height, props.mediaPosition])
+  }, [props.backgroundColor, props.height, props.mediaPosition, props.width])
   
   let p = {
     gridArea        :  "left",
@@ -46,14 +47,18 @@ const Card = (props) => {
     zIndex          :  "1",
     backgroundColor :  props.textBackgroundColor,
     borderRadius    :  "18px",
-    padding         :  "5%",
-    width           :  "70%"
+    padding         :  props.padding,
+    width           :  props.textWidth
   }
   
   return (
     <section style={CardStyle}>
       <p style={p}>{props.text}</p>
-       <img style={MediaStyle} src={props.src} alt={props.alt} />
+      {props.isImg ? (
+        <img style={MediaStyle} src={props.src} alt={props.alt} />
+      ) : (
+        <VideoJS />
+      )}
     </section>
   )
   

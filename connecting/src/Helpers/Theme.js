@@ -19,7 +19,8 @@ export const theme = {
       boxSizing           :  "border-box",
       padding             :  "2vw",
       display             :  "grid",
-      gridTemplateColumns :  "repeat(auto-fit, minmax(15rem, 1fr))"
+      gridTemplateColumns :  "repeat(auto-fit, minmax(15rem, 1fr))",
+      scrollbarWidth      :  "thin",
     },
     button: {
       
@@ -55,7 +56,7 @@ theme.landing = {
     ...theme.common.button,
     ...theme.common.header,
     fontWeight      :  "400",
-    backgroundColor :  "#FB925B",
+    backgroundColor :  "#FBA374",
     color           :  "#3B3156",
     borderRadius    :  "8px",
   },
@@ -95,6 +96,10 @@ theme.app = {
     lineHeight: "2em",
     color :  "#F5FFFE",
     textBackgroundColor :  "#4D426D" // #4059AD
+  },
+  avatar: {
+    female :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/ad8621cf7df6033e0883d672283f276c883fefa0/connecting/src/Media/Icons/Avatars/Avatar-01.svg",
+    male   :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/36ad8207e99fb865e2395661e0984ed0cc343d80/connecting/src/Media/Icons/Avatars/Avatar-02.svg"
   }
 }
 
@@ -102,7 +107,6 @@ theme.app.story = {
   ch1: {
     text: {...theme.common.text},
     backgroundColor     :  "#4D426D",
-    borderColor         :  "#F5FFFE",
     color               :  "#1C1B3A",
     textBackgroundColor :  "#01D2CD",
     storyContent        :  Story1
@@ -110,7 +114,6 @@ theme.app.story = {
   ch2: {
     text: {...theme.common.text},
     backgroundColor     :  "#4D426D",
-    borderColor         :  "#F5FFFE",
     color               :  "#1C1B3A",
     textBackgroundColor :  "#F98063",
     storyContent        :  Story2
@@ -132,7 +135,6 @@ theme.app.story = {
   user: {
     text: {...theme.common.text},
     backgroundColor     :  "#4D426D",
-    borderColor         :  "#F5FFFE",
     color               :  "#F5FFFE",
     textBackgroundColor :  "#2173f6",
   }

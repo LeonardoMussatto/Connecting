@@ -6,7 +6,7 @@ import Location from "../Components/Stories/Location"
 import Weather  from "../Components/Stories/Weather"
 import Time     from "../Components/Stories/Time"
 //Components
-import Ch   from "../Components/Shared/ChPlaceholder"
+import Ch   from "../Components/Shared/Avatar"
 import UserHistory from "../Components/Shared/UserHistory"
 
 const User = (props) => {

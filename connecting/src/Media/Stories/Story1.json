@@ -2,108 +2,127 @@
   {
     "id": "12:0",
     "text": {
-      "text": "It's probably a bit cheese...yet it is inspiring...now let's get out of this bed",
-      "position": ""
+      "text": "It's probably a bit cheese... yet it is inspiring... now let's get out of this bed",
+      "position": "",
+      "padding": "3%",
+      "width": "67%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/programming-quotes-for-developers-made4dev-job.webp",
       "alt": "Inspiring Quote",
       "message": "woke up",
       "position": "",
-      "size": ""
+      "width": "70%"
     }
   },
   {
     "id": "12:10",
     "text": {
       "text": "You would be scared of my face in the mirror right now.",
-      "position": ""
+      "position": "center",
+      "width": "80%",
+      "padding": "5%"
     },
     "media": {
-      "src": "",
-      "alt": "",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/soap.png",
+      "alt": "soap",
       "message": "looked into the mirror",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "12:12",
-    "text": {
-      "text": "By the way, yesterday I finally finished my interactive mirror.",
-      "position": ""
-    },
-    "media": {
-      "src": "",
-      "alt": "smart mirror",
-      "message": "finished the smart mirror project",
       "position": "right",
-      "size": ""
-    }
-  },
-  {
-    "id": "12:14",
-    "text": {
-      "text": "Maybe later I'll show you how i did it in detail. Here are some schematics for those who'd like to give it a try.",
-      "position": ""
-    },
-    "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "interactive mirror schematics",
-      "message": "used this circuit",
-      "position": "",
-      "size": ""
+      "width": "70%"
     }
   },
   {
     "id": "12:30",
     "text": {
-      "text": "A fresh shower, some music and a cup of coffee: that's my trick to get ready for the day",
-      "position": ""
+      "text": "A shower, some music and a cup of freshly ground coffee: that's my trick to get ready for the day",
+      "position": "start",
+      "width": "60%",
+      "padding": "3%"
     },
     "media": {
-      "src": "",
-      "alt": "",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/Morning-03.png",
+      "alt": "a grinder, an espresso machine and a cup",
       "message": "uses this trick to wake up",
+      "position": "center",
+      "width": "80%"
+    }
+  },
+  {
+    "id": "13:0",
+    "text": {
+      "text": "It's time to get some work done...",
       "position": "",
-      "size": ""
+      "width": "60%",
+      "padding": "5%"
+    },
+    "media": {
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/Computer.png",
+      "alt": "computer",
+      "message": "was about to start working",
+      "position": "right",
+      "height": "90%"
     }
   },
   {
     "id": "14:0",
     "text": {
-      "text": "'Another day another challenge'...let's see what do I have to work on today",
+      "text": "Another day another challenge, they say...let's see what do I have to work on today",
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "",
-      "alt": "",
-      "message": "was about to start working",
+      "alt": "opening apps",
+      "message": "was about to find out the tasks for the day",
       "position": "",
       "size": ""
     }
   },
   {
-    "id": "14:5",
+    "id": "14:10",
     "text": {
-      "text": "Today is a 'style-day' ahahah...let's go!! =)",
+      "text": "Today is a 'style-day'...let's go!! =)",
+      "position": "",
+      "padding": "5%"
+    },
+    "media": {
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/pixeltrue-web-design-1.png",
+      "alt": "todo-list",
+      "message": "had to work on styling the webapp",
+      "position": "",
+      "width": "80%"
+    }
+  },
+  {
+    "id": "14:30",
+    "timespan": "15",
+    "text": {
+      "text": "Do I really know what I'm doing??",
       "position": ""
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
-      "message": "had to work on styling the webapp",
-      "position": "",
+      "isImg": "true",
+      "src": "",
+      "alt": "writing code",
+      "message": "started working",
+      "position": "right",
       "size": ""
     }
   },
   {
     "id": "16:0",
+    "timespan": "17",
     "text": {
-      "text": "What would I do without these references ?!? What would I do without those who mantains them??",
+      "text": "What would I do without these references ?!? What would I do without those who maintain them??",
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
       "message": "uses of then references maintained by other people",
@@ -118,6 +137,7 @@
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
       "message": "took a break",
@@ -129,14 +149,16 @@
     "id": "18:10",
     "text": {
       "text": "Some say it might be an illusion...well, give that developer a rise then because this ** is really good!!",
-      "position": ""
+      "position": "start",
+      "padding": "2%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixSteak.gif",
       "alt": "placeholder image",
       "message": "ate lunch",
-      "position": "",
-      "size": ""
+      "position": "center",
+      "height": "60vh"
     }
   },
   {
@@ -146,6 +168,7 @@
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
       "message": "went back to work",
@@ -154,26 +177,30 @@
     }
   },
   {
-    "id": "19:15",
+    "id": "20:0",
     "text": {
-      "text": "(co-worker) always has a good eye, but this time was really evident. I forgot to add the user Icon!! oops ':)",
-      "position": ""
+      "text": "Good thing I don't work alone....John has always a good eye, but this time was really obvious. I forgot to add the user Icon!! oops ':)",
+      "position": "end",
+      "padding": "2%"
     },
     "media": {
-      "src": "",
-      "alt": "",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/Bug.png",
+      "alt": "GitHub Issue",
       "message": "forgot to add an icon fot the user",
-      "position": "",
-      "size": ""
+      "position": "center",
+      "height": "100%"
     }
   },
   {
-    "id": "19:20",
+    "id": "20:20",
+    "timespan": "20",
     "text": {
       "text": "For this project we found a great 3d avatar's library, let's see if I can find some new character...",
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
       "message": "uses a 3d icons library from a young illustrator",
@@ -182,12 +209,13 @@
     }
   },
   {
-    "id": "19:40",
+    "id": "20:40",
     "text": {
       "text": "This one seems to be the right one for our testing users",
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
       "message": "found the avatar for the user",
@@ -196,72 +224,84 @@
     }
   },
   {
-    "id": "22:0",
+    "id": "21:0",
     "text": {
-      "text": "That's all for today. The update should be released at **",
-      "position": ""
+      "text": "Ahh aesthetic....so much time spent after it",
+      "position": "start",
+      "padding": "3%"
     },
     "media": {
-      "src": "",
-      "alt": "",
-      "message": "the restyled version was planned to be released at **",
-      "position": "",
-      "size": ""
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/cyborg-16.png",
+      "alt": "placeholder image",
+      "message": "went back to work",
+      "position": "center",
+      "height": "70vh"
     }
   },
   {
-    "id": "22.10",
+    "id": "22:0",
     "text": {
-      "text": "Now it's time for some personal project: I have a new idea I want to work on!",
-      "position": ""
+      "text": "That's all for today. The update should be released at midnight",
+      "position": "",
+      "padding": "5%"
     },
     "media": {
-      "src": "",
-      "alt": "",
-      "message": "was about to start working a new personal project",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/pixeltrue-time-management-1.png",
+      "alt": "hourglass",
+      "message": "the restyled version was planned to be released at midnight",
       "position": "",
-      "size": ""
+      "width": "80%"
+    }
+  },
+  {
+    "id": "22:30",
+    "text": {
+      "text": "Now it's time for some personal project: I have a new idea I want to work on!",
+      "position": "center",
+      "width": "57%",
+      "padding": "5%"
+    },
+    "media": {
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/Idea-04.png",
+      "alt": "a notebook with a light bulb on top",
+      "message": "was about to start working a new personal project",
+      "position": "right",
+      "height": "70%"
     }
   },
   {
     "id": "23:0",
     "text": {
-      "text": "I love to read and sketch, but I always end up in the dark because I'm to lazy to get to the switch",
-      "position": ""
+      "text": "I love to read and sketch, but I always end up in the dark because I'm to lazy to get to the switch. The solution: a portable book-lamp",
+      "position": "start",
+      "padding": "2%",
+      "width": "73%"
     },
     "media": {
-      "src": "",
-      "alt": "",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/LumioLamp.png",
+      "alt": "book lamp",
       "message": "loves to read but always ends up in the dark",
-      "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "23:02",
-    "text": {
-      "text": "or because I don't have a lamp with me.",
-      "position": ""
-    },
-    "media": {
-      "src": "",
-      "alt": "",
-      "message": "",
-      "position": "",
+      "position": "center",
       "size": ""
     }
   },
   {
     "id": "23:5",
     "text": {
-      "text": "And you know how paranoid I am with creating the right ambient with lights. So I decided to build my own portable lamp.",
-      "position": ""
+      "text": "But you know how paranoid I am with creating the right ambient with lights. So I decided to build my own book-lamp.",
+      "position": "end",
+      "padding": "2%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/LumioLamp.png",
+      "alt": "book lamp",
       "message": "decided to create a lamp",
-      "position": "",
+      "position": "center",
       "size": ""
     }
   },
@@ -269,14 +309,15 @@
     "id": "23:15",
     "text": {
       "text": "Ok, the design is not mine actually. Yet is such a great design I have to try and rebuild it! I want to use tunable white led because you know...",
-      "position": ""
+      "position": "",
+      "padding": "5%",
+      "width": "70%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
-      "message": "was inspired by the design of Lumio",
-      "position": "",
-      "size": ""
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/LightMeme.png",
+      "alt": "meme abut light temperature",
+      "message": "was inspired by the design of Lumio"
     }
   },
   {
@@ -286,6 +327,7 @@
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
       "message": "started working on the project",
@@ -300,6 +342,7 @@
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
       "message": "started working on the circuit",
@@ -314,6 +357,7 @@
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
       "message": "looked on forums to find out more about capacitive sensors",
@@ -328,6 +372,7 @@
       "position": ""
     },
     "media": {
+      "isImg": "true",
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
       "message": "finished all the materials needed for the last project",
@@ -339,70 +384,100 @@
     "id": "2:10",
     "text": {
       "text": "Today's recipe: **",
-      "position": ""
+      "position": "",
+      "padding": "3%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/pan.png",
+      "alt": "pan",
       "message": "was cooking",
-      "position": "",
-      "size": ""
+      "position": "right",
+      "width": "80%"
     }
   },
   {
     "id": "3:0",
     "text": {
-      "text": "What better way to finish the day than watching a movie ?!?",
-      "position": ""
-    },
-    "media": {
-      "src": "",
-      "alt": "",
-      "message": "",
+      "text": "What better way to finish the day than watching a movie ?!? Ok there are many, but I'm going for the movie tonight",
       "position": "",
-      "size": ""
-    }
-  },
-  {
-    "id": "3:5",
-    "text": {
-      "text": "Ok there are many, but I'm going for the movie tonight",
-      "position": ""
+      "padding": "3%",
+      "width": "70%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/rush-9.png",
+      "alt": "old tv screen noise",
       "message": "decided to watch a movie",
       "position": "",
-      "size": ""
+      "width": "70%"
     }
   },
   {
     "id": "4:40",
     "text": {
       "text": "What a great movie!",
-      "position": ""
+      "position": "",
+      "padding": "3%"
     },
     "media": {
-      "src": "",
-      "alt": "",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/Handz/White-in-Basic9.png",
+      "alt": "ok sign",
       "message": "enjoyed the movie",
-      "position": "",
-      "size": ""
+      "position": "right",
+      "width": "100%"
     }
   },
   {
     "id": "5:0",
+    "timespan": "6",
     "text": {
       "text": "Time to get some rest",
-      "position": ""
+      "position": "start",
+      "padding": "2%"
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt": "matrix code rain",
       "message": "went to sleep",
-      "position": "",
-      "size": ""
+      "position": "center",
+      "height": "60vh"
+    }
+  },
+  {
+    "id": "7:0",
+    "timespan": "8",
+    "text": {
+      "text": "Sleeping",
+      "position": "start",
+      "padding": "2%"
+    },
+    "media": {
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt": "matrix code rain",
+      "message": "was sleeping",
+      "position": "center",
+      "height": "60vh"
+    }
+  },
+  {
+    "id": "9:0",
+    "timespan": "10",
+    "text": {
+      "text": "Sleeping",
+      "position": "start",
+      "padding": "2%"
+    },
+    "media": {
+      "isImg": "true",
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt": "matrix code rain",
+      "message": "was sleeping",
+      "position": "center",
+      "height": "60vh"
     }
   }
 ]

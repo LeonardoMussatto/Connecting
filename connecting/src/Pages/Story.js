@@ -8,7 +8,7 @@ import Weather  from "../Components/Stories/Weather"
 import Time     from "../Components/Stories/Time"
 
 //Components
-import Ch   from "../Components/Shared/ChPlaceholder"
+import Avatar   from "../Components/Shared/Avatar"
 import Card from "../Components/Shared/Card"
 
 
@@ -22,7 +22,7 @@ const Story = (props) => {
   let   location                      = useLocation()
   const [character, setCharacter]     = useState(theme.story.ch1)
   const [CardContent, setCardContent] = useState(character.storyContent[0])  //REM choose a def. state
-  const [timeZone, setTimeZone]       = useState(0)
+  const [TimeZone, setTimeZone]       = useState(0)
 
   useEffect(() => {
     switch (location.hash) {
@@ -65,6 +65,9 @@ const Story = (props) => {
         `,
       margin          :  "3% 3% 3% 0",
       borderRadius    :  "18px",
+      borderStyle     :  "solid",
+      borderWidth     :  "4px",
+      borderColor     :  "#1C1B3A",
       backgroundColor :  character.backgroundColor,
       color           :  character.color,
       overflow        :  "clip"
@@ -83,7 +86,7 @@ const Story = (props) => {
       borderRadius        :  "18px",
       borderStyle         :  "solid",
       borderWidth         :  "4px",
-      borderColor         :  character.borderColor,
+      borderColor         :  "#1C1B3A",
       ...theme.text,
     },
     cards: {
@@ -97,7 +100,8 @@ const Story = (props) => {
   return (
     <div style={page}>
       <nav style={props.userIsVisible ? nav2 : nav}>
-        <Ch
+        <Avatar
+          src={theme.avatar.female}
           width={"60%"}
           link={location.hash === "#1" ? "/App/Interface" : "/App/Story#1"}
           selected={
@@ -105,9 +109,11 @@ const Story = (props) => {
               ? character.textBackgroundColor
               : theme.page.backgroundColor
           }
+          borderColor = {theme.story.ch1.textBackgroundColor}
           isChanged = {props.story1IsChanged}
         />
-        <Ch
+        <Avatar
+          src={theme.avatar.male}
           width={"60%"}
           link={location.hash === "#2" ? "/App/Interface" : "/App/Story#2"}
           selected={
@@ -115,10 +121,12 @@ const Story = (props) => {
               ? character.textBackgroundColor
               : theme.page.backgroundColor
           }
+          borderColor = {theme.story.ch2.textBackgroundColor}
           isChanged = {props.story2IsChanged}
         />
         {props.userIsVisible && 
-        <Ch
+        <Avatar
+          src={theme.avatar.male}
           width={"60%"}
           link={location.path === "/App/User" ? "/App/Interface" : "/App/User"}
           selected={
@@ -126,6 +134,7 @@ const Story = (props) => {
               ? character.textBackgroundColor
               : theme.page.backgroundColor
           }
+          borderColor = {theme.story.user.textBackgroundColor}
           isChanged = {props.historyIsChanged}
         />}
       </nav>
@@ -136,7 +145,7 @@ const Story = (props) => {
           <Time
             hours    = {props.hours}
             minutes  = {props.minutes}
-            timeZone = {timeZone}
+            timeZone = {TimeZone}
           />
         </header>
         <main style={content.cards}>
@@ -144,7 +153,9 @@ const Story = (props) => {
             key                 = {CardContent.text.text}
             text                = {CardContent.text.text}
             textPosition        = {CardContent.text.position}
+            textWidth           = {CardContent.text.width}
             padding             = {CardContent.text.padding}
+            isImg               = {CardContent.media.isImg}
             src                 = {CardContent.media.src}
             alt                 = {CardContent.media.alt}
             width               = {CardContent.media.width}
