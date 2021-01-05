@@ -6,6 +6,7 @@ import Interface from "./Interface"
 import Story     from "./Story"
 import User from "./User.js"
 
+
 const AppInApp = () => {
   const theme                 = useContext(ThemeContext)
   let   location              = useLocation()
@@ -17,14 +18,17 @@ const AppInApp = () => {
   const [Minutes, setMinutes] = useState(m)
   const [Story1, setStory1]   = useState(theme.story.ch1.storyContent[0])
   const [Story2, setStory2]   = useState(theme.story.ch2.storyContent[0])
-  const [Story3, setStory3]   = useState(theme.story.ch3.storyContent[0])
-  const [Story4, setStory4]   = useState(theme.story.ch4.storyContent[0])
   const [Index, setIndex]     = useState(0)
   let   time                  = `${Hours}:${Minutes}`
   let   userTime              = `${Hours - z}:${Minutes}`
   let   ch1Name               = "ch1"
   let   ch2Name               = "ch2"
-  const [HistoryRecord, setHistoryRecord] = useState([{id: userTime, text: "The user started the demo"}])
+
+  const [Story1IsChanged, setStory1IsChanged]   = useState(false)
+  const [Story2IsChanged, setStory2IsChanged]   = useState(false)
+  const [HistoryIsChanged, setHistoryIsChanged] = useState(true)
+  const [UserIsVisible, setUserIsVisible]       = useState(false)
+  const [HistoryRecord, setHistoryRecord]       = useState([{id: userTime, text: "The user started the demo", media: { src: "https://fakeimg.pl/800x500/f2f2f2", alt: "placeholder image" }}])
 
   useEffect(() => {
     if (Index < Content.length - 1) {
@@ -43,16 +47,6 @@ const AppInApp = () => {
     theme.story.ch2.storyContent.forEach((element) => {
       if (element.id === time || element.timespan === Hours) {
         setStory2(element)
-      }
-    })
-    theme.story.ch3.storyContent.forEach((element) => {
-      if (element.id === time || element.timespan === Hours) {
-        setStory3(element)
-      }
-    })
-    theme.story.ch4.storyContent.forEach((element) => {
-      if (element.id === time || element.timespan === Hours) {
-        setStory4(element)
       }
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -79,19 +73,14 @@ const AppInApp = () => {
           switch (target) {
             case theme.story.ch1:
               setStory1(element)
+              setStory1IsChanged(true)
               break
 
             case theme.story.ch2:
               setStory2(element)
+              setStory2IsChanged(true)
               break
 
-            case theme.story.ch3:
-              setStory3(element)
-              break
-
-            case theme.story.ch4:
-              setStory4(element)
-              break
             default:
               break
           }
@@ -101,8 +90,6 @@ const AppInApp = () => {
   }
   useUpdateContent(theme.story.ch1, time)
   useUpdateContent(theme.story.ch2, time)
-  useUpdateContent(theme.story.ch3, time)
-  useUpdateContent(theme.story.ch4, time)
 
   function usePrevious(value) {
     const ref = useRef();
@@ -125,10 +112,18 @@ const AppInApp = () => {
               ...HistoryRecord,
               {
                 id: userTime,
-                text: `The user learned that ${ch1Name} was ${Story1.media.alt}`,
+                text: `The user learned that ${ch1Name} was ${Story1.media.message}`,
+                media: {
+                  src: Story1.media.src,
+                  alt: Story1.media.alt,
+                },
               },
             ]
             setHistoryRecord(newHistory)
+            setHistoryIsChanged(true)
+          }
+          if (Story1IsChanged) {
+            setStory1IsChanged(false)
           }
           break
         case "#2":
@@ -137,10 +132,18 @@ const AppInApp = () => {
               ...HistoryRecord,
               {
                 id: userTime,
-                text: `The user learned that ${ch2Name} was ${Story2.media.alt}`,
+                text: `The user learned that ${ch2Name} was ${Story2.media.message}`,
+                media: {
+                  src: Story2.media.src,
+                  alt: Story2.media.alt,
+                },
               },
             ]
             setHistoryRecord(newHistory)
+            setHistoryIsChanged(true)
+          }
+          if (Story2IsChanged) {
+            setStory2IsChanged(false)
           }
           break
 
@@ -152,8 +155,10 @@ const AppInApp = () => {
     HistoryRecord,
     Story1,
     Story1.media.alt,
+    Story1IsChanged,
     Story2,
     Story2.media.alt,
+    Story2IsChanged,
     ch1Name,
     ch2Name,
     location.hash,
@@ -169,21 +174,27 @@ const AppInApp = () => {
       <Switch>
         <Route path={"/App/Interface"}>
           <Interface 
-            content = {Content[Index]}
+            userIsVisible = {UserIsVisible}
+            content       = {Content[Index]}
           />
         </Route>
         <Route path={"/App/Story"}>
           <Story
-            hours   = {Hours}
-            minutes = {Minutes}
-            story1  = {Story1}
-            story2  = {Story2}
-            story3  = {Story3}
-            story4  = {Story4}
+            hours            = {Hours}
+            minutes          = {Minutes}
+            story1           = {Story1}
+            story2           = {Story2}
+            story1IsChanged  = {Story1IsChanged}
+            story2IsChanged  = {Story2IsChanged}
+            historyIsChanged = {HistoryIsChanged}
+            userIsVisible    = {UserIsVisible}
           />
         </Route>
         <Route path={"/App/User"}>
-          <User history={HistoryRecord} />
+          <User 
+            history         = {HistoryRecord}
+            story1IsChanged = {Story1IsChanged}
+            story2IsChanged = {Story2IsChanged}/>
         </Route>
       </Switch>
     </ThemeContext.Provider>

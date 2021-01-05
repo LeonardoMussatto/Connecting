@@ -1,3 +1,4 @@
+
 [
   {
     "id": "2:0",
@@ -8,6 +9,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "Alarm clock ringing",
+      "message": "woke up",
       "position": "",
       "size": ""
     }
@@ -21,6 +23,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "Taking a shower",
+      "message": "took a shower",
       "position": "",
       "size": ""
     }
@@ -33,7 +36,8 @@
     },
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "Cutting the beard",
+      "alt": "podcast",
+      "message": "stated listening to a podcast",
       "position": "",
       "size": ""
     }
@@ -47,6 +51,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "doesn't talk much in the morning",
       "position": "",
       "size": ""
     }
@@ -60,6 +65,7 @@
     "media": {
       "src": "",
       "alt": "",
+      "message": "loves to create illustration more than talking",
       "position": "",
       "size": ""
     }
@@ -73,6 +79,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "was about to start working on the 3d icons library",
       "position": "",
       "size": ""
     }
@@ -86,6 +93,7 @@
     "media": {
       "src": "",
       "alt": "",
+      "message": "decided to make a cup of tea",
       "position": "",
       "size": ""
     }
@@ -99,6 +107,7 @@
     "media": {
       "src": "",
       "alt": "Working on 3d illustrations",
+      "message": "was working on illustrations",
       "position": "",
       "size": ""
     }
@@ -112,6 +121,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "ate lunch late, as usual",
       "position": "",
       "size": ""
     }
@@ -125,6 +135,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "working on more 3d icons",
+      "message": "was working on illustrations",
       "position": "",
       "size": ""
     }
@@ -138,6 +149,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "break",
+      "message": "took a break",
       "position": "",
       "size": ""
     }
@@ -151,6 +163,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "back to work",
+      "message": "started working again",
       "position": "",
       "size": ""
     }
@@ -164,6 +177,7 @@
     "media": {
       "src": "",
       "alt": "break",
+      "message": "took another break",
       "position": "",
       "size": ""
     }
@@ -177,6 +191,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "back to work",
+      "message": "kept on working",
       "position": "",
       "size": ""
     }
@@ -190,6 +205,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "likes to design soft characters",
       "position": "",
       "size": ""
     }
@@ -203,6 +219,7 @@
     "media": {
       "src": "",
       "alt": "",
+      "message": "often designs happy characters",
       "position": "",
       "size": ""
     }
@@ -216,6 +233,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "started cooking dinner",
       "position": "",
       "size": ""
     }
@@ -229,6 +247,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "ate dinner",
       "position": "",
       "size": ""
     }
@@ -241,7 +260,8 @@
     },
     "media": {
       "src": "",
-      "alt": "",
+      "alt": "decided to work again on the characters",
+      "message": "",
       "position": "",
       "size": ""
     }
@@ -255,6 +275,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "lost track of time and decided stop working for today",
       "position": "",
       "size": ""
     }
@@ -268,6 +289,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "loves reading",
       "position": "",
       "size": ""
     }
@@ -281,6 +303,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "reading",
+      "message": "was reading",
       "position": "",
       "size": ""
     }
@@ -288,12 +311,13 @@
   {
     "id": "17:00",
     "text": {
-      "text": "Sometimes people ask me what my favourite book is. Who knows me asks me what my favourite book _is at the moment_ : how am I supposed to choose an overall winner??",
+      "text": "Sometimes people ask me what my favourite book is. Who knows me asks me what my favourite book is at the moment : how am I supposed to choose an overall winner??",
       "position": ""
     },
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "can't choose a favourite book",
       "position": "",
       "size": ""
     }
@@ -307,6 +331,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "",
       "position": "",
       "size": ""
     }
@@ -320,6 +345,7 @@
     "media": {
       "src": "",
       "alt": "",
+      "message": "at the moment his the favourite books are by Calvino and Borges",
       "position": "",
       "size": ""
     }
@@ -333,6 +359,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "",
       "position": "",
       "size": ""
     }
@@ -346,6 +373,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "went to sleep",
       "position": "",
       "size": ""
     }

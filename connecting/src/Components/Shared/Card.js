@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react"
+// import img from "../../Media/Images/logo512.png"
 
 const Card = (props) => {
   const [CardStyle, setCardStyle] = useState()
   const [MediaStyle, setMediaStyle] = useState()
+  
   useEffect(() => {
     if (props.mediaPosition === "center") {
       let card = {
         display    :  "grid",
-        placeItems :  "center"
+        placeItems :  "center center"
       }
       setCardStyle(card)
       let media = {
@@ -21,21 +23,22 @@ const Card = (props) => {
     } else {
       let card = {
         display             :  "grid",
-        gridTemplateRows    :  "auto-fill",
+        gridTemplateRows    :  "100%",
         gridTemplateColumns :  "minmax(min-content, 30vw) minmax(7vw, 40vw)",
         gridTemplateAreas   :  `"left right"`,
-        placeItems          :  "center",
+        placeItems          :  "center center",
       }
       setCardStyle(card)
       let media = {
         gridArea     :  "right",
         position     :  `${props.mediaPosition} center`,
         width        :  "100%",
+        height       :  props.height,
         borderRadius :  "18px",
       }
       setMediaStyle(media)
     }
-  }, [props.mediaPosition])
+  }, [props.height, props.mediaPosition])
   
   let p = {
     gridArea        :  "left",
@@ -43,15 +46,16 @@ const Card = (props) => {
     zIndex          :  "1",
     backgroundColor :  props.textBackgroundColor,
     borderRadius    :  "18px",
-    padding         :  props.padding,
+    padding         :  "5%",
     width           :  "70%"
   }
   
   return (
     <section style={CardStyle}>
       <p style={p}>{props.text}</p>
-      <img style={MediaStyle} src={props.src} alt={props.alt} />
+       <img style={MediaStyle} src={props.src} alt={props.alt} />
     </section>
   )
+  
 }
 export default Card

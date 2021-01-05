@@ -18,7 +18,11 @@ const Interface = (props) => {
     ...theme.page
   }
   let nav = {
-    ...theme.nav
+    ...theme.nav,
+  }
+  let nav2 = {
+    ...theme.nav,
+    padding: "10% 5%"
   }
   let main = {
     ...theme.text,
@@ -29,7 +33,7 @@ const Interface = (props) => {
   }
   return (
     <div style={page}>
-      <nav style={nav}>
+      <nav style={props.userIsVisible ? nav2 : nav}>
         <Ch
           width = {"60%"}
           link  = {"/App/Story#1"}
@@ -38,10 +42,11 @@ const Interface = (props) => {
           width = {"60%"}
           link  = {"/App/Story#2"}
         />
-        {/* <Ch
+        {props.userIsVisible &&
+        <Ch
           width = {"60%"}
           link  = {"/App/User"}
-        /> */}
+        />}
       </nav>
       <main style={main}>
           <Card 

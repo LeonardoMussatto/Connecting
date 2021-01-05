@@ -12,6 +12,11 @@ const ChPlaceholder = (props) => {
     borderRadius    :  "100%",
     backgroundColor :  props.selected
   }
+  // let style={
+  //   props.isChanged
+  //     ? { backgroundColor: "#4059AD" }
+  //     : { backgroundColor: "" }
+  // }
   return (
     <Link to={props.link} style={icon}>
       <Ch />

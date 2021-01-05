@@ -7,7 +7,8 @@
     },
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "alt": "Inspiring Quote",
+      "message": "woke up",
       "position": "",
       "size": ""
     }
@@ -19,8 +20,9 @@
       "position": ""
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "src": "",
+      "alt": "",
+      "message": "looked into the mirror",
       "position": "",
       "size": ""
     }
@@ -32,9 +34,10 @@
       "position": ""
     },
     "media": {
-      "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
-      "position": "",
+      "src": "",
+      "alt": "smart mirror",
+      "message": "finished the smart mirror project",
+      "position": "right",
       "size": ""
     }
   },
@@ -46,7 +49,8 @@
     },
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
-      "alt": "placeholder image",
+      "alt": "interactive mirror schematics",
+      "message": "used this circuit",
       "position": "",
       "size": ""
     }
@@ -54,12 +58,13 @@
   {
     "id": "12:30",
     "text": {
-      "text": "A fresh shower, some music and a cup of **: that's my trick to get ready for the day",
+      "text": "A fresh shower, some music and a cup of coffee: that's my trick to get ready for the day",
       "position": ""
     },
     "media": {
       "src": "",
       "alt": "",
+      "message": "uses this trick to wake up",
       "position": "",
       "size": ""
     }
@@ -67,12 +72,13 @@
   {
     "id": "14:0",
     "text": {
-      "text": "'Another day another challenge'...let's see what do I have to work on today. Perhaps the new the feature?",
+      "text": "'Another day another challenge'...let's see what do I have to work on today",
       "position": ""
     },
     "media": {
       "src": "",
       "alt": "",
+      "message": "was about to start working",
       "position": "",
       "size": ""
     }
@@ -80,12 +86,13 @@
   {
     "id": "14:5",
     "text": {
-      "text": "Yup, today is a 'new feature day' ahahah...let's go!! =)",
+      "text": "Today is a 'style-day' ahahah...let's go!! =)",
       "position": ""
     },
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "had to work on styling the webapp",
       "position": "",
       "size": ""
     }
@@ -93,12 +100,13 @@
   {
     "id": "16:0",
     "text": {
-      "text": "What would I do without these references ?!? Thank you to whoever mantains them",
+      "text": "What would I do without these references ?!? What would I do without those who mantains them??",
       "position": ""
     },
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "uses of then references maintained by other people",
       "position": "",
       "size": ""
     }
@@ -112,6 +120,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "took a break",
       "position": "",
       "size": ""
     }
@@ -125,6 +134,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "ate lunch",
       "position": "",
       "size": ""
     }
@@ -132,12 +142,13 @@
   {
     "id": "19:0",
     "text": {
-      "text": "Let's get back to work. I'd really like to release the new feature today...",
+      "text": "Let's get back to work. I'd really like to release the restyled version today...",
       "position": ""
     },
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "went back to work",
       "position": "",
       "size": ""
     }
@@ -151,6 +162,7 @@
     "media": {
       "src": "",
       "alt": "",
+      "message": "forgot to add an icon fot the user",
       "position": "",
       "size": ""
     }
@@ -164,6 +176,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "uses a 3d icons library from a young illustrator",
       "position": "",
       "size": ""
     }
@@ -177,6 +190,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "found the avatar for the user",
       "position": "",
       "size": ""
     }
@@ -184,12 +198,13 @@
   {
     "id": "22:0",
     "text": {
-      "text": "That's all for today. The update should be released **",
+      "text": "That's all for today. The update should be released at **",
       "position": ""
     },
     "media": {
       "src": "",
       "alt": "",
+      "message": "the restyled version was planned to be released at **",
       "position": "",
       "size": ""
     }
@@ -197,18 +212,19 @@
   {
     "id": "22.10",
     "text": {
-      "text": "Time to head back home: there's a new project I want to work on!",
+      "text": "Now it's time for some personal project: I have a new idea I want to work on!",
       "position": ""
     },
     "media": {
       "src": "",
       "alt": "",
+      "message": "was about to start working a new personal project",
       "position": "",
       "size": ""
     }
   },
   {
-    "id": "0:0",
+    "id": "23:0",
     "text": {
       "text": "I love to read and sketch, but I always end up in the dark because I'm to lazy to get to the switch",
       "position": ""
@@ -216,12 +232,13 @@
     "media": {
       "src": "",
       "alt": "",
+      "message": "loves to read but always ends up in the dark",
       "position": "",
       "size": ""
     }
   },
   {
-    "id": "0:02",
+    "id": "23:02",
     "text": {
       "text": "or because I don't have a lamp with me.",
       "position": ""
@@ -229,12 +246,13 @@
     "media": {
       "src": "",
       "alt": "",
+      "message": "",
       "position": "",
       "size": ""
     }
   },
   {
-    "id": "0:5",
+    "id": "23:5",
     "text": {
       "text": "And you know how paranoid I am with creating the right ambient with lights. So I decided to build my own portable lamp.",
       "position": ""
@@ -242,12 +260,13 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "decided to create a lamp",
       "position": "",
       "size": ""
     }
   },
   {
-    "id": "0:15",
+    "id": "23:15",
     "text": {
       "text": "Ok, the design is not mine actually. Yet is such a great design I have to try and rebuild it! I want to use tunable white led because you know...",
       "position": ""
@@ -255,12 +274,13 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "was inspired by the design of Lumio",
       "position": "",
       "size": ""
     }
   },
   {
-    "id": "0:20",
+    "id": "23:20",
     "text": {
       "text": "Let's get to work",
       "position": ""
@@ -268,12 +288,13 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "started working on the project",
       "position": "",
       "size": ""
     }
   },
   {
-    "id": "1:0",
+    "id": "0:0",
     "text": {
       "text": "Now some schematics",
       "position": ""
@@ -281,12 +302,13 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "started working on the circuit",
       "position": "",
       "size": ""
     }
   },
   {
-    "id": "1:30",
+    "id": "0:30",
     "text": {
       "text": "I need some kind of interface...Perhaps capacitive sensors??",
       "position": ""
@@ -294,6 +316,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "looked on forums to find out more about capacitive sensors",
       "position": "",
       "size": ""
     }
@@ -307,6 +330,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "finished all the materials needed for the last project",
       "position": "",
       "size": ""
     }
@@ -320,6 +344,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "was cooking",
       "position": "",
       "size": ""
     }
@@ -333,6 +358,7 @@
     "media": {
       "src": "",
       "alt": "",
+      "message": "",
       "position": "",
       "size": ""
     }
@@ -346,6 +372,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "decided to watch a movie",
       "position": "",
       "size": ""
     }
@@ -359,6 +386,7 @@
     "media": {
       "src": "",
       "alt": "",
+      "message": "enjoyed the movie",
       "position": "",
       "size": ""
     }
@@ -372,6 +400,7 @@
     "media": {
       "src": "https://fakeimg.pl/400x200/f2f2f2",
       "alt": "placeholder image",
+      "message": "went to sleep",
       "position": "",
       "size": ""
     }

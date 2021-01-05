@@ -1,12 +1,10 @@
 import React from "react"
-// import Story1 from "../Media/Stories/Story1.json"
-// import Story2 from "../Media/Stories/Story2.json"
+import Story1 from "../Media/Stories/Story1.json"
+import Story2 from "../Media/Stories/Story2.json"
 // import Story3 from "../Media/Stories/Story1.2.json"
 // import Story4 from "../Media/Stories/Story2.2.json"
-import Story1 from "../Media/Stories/Placeholders/storyContentPlaceholder3.json"
-import Story2 from "../Media/Stories/Placeholders/storyContentPlaceholder2.json"
-import Story3 from "../Media/Stories/Placeholders/storyContentPlaceholder3.json"
-import Story4 from "../Media/Stories/Placeholders/storyContentPlaceholder4.json"
+// import Story1 from "../Media/Stories/Placeholders/storyContentPlaceholder3.json"
+// import Story2 from "../Media/Stories/Placeholders/storyContentPlaceholder2.json"
 
 
 //REM it might be useful to use the common as a "fail-safe theme"
@@ -117,19 +115,26 @@ theme.app.story = {
     textBackgroundColor :  "#F98063",
     storyContent        :  Story2
   },
-  ch3: {
-    backgroundColor     :  "#9AAAD9",
+  // ch3: {
+  //   backgroundColor     :  "#9AAAD9",
+  //   borderColor         :  "#F5FFFE",
+  //   color               :  "#1C1B3A",
+  //   textBackgroundColor :  "",
+  //   storyContent        :  Story3
+  // },
+  // ch4: {
+  //   backgroundColor     :  "#FFCB77",
+  //   borderColor         :  "#F5FFFE",
+  //   color               :  "#1C1B3A",
+  //   textBackgroundColor :  "",
+  //   storyContent        :  Story4
+  // },
+  user: {
+    text: {...theme.common.text},
+    backgroundColor     :  "#4D426D",
     borderColor         :  "#F5FFFE",
-    color               :  "#1C1B3A",
-    textBackgroundColor :  "",
-    storyContent        :  Story3
-  },
-  ch4: {
-    backgroundColor     :  "#FFCB77",
-    borderColor         :  "#F5FFFE",
-    color               :  "#1C1B3A",
-    textBackgroundColor :  "",
-    storyContent        :  Story4
+    color               :  "#F5FFFE",
+    textBackgroundColor :  "#2173f6",
   }
 }
 

@@ -7,7 +7,7 @@ import Location from "../Components/Stories/Location"
 import Weather  from "../Components/Stories/Weather"
 import Time     from "../Components/Stories/Time"
 
-//Placeholders
+//Components
 import Ch   from "../Components/Shared/ChPlaceholder"
 import Card from "../Components/Shared/Card"
 
@@ -15,13 +15,12 @@ import Card from "../Components/Shared/Card"
 //ENHANCEMENT #18 make the page responsive - add support for mobile devices
 //STYLE #12 add side bar animation - selected icon
 //STYLE #12 add card exit animation
-//ENHANCEMENT STYLE create a more contemporary look
 
 
 const Story = (props) => {
   const theme                         = useContext(ThemeContext)
   let   location                      = useLocation()
-  const [character, setCharacter]     = useState(theme.story.ch3)
+  const [character, setCharacter]     = useState(theme.story.ch1)
   const [CardContent, setCardContent] = useState(character.storyContent[0])  //REM choose a def. state
   const [timeZone, setTimeZone]       = useState(0)
 
@@ -37,16 +36,6 @@ const Story = (props) => {
         setCardContent(props.story2)
         setTimeZone(+7)
         break
-      case "#3":
-        setCharacter(theme.story.ch3)
-        setCardContent(props.story3)
-        setTimeZone(-5)
-        break
-      case "#4":
-        setCharacter(theme.story.ch4)
-        setCardContent(props.story4)
-        setTimeZone(+7)
-        break
 
       default:
         break
@@ -59,6 +48,10 @@ const Story = (props) => {
   }
   let nav = {
     ...theme.nav
+  }
+  let nav2 = {
+    ...theme.nav,
+    padding: "10% 5%"
   }
   let content = {
     div: {
@@ -94,16 +87,16 @@ const Story = (props) => {
       ...theme.text,
     },
     cards: {
-      gridArea        :  "cards",
-      display         :  "grid",
-      placeItems      :  "center center",
-      padding         :  "3%",
+      gridArea   :  "cards",
+      display    :  "grid",
+      placeItems :  "center center",
+      margin     :  "3%",
       ...character.text
     },
   }
   return (
     <div style={page}>
-      <nav style={nav}>
+      <nav style={props.userIsVisible ? nav2 : nav}>
         <Ch
           width={"60%"}
           link={location.hash === "#1" ? "/App/Interface" : "/App/Story#1"}
@@ -112,6 +105,7 @@ const Story = (props) => {
               ? character.textBackgroundColor
               : theme.page.backgroundColor
           }
+          isChanged = {props.story1IsChanged}
         />
         <Ch
           width={"60%"}
@@ -121,16 +115,19 @@ const Story = (props) => {
               ? character.textBackgroundColor
               : theme.page.backgroundColor
           }
+          isChanged = {props.story2IsChanged}
         />
-        {/* <Ch
+        {props.userIsVisible && 
+        <Ch
           width={"60%"}
-          link={location.hash === "#3" ? "/App/Interface" : "/App/Story#3"}
+          link={location.path === "/App/User" ? "/App/Interface" : "/App/User"}
           selected={
-            location.hash === "#3"
-              ? character.backgroundColor
+            location.pathname === "/App/User"
+              ? character.textBackgroundColor
               : theme.page.backgroundColor
           }
-        /> */}
+          isChanged = {props.historyIsChanged}
+        />}
       </nav>
       <div style={content.div}>
         <header style={content.header}>
