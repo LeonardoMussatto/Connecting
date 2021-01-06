@@ -44,12 +44,6 @@ const Considerations = () => {
     overflow        :  "clip",
     height: "60vh",
   }
-  const content = [
-    {id: 1, text: "You have just clicked this link, your friend sent you. Or maybe it was from someone you haven't been hearing much from lately. You should really reach out and see how everything is going."},
-    {id: 2, text: "Take some time. Relax. Sit back on your chair. You didn't even notice but you have been getting closer and closer to the screen. Or maybe you are lying on your bed. Under the cover is better."},
-    {id: 3, text: "Now that you have found a comfortable position, you don't want to be interrupted. Tell the others not to call you for some time: you are about to take a look at that web experience your friend was talking about."},
-    {id: 4, text: "Think about anything you absolutely need to do before taking some time off by yourself, and get it done. Otherwise, don't think about it. Now that you are ready, you start searching for a way to start this experience."}
-  ]
 
   useEffect(() => {
     setTimeout(()=>{
@@ -60,11 +54,25 @@ const Considerations = () => {
   return (
     <main style={page}>
       <article style={textArea}>
-        {content.map((element) => (
-          <section key={element.id}>
-            <p>{element.text}</p>
-          </section>
-        ))}
+        <p>Different times</p>
+        <p>Different places</p>
+        <p>Different people</p>
+        <p>Different passions</p>
+        <p>Different occupations</p>
+        <br/>
+        <p>Nonetheless each one influenced one another. Knowingly or unknowingly relaying on the actions, dedication and time of someone too often left undefined and thus forgotten, further afar than we are used to perceive and willing to investigate.</p>
+        <br/>
+        <p>We think of ourselves as "always connected". But are we really?</p>
+        <p>Our actions, decision, ideas and beliefs are the result of a deeply intertwined web we often fail to perceive.</p>
+        <p>Or choose to ignore.</p>
+        {/* <p>Today as never before the effect, the cause and the conditions of the simplest of our actions are often difficult to trace and utterly unlinear.</p> */}
+        <p>The internet gives us the possibility to reach informations from all over the world. People however are much more difficult to gasp. Informations and services are dematerialized into lifeless bits. Everything just seem to "be there". Even people loose their materiality and humanity and become just a part of the landscape we move in at our will.</p>
+        <p>Do we truly perceive the presence, the <em>sweat of the reality</em>, while wandering in our digital realities? </p>
+        <p>Bits might be lifeless, but there is always a whole life behind them, if one is willing to find it.</p>
+        <p>What does it mean to be truly connected?</p>
+        <br/>
+        <p>Perhaps we are still in the progress. Connections aren't yet established.</p>
+        <p>Perhaps we are still ...</p>
       </article>
       <div style={graphic}>
         {/* <Avatar src={theme.avatar.female} width={"15%"} position={"relative"} top={"40%"} left={"15%"} selected={theme.story.ch1.textBackgroundColor}/>  

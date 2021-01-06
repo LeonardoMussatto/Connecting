@@ -52,7 +52,8 @@ const AppInApp = () => {
         setStory2(element)
       }
     })
-  })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
 
   useEffect(() => {
     setTimeout(() => {
@@ -185,9 +186,9 @@ const AppInApp = () => {
   }, [location.hash, location.pathname])
 
   useEffect(() => {
-    time === "7:0" && setUserIsVisible(true) 
-    time === "9:0" && history.push('App/User/Considerations')
-  }, [history, time])
+    time === "5:0" && setUserIsVisible(true) 
+    if(time === "6:0" && location.pathname === "/App/User"){history.push('/User/Considerations')}
+  }, [history, location.pathname, time])
 
   return (
     <ThemeContext.Provider value={theme}>
@@ -218,9 +219,6 @@ const AppInApp = () => {
             history         = {HistoryRecord}
             story1IsChanged = {Story1IsChanged}
             story2IsChanged = {Story2IsChanged}/>
-        </Route>
-        <Route path={"/App/User/Considerations"}>
-          <Considerations />
         </Route>
       </Switch>
     </ThemeContext.Provider>

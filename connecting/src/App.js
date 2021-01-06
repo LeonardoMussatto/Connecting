@@ -1,9 +1,8 @@
-import "./App.css"
 import { ThemeContext, theme } from "./Helpers/Theme"
 import { Switch, Route }       from "react-router-dom"
 
 //Pages
-// import AppInApp from "./Pages/AppInApp"
+import AppInApp       from "./Pages/AppInApp"
 import Landing        from "./Pages/Landing"
 import Credits        from "./Pages/Credits"
 import Considerations from "./Pages/Considerations"
@@ -14,17 +13,24 @@ function App() {
     <Switch>
       <Route path="/App">
         <ThemeContext.Provider value={theme.app}>
+          <AppInApp />
+        </ThemeContext.Provider>
+      </Route>
+      <Route path="/User/Considerations">
+        <ThemeContext.Provider value={theme.app}>
           <Considerations />
         </ThemeContext.Provider>
       </Route>
-      <ThemeContext.Provider value={theme.landing}>
-        <Route path="/Credits">
+      <Route path="/Credits">
+        <ThemeContext.Provider value={theme.landing}>
           <Credits />
-        </Route>
-        <Route path="/">
+        </ThemeContext.Provider>
+      </Route>
+      <Route path="/">
+        <ThemeContext.Provider value={theme.landing}>
           <Landing />
-        </Route>
-      </ThemeContext.Provider>
+        </ThemeContext.Provider>
+      </Route>
     </Switch>
   )
 }

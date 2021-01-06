@@ -4,10 +4,11 @@ import ReactPlayer from 'react-player/vimeo'
 
 const VideoPlayer = (props) => {
     let style = {
-        borderRadius :  "18px", 
-        borderStyle: "solid", 
-        borderColor: "#00000000", 
-        overflow: "hidden"
+        borderRadius :  "18px",
+        borderStyle  :  "solid",
+        borderWidth  :  "4px",
+        borderColor  :  props.color,
+        overflow     :  "hidden"
     }
     return (<ReactPlayer url={props.src}
     config={{
