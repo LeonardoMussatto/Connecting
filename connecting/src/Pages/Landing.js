@@ -34,7 +34,7 @@ const Landing = () => {
     display      :  "grid",
     justifyItems :  "center",
     rowGap       :  "1%",
-    margin: "2vh 2vw"
+    margin       :  "2vh 2vw"
   }
   let text = {
     ...theme.text,

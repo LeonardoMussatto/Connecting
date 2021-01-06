@@ -9,7 +9,7 @@ import Time     from "../Components/Stories/Time"
 
 //Components
 import Avatar   from "../Components/Shared/Avatar"
-import Card from "../Components/Shared/Card"
+import Card     from "../Components/Shared/Card"
 
 
 //ENHANCEMENT #18 make the page responsive - add support for mobile devices

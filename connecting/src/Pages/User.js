@@ -1,12 +1,14 @@
 import React, { useContext } from "react"
-import { ThemeContext } from "../Helpers/Theme"
-import { useLocation }  from "react-router-dom"
+import { ThemeContext }      from "../Helpers/Theme"
+import { useLocation }       from "react-router-dom"
+
 //Header
 import Location from "../Components/Stories/Location"
 import Weather  from "../Components/Stories/Weather"
 import Time     from "../Components/Stories/Time"
+
 //Components
-import Ch   from "../Components/Shared/Avatar"
+import Avatar      from "../Components/Shared/Avatar"
 import UserHistory from "../Components/Shared/UserHistory"
 
 const User = (props) => {
@@ -68,18 +70,22 @@ const User = (props) => {
   return (
     <div style={page}>
       <nav style={nav}>
-        <Ch
+        <Avatar
+          src={theme.avatar.female}
           width={"60%"}
           link={location.hash === "#1" ? "/App/Interface" : "/App/Story#1"}
           isChanged = {props.story1IsChanged}
+          borderColor = {theme.story.ch1.textBackgroundColor}
         />
-        <Ch
+        <Avatar
+          src={theme.avatar.male}
           width={"60%"}
           link={location.hash === "#2" ? "/App/Interface" : "/App/Story#2"}
           isChanged = {props.story2IsChanged}
-
+          borderColor = {theme.story.ch2.textBackgroundColor}
         />
-        <Ch
+        <Avatar
+        src={theme.avatar.male}
           width={"60%"}
           link={location.pathname === "/App/User" ? "/App/Interface" : "/App/User"}
           selected={

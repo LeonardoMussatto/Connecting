@@ -1,14 +1,18 @@
 import React, { useContext, useState, useEffect, useRef } from "react"
-import { ThemeContext }  from "../Helpers/Theme"
-import { Switch, Route, useLocation } from "react-router-dom"
-import Content   from "../Media/Content/Interface.json"
-import Interface from "./Interface"
-import Story     from "./Story"
-import User from "./User.js"
+import { Switch, Route, useLocation, useHistory }         from "react-router-dom"
+import { ThemeContext }                                   from "../Helpers/Theme"
+
+//Components
+import Content         from "../Media/Content/Interface.json"
+import Interface      from "./Interface"
+import Story          from "./Story"
+import User           from "./User.js"
+import Considerations from "./Considerations"
 
 
 const AppInApp = () => {
   const theme                 = useContext(ThemeContext)
+  const history               = useHistory()
   let   location              = useLocation()
   let   d                     = new Date()
   let   h                     = d.getUTCHours()
@@ -61,7 +65,7 @@ const AppInApp = () => {
       if (Hours === 24) {
         setHours(0)
       }
-    }, 417) // 24h in 10min, as milliseconds
+    }, 624) // 24h in 15min, as milliseconds
   }, [Minutes, Hours])
 
   function useUpdateContent(target, time) {
@@ -182,7 +186,8 @@ const AppInApp = () => {
 
   useEffect(() => {
     time === "7:0" && setUserIsVisible(true) 
-  }, [time])
+    time === "9:0" && history.push('App/User/Considerations')
+  }, [history, time])
 
   return (
     <ThemeContext.Provider value={theme}>
@@ -213,6 +218,9 @@ const AppInApp = () => {
             history         = {HistoryRecord}
             story1IsChanged = {Story1IsChanged}
             story2IsChanged = {Story2IsChanged}/>
+        </Route>
+        <Route path={"/App/User/Considerations"}>
+          <Considerations />
         </Route>
       </Switch>
     </ThemeContext.Provider>

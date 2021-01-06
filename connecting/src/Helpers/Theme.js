@@ -1,14 +1,10 @@
-import React from "react"
+import React  from "react"
 import Story1 from "../Media/Stories/Story1.json"
 import Story2 from "../Media/Stories/Story2.json"
 // import Story3 from "../Media/Stories/Story1.2.json"
 // import Story4 from "../Media/Stories/Story2.2.json"
 // import Story1 from "../Media/Stories/Placeholders/storyContentPlaceholder3.json"
 // import Story2 from "../Media/Stories/Placeholders/storyContentPlaceholder2.json"
-
-
-//REM it might be useful to use the common as a "fail-safe theme"
-
 
 export const theme = {
   common: {

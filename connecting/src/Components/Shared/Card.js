@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import VideoJS from "./VideoJS"
+import VideoPlayer from "./VideoPlayer"
 
 const Card = (props) => {
   const [CardStyle, setCardStyle] = useState()
@@ -14,7 +14,7 @@ const Card = (props) => {
       setCardStyle(card)
       let media = {
         gridArea        :  "right",
-        position        :  "center center",
+        position        :  "start center",
         height          :  props.height,
         width           :  props.width,
         borderRadius    :  "18px",
@@ -54,10 +54,12 @@ const Card = (props) => {
   return (
     <section style={CardStyle}>
       <p style={p}>{props.text}</p>
-      {props.isImg ? (
+      {props.isImg === "true" ? (
         <img style={MediaStyle} src={props.src} alt={props.alt} />
       ) : (
-        <VideoJS />
+        <div style={MediaStyle}>
+          <VideoPlayer src={props.src} />
+        </div>
       )}
     </section>
   )

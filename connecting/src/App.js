@@ -3,8 +3,10 @@ import { ThemeContext, theme } from "./Helpers/Theme"
 import { Switch, Route }       from "react-router-dom"
 
 //Pages
-import AppInApp from "./Pages/AppInApp"
-import Landing   from "./Pages/Landing"
+// import AppInApp from "./Pages/AppInApp"
+import Landing        from "./Pages/Landing"
+import Credits        from "./Pages/Credits"
+import Considerations from "./Pages/Considerations"
 
 
 function App() {
@@ -12,14 +14,17 @@ function App() {
     <Switch>
       <Route path="/App">
         <ThemeContext.Provider value={theme.app}>
-          <AppInApp />
+          <Considerations />
         </ThemeContext.Provider>
       </Route>
-      <Route>
-        <ThemeContext.Provider value={theme.landing}>
-          <Landing path="/" />
-        </ThemeContext.Provider>
-      </Route>
+      <ThemeContext.Provider value={theme.landing}>
+        <Route path="/Credits">
+          <Credits />
+        </Route>
+        <Route path="/">
+          <Landing />
+        </Route>
+      </ThemeContext.Provider>
     </Switch>
   )
 }
