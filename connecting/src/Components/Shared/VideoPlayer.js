@@ -15,7 +15,7 @@ const VideoPlayer = (props) => {
         vimeo: {
             playerOptions: {
                 autopause :  false,
-                autoplay  :  true,
+                autoplay  :  props.autoplay,
                 byline    :  false,
                 portrait  :  false,
                 title     :  false,
@@ -23,7 +23,7 @@ const VideoPlayer = (props) => {
             }  
         }
     }}
-    muted={true} pip={false} width={"854px"} height={"480px"} style={style}
+    muted={true} pip={false} width={props.width} height={props.height} style={style}
     />)
 }
 

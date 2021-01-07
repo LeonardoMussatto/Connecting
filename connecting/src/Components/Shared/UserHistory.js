@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { ThemeContext } from "../../Helpers/Theme"
+import VideoPlayer from "./VideoPlayer"
 
 const Card = (props) => {
   const theme = useContext(ThemeContext)
@@ -30,7 +31,13 @@ const Card = (props) => {
       <p style={p}>
         {entry.id} {entry.text}
       </p>
-      <img style={media} src={entry.media.src} alt={entry.media.alt} />
+      {entry.media.isImg === "true" ? (
+        <img style={media} src={entry.media.src} alt={entry.media.alt} />
+      ) : (
+        <div style={media}>
+          <VideoPlayer color={entry.media.borderColor} src={entry.media.src} autoplay={false} width={"270px"} height={"152px"}/>
+        </div>
+      )}
     </section>
   ))
 

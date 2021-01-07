@@ -16,7 +16,7 @@ function App() {
           <AppInApp />
         </ThemeContext.Provider>
       </Route>
-      <Route path="/User/Considerations">
+      <Route path="/Considerations">
         <ThemeContext.Provider value={theme.app}>
           <Considerations />
         </ThemeContext.Provider>

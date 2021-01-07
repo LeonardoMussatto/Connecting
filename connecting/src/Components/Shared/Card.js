@@ -58,7 +58,7 @@ const Card = (props) => {
         <img style={MediaStyle} src={props.src} alt={props.alt} />
       ) : (
         <div style={MediaStyle}>
-          <VideoPlayer color={props.textBackgroundColor} src={props.src} />
+          <VideoPlayer color={props.textBackgroundColor} src={props.src} autoplay={true} width={"854px"} height={"480px"}/>
         </div>
       )}
     </section>

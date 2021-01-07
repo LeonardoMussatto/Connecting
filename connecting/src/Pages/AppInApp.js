@@ -6,8 +6,7 @@ import { ThemeContext }                                   from "../Helpers/Theme
 import Content         from "../Media/Content/Interface.json"
 import Interface      from "./Interface"
 import Story          from "./Story"
-import User           from "./User.js"
-import Considerations from "./Considerations"
+import User           from "./User"
 
 
 const AppInApp = () => {
@@ -117,8 +116,10 @@ const AppInApp = () => {
                 id: userTime,
                 text: `The user learned that ${ch1Name} ${Story1.media.message}`,
                 media: {
-                  src: Story1.media.src,
-                  alt: Story1.media.alt,
+                  isImg       :  Story1.media.isImg,
+                  src         :  Story1.media.src,
+                  alt         :  Story1.media.alt,
+                  borderColor :  theme.story.ch1.textBackgroundColor
                 },
               },
             ]
@@ -134,8 +135,10 @@ const AppInApp = () => {
                 id: userTime,
                 text: `The user learned that ${ch2Name} ${Story2.media.message}`,
                 media: {
-                  src: Story2.media.src,
-                  alt: Story2.media.alt,
+                  isImg       :  Story2.media.isImg,
+                  src         :  Story2.media.src,
+                  alt         :  Story2.media.alt,
+                  borderColor :  theme.story.ch2.textBackgroundColor
                 },
               },
             ]
@@ -148,23 +151,7 @@ const AppInApp = () => {
           break
       }
     }
-  }, [
-    HistoryRecord,
-    Story1,
-    Story1.media.alt,
-    Story1IsChanged,
-    Story2,
-    Story2.media.alt,
-    Story2IsChanged,
-    ch1Name,
-    ch2Name,
-    location.hash,
-    location.pathname,
-    prevLocation,
-    prevStory1,
-    prevStory2,
-    userTime,
-  ])
+  }, [HistoryRecord, Story1, Story1.media.alt, Story1IsChanged, Story2, Story2.media.alt, Story2IsChanged, ch1Name, ch2Name, location.hash, location.pathname, prevLocation, prevStory1, prevStory2, theme.story.ch1.textBackgroundColor, theme.story.ch2.textBackgroundColor, userTime])
 
   useEffect(()=>{
     if (location.pathname === "/App/Story"){
@@ -187,7 +174,7 @@ const AppInApp = () => {
 
   useEffect(() => {
     time === "5:0" && setUserIsVisible(true) 
-    if(time === "6:0" && location.pathname === "/App/User"){history.push('/User/Considerations')}
+    if(time === "6:0" && location.pathname === "/App/User"){history.push('/Considerations')}
   }, [history, location.pathname, time])
 
   return (
