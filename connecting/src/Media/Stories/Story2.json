@@ -463,7 +463,7 @@
     "media": {
       "isImg"    :  "true",
       "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
-      "alt"      :  "telescope and starts illustration",
+      "alt"      :  "werewolf gif",
       "message"  :  "went to sleep",
       "position" :  "center",
       "width"    :  "70%"
@@ -473,15 +473,15 @@
     "id": "20:0",
     "timespan": "21",
     "text": {
-      "text"     :  "It's getting late. Tomorrow I'll get up late again I guess...",
+      "text"     :  "Sleeping. Tomorrow I'll get up late again I guess...",
       "position" :  "end",
       "padding"  :  "2%"
     },
     "media": {
       "isImg"    :  "true",
       "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
-      "alt"      :  "telescope and starts illustration",
-      "message"  :  "went to sleep",
+      "alt"      :  "werewolf gif",
+      "message"  :  "was sleep",
       "position" :  "center",
       "width"    :  "70%"
     }
@@ -490,15 +490,15 @@
     "id": "22:0",
     "timespan": "23",
     "text": {
-      "text"     :  "It's getting late. Tomorrow I'll get up late again I guess...",
+      "text"     :  "Sleeping....maybe",
       "position" :  "end",
       "padding"  :  "2%"
     },
     "media": {
       "isImg"    :  "true",
       "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
-      "alt"      :  "telescope and starts illustration",
-      "message"  :  "went to sleep",
+      "alt"      :  "werewolf gif",
+      "message"  :  "was sleep",
       "position" :  "center",
       "width"    :  "70%"
     }
@@ -507,15 +507,15 @@
     "id": "0:0",
     "timespan": "1",
     "text": {
-      "text"     :  "It's getting late. Tomorrow I'll get up late again I guess...",
+      "text"     :  "Sleeping",
       "position" :  "end",
       "padding"  :  "2%"
     },
     "media": {
       "isImg"    :  "true",
       "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
-      "alt"      :  "telescope and starts illustration",
-      "message"  :  "went to sleep",
+      "alt"      :  "werewolf gif",
+      "message"  :  "was sleep",
       "position" :  "center",
       "width"    :  "70%"
     }
@@ -524,14 +524,14 @@
     "id": "2:0",
     "timespan": "18",
     "text": {
-      "text"     :  "It's getting late. Tomorrow I'll get up late again I guess...",
+      "text"     :  "Sleeping",
       "position" :  "end",
       "padding"  :  "2%"
     },
     "media": {
       "isImg"    :  "true",
       "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
-      "alt"      :  "telescope and starts illustration",
+      "alt"      :  "werewolf gif",
       "message"  :  "went to sleep",
       "position" :  "center",
       "width"    :  "70%"
