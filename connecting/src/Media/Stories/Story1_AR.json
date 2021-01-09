@@ -59,8 +59,8 @@
       "padding"  :  "2%"
     },
     "media": {
-      "isImg"    :  "true",
-      "src"      :  "",
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/498738612",
       "alt"      :  "opening apps",
       "message"  :  "was about to find out the tasks for the day",
       "position" :  "center"
@@ -183,17 +183,16 @@
     "id": "18:5",
     "timespan": "18",
     "text": {
-      "text"    :  "For this project we found a great 3d avatar's library, let's see if I can find some new character...",
-      "padding" :  "3%",
-      "width"   :  "80%"
+      "text"    :  "For this project we found a nice 3d avatar's library, let's see if I can find some new character...",
+      "position" :  "end",
+      "padding"  :  "2%"
     },
     "media": {
-      "isImg"    :  "true",
-      "src"      :  "https://fakeimg.pl/400x200/f2f2f2",
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/498727664",
       "alt"      :  "looking through library icons",
       "message"  :  "uses a 3d icons library from a young illustrator",
-      "position" :  "right",
-      "size"     :  ""
+      "position" :  "center"
     }
   },
   {
