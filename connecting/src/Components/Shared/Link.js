@@ -34,7 +34,7 @@ const Link = (props) => {
   }
   return (
     <a style={props.isButton ? buttonStyle : linkStyle} href={props.href}>
-        {props.isButton && <img style={img} src={props.src} alt="button" />}
+      {props.isButton && <img style={img} src={props.src} alt="button" />}
       {props.children}
     </a>
   )

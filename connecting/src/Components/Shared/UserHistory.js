@@ -17,7 +17,6 @@ const Card = (props) => {
     height       :  "80%",
     borderRadius :  "18px",
   }
-
   let p = {
     gridArea        :  "left",
     placeSelf       :  "center center",
@@ -26,6 +25,7 @@ const Card = (props) => {
     padding         :  "2%",
     width           :  "70%",
   }
+
   let historyMessage = props.history.map((entry) => (
     <section style={card} key={entry.id}>
       <p style={p}>
@@ -35,12 +35,18 @@ const Card = (props) => {
         <img style={media} src={entry.media.src} alt={entry.media.alt} />
       ) : (
         <div style={media}>
-          <VideoPlayer color={entry.media.borderColor} src={entry.media.src} autoplay={false} width={"270px"} height={"152px"}/>
+          <VideoPlayer
+            color    = {entry.media.borderColor}
+            src      = {entry.media.src}
+            autoplay = {false}
+            width    = {"270px"}
+            height   = {"152px"}
+          />
         </div>
       )}
     </section>
   ))
 
-  return <>{historyMessage}</>
+  return historyMessage
 }
 export default Card

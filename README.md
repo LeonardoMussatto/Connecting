@@ -17,7 +17,6 @@ This project is an opportunity to learn and put into practice new skills. I am a
 In the wiki, I will explain the meaning of the project and keep track of the process as I develop the website and work on the story.
 
 - [Some Background](https://github.com/LeonardoMussatto/Connecting/wiki/Some-Background) - _Who am I?_
-- [The Vision](https://github.com/LeonardoMussatto/Connecting/wiki/Home#the-vision) - _Where am I going?_
 - [The Process](https://github.com/LeonardoMussatto/Connecting/wiki/The-Process) - _What was I thinking!?_
 - [The Meaning](https://github.com/LeonardoMussatto/Connecting/wiki/Home#the-meaning) - _Did you get it?_
 

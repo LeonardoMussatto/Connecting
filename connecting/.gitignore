@@ -25,3 +25,5 @@ yarn-error.log*
 # tests & others
 ClockTest.js
 Questions.txt
+Landing.txt
+Interface.txt

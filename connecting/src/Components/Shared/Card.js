@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import VideoPlayer from "./VideoPlayer"
+import VideoPlayer                    from "./VideoPlayer"
 
 const Card = (props) => {
   const [CardStyle, setCardStyle] = useState()
@@ -15,9 +15,9 @@ const Card = (props) => {
       let media = {
         gridArea        :  "right",
         position        :  "start center",
+        borderRadius    :  "18px",
         height          :  props.height,
         width           :  props.width,
-        borderRadius    :  "18px",
         backgroundColor :  props.backgroundColor
       }
       setMediaStyle(media)
@@ -33,9 +33,9 @@ const Card = (props) => {
       let media = {
         gridArea     :  "right",
         position     :  "center center",
+        borderRadius :  "18px",
         width        :  props.width,
         height       :  props.height,
-        borderRadius :  "18px",
       }
       setMediaStyle(media)
     }
@@ -43,10 +43,10 @@ const Card = (props) => {
   
   let p = {
     gridArea        :  "left",
-    placeSelf       :  `${props.textPosition} center`,
     zIndex          :  "1",
-    backgroundColor :  props.textBackgroundColor,
     borderRadius    :  "18px",
+    placeSelf       :  `${props.textPosition} center`,
+    backgroundColor :  props.textBackgroundColor,
     padding         :  props.padding,
     width           :  props.textWidth
   }
@@ -58,7 +58,13 @@ const Card = (props) => {
         <img style={MediaStyle} src={props.src} alt={props.alt} />
       ) : (
         <div style={MediaStyle}>
-          <VideoPlayer color={props.textBackgroundColor} src={props.src} autoplay={true} width={"854px"} height={"480px"}/>
+          <VideoPlayer
+            color    = {props.textBackgroundColor}
+            src      = {props.src}
+            autoplay = {true}
+            width    = {"854px"}
+            height   = {"480px"}
+          />
         </div>
       )}
     </section>
