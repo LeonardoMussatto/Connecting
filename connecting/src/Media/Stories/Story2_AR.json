@@ -1,6 +1,6 @@
 [
   {
-    "id": "3:5",
+    "id": "12:5",
     "text": {
       "text"     :  "BEEEB  BEEEEB  BEEEEB  BEEEEB ...",
       "position" :  "start",
@@ -16,8 +16,8 @@
     }
   },
   {
-    "id": "3:20",
-    "timespan": "3",
+    "id": "12:20",
+    "timespan": "12",
     "text": {
       "text"    :  "yaaaaawn",
       "padding" :  "3%"
@@ -32,7 +32,7 @@
     }
   },
   {
-    "id": "3:35",
+    "id": "12:35",
     "text": {
       "text"     :  "",
       "position" :  "",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "id": "4:5",
+    "id": "13:5",
     "text": {
       "text"    :  "I really am not one of those people who talks a lot in the morning... Actually I don't talk a lot...maybe this is why I love so much illustrations",
       "padding" :  "3%",
@@ -63,8 +63,8 @@
     }
   },
   {
-    "id": "4:20",
-    "timespan": "4",
+    "id": "13:20",
+    "timespan": "13",
     "text": {
       "text"     :  "I woke up late as usual... Time to work on some icons for the library",
       "position" :  "end",
@@ -81,7 +81,7 @@
     }
   },
   {
-    "id": "4:35",
+    "id": "13:35",
     "text": {
       "text"    :  "I definitely need a cup of tea before being able to get anything done",
       "padding" :  "3%",
@@ -97,7 +97,7 @@
     }
   },
   {
-    "id": "4:40",
+    "id": "13:40",
     "text": {
       "text"     :  "Let's start with an alarm clock",
       "position" :  "end",
@@ -112,8 +112,8 @@
     }
   },
   {
-    "id": "5:28",
-    "timespan": "5",
+    "id": "14:28",
+    "timespan": "14",
     "text": {
       "text"     :  "Time to give it some color",
       "position" :  "end",
@@ -128,8 +128,8 @@
     }
   },
   {
-    "id": "6:13",
-    "timespan": "6",
+    "id": "15:13",
+    "timespan": "15",
     "text": {
       "text"     :  "Let's try a first render",
       "position" :  "end",
@@ -144,7 +144,7 @@
     }
   },
   {
-    "id": "7:02",
+    "id": "16:02",
     "text": {
       "text"     :  "Tomorrow I'm going to work on more color variations. But now I have to eat: it's getting late. ..again",
       "position" :  "",
@@ -161,8 +161,8 @@
     }
   },
   {
-    "id": "7:30",
-    "timespan": "7",
+    "id": "16:30",
+    "timespan": "16",
     "text": {
       "text"     :  "Back to work",
       "padding"  :  "2%",
@@ -177,7 +177,8 @@
     }
   },
   {
-    "id": "8:0",
+    "id": "17:0",
+    "timespan": "17",
     "text": {
       "text"     :  "Perhaps I'll make myself a cup of coffee too",
       "padding"  :  "2%",
@@ -192,23 +193,22 @@
     }
   },
   {
-    "id": "8:35",
+    "id": "17:40",
     "text": {
       "text"     :  "I really do overthink everything",
       "padding"  :  "2%",
       "position" :  "end"
     },
     "media": {
-      "isImg"    :  "true",
+      "isImg"    :  "false",
       "src"      :  "https://vimeo.com/497656984",
       "alt"      :  "working on books' illustration",
       "message"  :  "started working again",
-      "position" :  "",
-      "size"     :  ""
+      "position" :  "center"
     }
   },
   {
-    "id": "9:20",
+    "id": "18:25",
     "text": {
       "text"     :  "I need more coffee",
       "position" :  "",
@@ -224,8 +224,8 @@
     }
   },
   {
-    "id": "9:30",
-    "timespan": "9",
+    "id": "18:30",
+    "timespan": "18",
     "text": {
       "text"     :  "Let's work on a new character",
       "padding"  :  "2%",
@@ -240,8 +240,8 @@
     }
   },
   {
-    "id": "10:44",
-    "timespan": "10",
+    "id": "19:44",
+    "timespan": "19",
     "text": {
       "text"     :  "These characters are not realistic at all, but I like their 'softness'...",
       "padding"  :  "2%",
@@ -256,7 +256,7 @@
     }
   },
   {
-    "id": "11:45",
+    "id": "20:45",
     "text": {
       "text"    :  "I tend to always design them happy. I should really implement more expressions in the library... still I like them happy",
       "padding" :  "3%",
@@ -272,8 +272,8 @@
     }
   },
   {
-    "id": "11:59",
-    "timespan": "11",
+    "id": "20:59",
+    "timespan": "20",
     "text": {
       "text"    :  "It's time to cook some food",
       "padding" :  "5%"
@@ -288,8 +288,8 @@
     }
   },
   {
-    "id": "12:30",
-    "timespan": "12",
+    "id": "21:30",
+    "timespan": "21",
     "text": {
       "text"     :  "I want to work on today's characters a bit more. Let's start with some clothes",
       "padding"  :  "2%",
@@ -304,8 +304,8 @@
     }
   },
   {
-    "id": "13:15",
-    "timespan": "13",
+    "id": "22:15",
+    "timespan": "22",
     "text": {
       "text"     :  "Then the shoes",
       "padding"  :  "2%",
@@ -320,8 +320,8 @@
     }
   },
   {
-    "id": "14:29",
-    "timespan": "14",
+    "id": "23:29",
+    "timespan": "23",
     "text": {
       "text"     :  "Finally, let's see the render",
       "padding"  :  "2%",
@@ -336,8 +336,8 @@
     }
   },
   {
-    "id": "15:15",
-    "timespan": "15",
+    "id": "0:15",
+    "timespan": "0",
     "text": {
       "text"     :  "I lost track of time once more... let's save the work and get some rest",
       "position" :  "end",
@@ -353,7 +353,7 @@
     }
   },
   {
-    "id": "15:45",
+    "id": "0:45",
     "text": {
       "text"     :  "I love reading. Be it novels, poems or drama - even essays - I always get carried away in another dimension...which in the end is often not far from ours...",
       "position" :  "end",
@@ -369,8 +369,8 @@
     }
   },
   {
-    "id": "16:15",
-    "timespan": "16",
+    "id": "1:15",
+    "timespan": "1",
     "text": {
       "text"     :  "Reading",
       "position" :  "end",
@@ -386,7 +386,7 @@
     }
   },
   {
-    "id": "17:05",
+    "id": "2:05",
     "text": {
       "text"    :  "Sometimes people ask me what my favourite book is. Who knows me asks me what my favourite book is at the moment: how am I supposed to choose an overall winner?? There are so many interesting books! And often they are so different it doesn't make any sense to compare them !!",
       "padding" :  "4%",
@@ -402,7 +402,8 @@
     }
   },
   {
-    "id": "17:15",
+    "id": "2:40",
+    "timespan": "2",
     "text": {
       "text"     :  "At the moment two are the titles that come immediately to my mind: 'Six Memos for the Next Millennium' by Calvino and 'Fictions' by Borges",
       "position" :  "",
@@ -419,25 +420,8 @@
     }
   },
   {
-    "id": "17:30",
-    "text": {
-      "text"     :  "but don't give me to much time to answer or I will overthink it and in the end I won't give any answer at all ahahah",
-      "position" :  "",
-      "padding"  :  "3%",
-      "width"    :  "70%"
-    },
-    "media": {
-      "isImg"    :  "true",
-      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-111.png",
-      "alt"      :  "books",
-      "message"  :  "tends to overthink everything",
-      "position" :  "right",
-      "width"    :  "70%"
-    }
-  },
-  {
-    "id": "17:45",
-    "timespan": "17",
+    "id": "3:0",
+    "timespan": "3",
     "text": {
       "text"     :  "Reading",
       "position" :  "end",
@@ -453,8 +437,8 @@
     }
   },
   {
-    "id": "18:20",
-    "timespan": "19",
+    "id": "4:20",
+    "timespan": "4",
     "text": {
       "text"     :  "It's getting late. Tomorrow I'll get up late again I guess...",
       "position" :  "end",
@@ -470,42 +454,8 @@
     }
   },
   {
-    "id": "20:0",
-    "timespan": "21",
-    "text": {
-      "text"     :  "Sleeping. Tomorrow I'll get up late again I guess...",
-      "position" :  "end",
-      "padding"  :  "2%"
-    },
-    "media": {
-      "isImg"    :  "true",
-      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
-      "alt"      :  "werewolf gif",
-      "message"  :  "was sleep",
-      "position" :  "center",
-      "width"    :  "70%"
-    }
-  },
-  {
-    "id": "22:0",
-    "timespan": "23",
-    "text": {
-      "text"     :  "Sleeping....maybe",
-      "position" :  "end",
-      "padding"  :  "2%"
-    },
-    "media": {
-      "isImg"    :  "true",
-      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
-      "alt"      :  "werewolf gif",
-      "message"  :  "was sleep",
-      "position" :  "center",
-      "width"    :  "70%"
-    }
-  },
-  {
-    "id": "0:0",
-    "timespan": "1",
+    "id": "5:0",
+    "timespan": "5",
     "text": {
       "text"     :  "Sleeping",
       "position" :  "end",
@@ -521,8 +471,93 @@
     }
   },
   {
-    "id": "2:0",
-    "timespan": "18",
+    "id": "6:0",
+    "timespan": "6",
+    "text": {
+      "text"     :  "Sleeping....maybe",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "was sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "7:0",
+    "timespan": "7",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "was sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "7:0",
+    "timespan": "8",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "went to sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "9:0",
+    "timespan": "9",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "went to sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "10:0",
+    "timespan": "10",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "went to sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "11:0",
+    "timespan": "11",
     "text": {
       "text"     :  "Sleeping",
       "position" :  "end",

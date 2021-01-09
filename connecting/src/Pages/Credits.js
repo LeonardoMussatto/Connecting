@@ -5,6 +5,7 @@ import { ThemeContext }      from "../Helpers/Theme"
 import Link from "../Components/Shared/Link"
 import GitHub from "../Media/Icons/Social/GitHub-Mark-Light-120px-plus.png"
 
+//ENHANCE add sharing buttons - https://medium.com/camperstribe/react-social-media-integration-with-react-share-and-react-helmet-84d9def6a445
 
 const Credits = () => {
   let theme = useContext(ThemeContext)

@@ -1,8 +1,8 @@
 import React  from "react"
-import Story1 from "../Media/Stories/Story1.json"
-import Story2 from "../Media/Stories/Story2.json"
-// import Story3 from "../Media/Stories/Story1.2.json"
-// import Story4 from "../Media/Stories/Story2.2.json"
+import Story1_AR from "../Media/Stories/Story1_AR.json"
+import Story1_TH from "../Media/Stories/Story1_TH.json"
+import Story2_AR from "../Media/Stories/Story2_AR.json"
+import Story2_TH from "../Media/Stories/Story2_TH.json"
 // import Story1 from "../Media/Stories/Placeholders/storyContentPlaceholder3.json"
 // import Story2 from "../Media/Stories/Placeholders/storyContentPlaceholder2.json"
 
@@ -70,7 +70,7 @@ theme.app = {
   page: {
     ...theme.common.general,
     backgroundColor     :  "#3B3156",
-    borderColor         :  "#F5FFFE",                   //each story will probably have a different border color, maybe a gradient - page background is not bad though
+    borderColor         :  "#F5FFFE",
     color               :  "#3E4250",
     padding             :  "0",
     display             :  "grid",
@@ -79,62 +79,98 @@ theme.app = {
     gridTemplateAreas   :  `
       "logo logo"
       "nav story"
-    `
+    `,
   },
   nav: {
     padding    :  "30% 5%",
     gridArea   :  "nav",
     display    :  "grid",
-    placeItems :  "center center"
+    placeItems :  "center center",
   },
-  text: {
-    ...theme.common.text,
-    lineHeight: "2em",
-    color :  "#F5FFFE",
-    textBackgroundColor :  "#4D426D" // #4059AD
+  content: {
+    gridArea            :  "story",
+    display             :  "grid",
+    gridTemplateRows    :  "6rem calc(100% - 6rem)",
+    gridTemplateColumns :  "1fr",
+    gridTemplateAreas   :  `
+      "header"
+      "cards"
+      `,
+    margin          :  "3% 3% 3% 0",
+    borderRadius    :  "18px",
+    borderStyle     :  "solid",
+    borderWidth     :  "4px",
+    borderColor     :  "#1C1B3A",
+    backgroundColor :  "#4D426D",
   },
-  avatar: {
-    female :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/ad8621cf7df6033e0883d672283f276c883fefa0/connecting/src/Media/Icons/Avatars/Avatar-01.svg",
-    male   :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/36ad8207e99fb865e2395661e0984ed0cc343d80/connecting/src/Media/Icons/Avatars/Avatar-02.svg"
-  }
-}
-
-theme.app.story = {
-  ch1: {
-    text: {...theme.common.text},
-    backgroundColor     :  "#4D426D",
-    color               :  "#1C1B3A",
-    textBackgroundColor :  "#01D2CD",
-    storyContent        :  Story1
-  },
-  ch2: {
-    text: {...theme.common.text},
-    backgroundColor     :  "#4D426D",
-    color               :  "#1C1B3A",
-    textBackgroundColor :  "#F98063",
-    storyContent        :  Story2
-  },
-  // ch3: {
-  //   backgroundColor     :  "#9AAAD9",
-  //   borderColor         :  "#F5FFFE",
-  //   color               :  "#1C1B3A",
-  //   textBackgroundColor :  "",
-  //   storyContent        :  Story3
-  // },
-  // ch4: {
-  //   backgroundColor     :  "#FFCB77",
-  //   borderColor         :  "#F5FFFE",
-  //   color               :  "#1C1B3A",
-  //   textBackgroundColor :  "",
-  //   storyContent        :  Story4
-  // },
-  user: {
-    text: {...theme.common.text},
-    backgroundColor     :  "#4D426D",
+  header: {
+    margin              :  "2% 2% 0",
+    gridArea            :  "header",
+    display             :  "grid",
+    gridTemplateColumns :  "1fr 1fr 1fr",
+    gridAutoFlow        :  "column",
+    placeItems          :  "center center",
+    gap                 :  "1%",
+    position            :  "sticky",
+    top                 :  "7%",
+    borderRadius        :  "18px",
+    borderStyle         :  "solid",
+    borderWidth         :  "4px",
+    lineHeight          :  "2em",
+    borderColor         :  "#1C1B3A",
     color               :  "#F5FFFE",
-    textBackgroundColor :  "#2173f6",
+    // backgroundColor     :  "#9992b3",       // #4059AD
+    ...theme.common.text,
+  },
+  cards: {
+    gridArea   :  "cards",
+    display    :  "grid",
+    placeItems :  "center center",
+    margin     :  "3%",
+    // color      :  "#1C1B3A",
+    ...theme.common.text,
+  },
+  text: { ...theme.common.text, color: "#F5FFFE" },
+  avatar: {
+    female:
+      "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/ad8621cf7df6033e0883d672283f276c883fefa0/connecting/src/Media/Icons/Avatars/Avatar-01.svg",
+    male:
+      "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/36ad8207e99fb865e2395661e0984ed0cc343d80/connecting/src/Media/Icons/Avatars/Avatar-02.svg",
+    user_male:
+      "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/60ad44686ea01aa236db6bbb1fdb5bbc78d34f6f/connecting/src/Media/Icons/Avatars/Avatar-03.svg",
+    user_female:
+      "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/60ad44686ea01aa236db6bbb1fdb5bbc78d34f6f/connecting/src/Media/Icons/Avatars/Avatar-04.svg",
+  },
+  locations: {
+    TH: {
+      name     :  "Thailand",
+      lat      :  "13.742395",
+      lon      :  "100.549215",
+      timeZone :  +7
+    },
+    AR: {
+      name     :  "Argentina",
+      lat      :  "",
+      lon      :  "",
+      timeZone :  -3
+    }
+  },
+  developer: {
+    textBackgroundColor: "#01D2CD",
+    weather: { main: "mist", icon: "50d" },
+    TH: Story1_TH,
+    AR: Story1_AR
+  },
+  illustrator: {
+    textBackgroundColor: "#F98063",
+    weather: { main: "few clouds ", icon: "02d" },
+    TH: Story2_TH,
+    AR: Story2_AR
+  },
+  user: {
+    textBackgroundColor :  "#9AAAD9",
+    weather :  { main: "drizzle ", icon: "09d" },
   }
 }
-
 
 export const ThemeContext = React.createContext(theme.common)

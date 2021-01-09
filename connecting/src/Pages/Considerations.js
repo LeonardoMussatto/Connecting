@@ -36,8 +36,7 @@ const Considerations = () => {
     margin          :  "3%",
     padding         :  "10%",
     borderRadius    :  "18px",
-    backgroundColor :  theme.story.user.backgroundColor,
-    color           :  theme.story.user.color,
+    backgroundColor :  "#4D426D",
     overflow        :  "clip",
     height          :  "60vh",
   }
@@ -114,7 +113,7 @@ const Considerations = () => {
           position={"relative"}
           top={"40%"}
           left={"5%"}
-          selected={theme.story.ch1.textBackgroundColor}
+          selected={theme.developer.textBackgroundColor}
         />
         <Avatar
           src={theme.avatar.male}
@@ -122,7 +121,7 @@ const Considerations = () => {
           position={"relative"}
           top={"40%"}
           left={"30%"}
-          selected={theme.story.ch2.textBackgroundColor}
+          selected={theme.illustrator.textBackgroundColor}
         />
         <Avatar
           src={theme.avatar.male}
@@ -130,7 +129,7 @@ const Considerations = () => {
           position={"relative"}
           top={"40%"}
           left={"50%"}
-          selected={theme.story.user.textBackgroundColor}
+          selected={theme.user.textBackgroundColor}
         /> */}
         <Avatar
           src={theme.avatar.female}
@@ -138,7 +137,7 @@ const Considerations = () => {
           position={"relative"}
           top={"20%"}
           left={"27%"}
-          selected={theme.story.ch1.textBackgroundColor}
+          selected={theme.developer.textBackgroundColor}
         />
         <Avatar
           src={theme.avatar.male}
@@ -146,15 +145,15 @@ const Considerations = () => {
           position={"relative"}
           top={"35%"}
           left={"43%"}
-          selected={theme.story.ch2.textBackgroundColor}
+          selected={theme.illustrator.textBackgroundColor}
         />
         <Avatar
-          src={theme.avatar.male}
+          src={theme.avatar.user_male}
           width={"15%"}
           position={"relative"}
           top={"65%"}
           left={"5%"}
-          selected={theme.story.user.textBackgroundColor}
+          selected={theme.user.textBackgroundColor}
         />
       </div>
     </main>

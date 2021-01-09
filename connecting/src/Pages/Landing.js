@@ -1,12 +1,13 @@
 import React, { useContext } from "react"
 import { ThemeContext }      from "../Helpers/Theme"
 import { useHistory }        from "react-router-dom"
+
+//Components
 import Button                from "../Components/Shared/Button"
 
-
 //ENHANCEMENT #17 make the page responsive - support for mobile devices
-//ENHANCEMENT add animations to landing text
-
+//ENHANCEMENT add delayed display to landing text
+//STYLE reconsider text background color
 
 const Landing = () => {
   const theme = useContext(ThemeContext)
@@ -44,10 +45,26 @@ const Landing = () => {
   }
 
   const content = [
-    {id: 1, text: "You have just clicked this link, your friend sent you. Or maybe it was from someone you haven't been hearing much from lately. You should really reach out and see how everything is going. Or perhaps you just remembered you had this link in your bookmarks for some time now and you were wondering what it is. Well..."},
-    {id: 2, text: "Take some time. Relax. Sit back on your chair. You didn't even notice but you have been getting closer and closer to the screen. Or maybe you are lying on your bed. Under the cover is better. If you just woke up, you should finish making yourself that cup of coffee before starting. You don't want to forget about it."},
-    {id: 3, text: "Now that you have found a comfortable position, you don't want to be interrupted. Tell the others not to call you for some time: you are about to take a look at that web experience your friend was talking about. Maybe no one heard you... try a second time. Or if you don't want to, let's just hope no one will bother you."},
-    {id: 4, text: "Think about anything you absolutely need to do before taking some time off by yourself, and get it done. Otherwise, don't think about it. Now that you are ready, you start searching for a way to start this experience. Here it is. You click it and ..."}
+    {
+      id: 1,
+      text:
+        "You just clicked on this link that your friend sent you. Or maybe it was sent by someone you haven't heard much from lately. You should get in touch and see how everything is going. Or perhaps you just remembered you've had this link in your bookmarks for a while and wondered what it was. Well...",
+    },
+    {
+      id: 2,
+      text:
+        "Take some time. Relax. Sit back in your chair. You haven't even noticed, but you've been getting closer and closer to the screen. Or maybe you're lying on your bed. Get under the blanket. That's always better. If you just woke up, you should finish making that cup of coffee before you start. You wouldn't want to forget it.",
+    },
+    {
+      id: 3,
+      text:
+        "Now that you've found a comfortable position, you don't want to be interrupted. Tell others not to call you for a while: you're about to check out that web experience your friend was talking about. Maybe no one heard you - try a second time. Or if you don't want to, hopefully, no one will bother you.",
+    },
+    {
+      id: 4,
+      text:
+        "Think about everything you have to do before you take some time alone and do it. Otherwise, don't think about it. Otherwise, don't think about it. Now that you are ready, you start looking for a way to begin this experience. Here it is. You click it and ...",
+    },
   ]
   
   const history = useHistory()

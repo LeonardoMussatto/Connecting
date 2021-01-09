@@ -3,60 +3,114 @@ import { Switch, Route, useLocation, useHistory }         from "react-router-dom
 import { ThemeContext }                                   from "../Helpers/Theme"
 
 //Components
-import Content         from "../Media/Content/Interface.json"
+import Content        from "../Media/Content/Interface.json"
 import Interface      from "./Interface"
 import Story          from "./Story"
 import User           from "./User"
 
+// FIX notification style/logic
+// FIX history duplication when switching between stories
+// STYLE add transitions between pages
+// STYLE add LOGO
+// REM reactivate end of experience check
 
 const AppInApp = () => {
-  const theme                 = useContext(ThemeContext)
-  const history               = useHistory()
-  let   location              = useLocation()
+  const theme = useContext(ThemeContext)
+
+  //Geo API
+  const [IsLoaded_Geo, setIsLoaded_Geo] = useState(false)
+  const [UserCountry, setUserCountry]   = useState("United Kingdom")
+  const [Lat_U, setLat_U]               = useState("51.494720")
+  const [Lon_U, setLon_U]               = useState("-0.135278")
+
+  //FIX Weather API
+  const [IsLoaded_Weather_U, setIsLoaded_Weather_U] = useState(true)
+  const [IsLoaded_Weather_1, setIsLoaded_Weather_1] = useState(true)
+  const [IsLoaded_Weather_2, setIsLoaded_Weather_2] = useState(true)
+  const [IsError_U, setIsError_U] = useState(true)
+  const [IsError_1, setIsError_1] = useState(true)
+  const [IsError_2, setIsError_2] = useState(true)
+  const [Weather_U, setWeather_U] = useState(theme.user.weather)
+  const [Weather_1, setWeather_1] = useState(theme.developer.weather)
+  const [Weather_2, setWeather_2] = useState(theme.illustrator.weather)
+  const [Country_1, setCountry_1] = useState(theme.locations.TH)
+  const [Country_2, setCountry_2] = useState(theme.locations.AR)
+  
+  //Routing
+  const history  = useHistory()
+  let   location = useLocation()
+  
+  //Timing
   let   d                     = new Date()
   let   h                     = d.getUTCHours()
   let   m                     = d.getUTCMinutes()
   let   z                     = d.getTimezoneOffset()/60
   const [Hours, setHours]     = useState(h)
   const [Minutes, setMinutes] = useState(m)
-  const [Story1, setStory1]   = useState(theme.story.ch1.storyContent[0])
-  const [Story2, setStory2]   = useState(theme.story.ch2.storyContent[0])
-  const [Index, setIndex]     = useState(0)
   let   time                  = `${Hours}:${Minutes}`
   let   userTime              = `${Hours - z}:${Minutes}`
-  let   ch1Name               = "ch1"
-  let   ch2Name               = "ch2"
-  const [Story1IsChanged, setStory1IsChanged]   = useState("transparent") // false = transparent; true = solid
-  const [Story2IsChanged, setStory2IsChanged]   = useState("transparent")
-  const [HistoryIsChanged, setHistoryIsChanged] = useState("solid")
-  const [UserIsVisible, setUserIsVisible]       = useState(false)
-  const [HistoryRecord, setHistoryRecord]       = useState([{id: userTime, text: "The user started the demo", media: { src: "https://fakeimg.pl/800x500/f2f2f2", alt: "placeholder image" }}])
+  const [CarouselIndex, setCarouselIndex] = useState(0)
+  const [WeatherIndex, setWeatherIndex]   = useState(0)
+  const [UserIsVisible, setUserIsVisible] = useState(true)
 
+  //Stories' content
+  let ch1Name = "Annie"
+  let ch2Name = "John"
+  const [DeveloperStory, setDeveloperStory] = useState(theme.developer.TH)
+  const [IllustratorStory, setIllustratorStory] = useState(theme.illustrator.AR)
+  const [Story1, setStory1] = useState(DeveloperStory[0])
+  const [Story2, setStory2] = useState(IllustratorStory[0])
+  const [HistoryRecord, setHistoryRecord] = useState([{id: userTime, text: "The user started the demo", media: { src: "https://fakeimg.pl/800x500/f2f2f2", alt: "placeholder image" }}]) //STYLE add screenshot of Interface.js
+
+  //Notifications
+  const [IsChanged_Story1, setIsChanged_Story1]   = useState(false)
+  const [IsChanged_Story2, setIsChanged_Story2]   = useState(false)
+  const [IsChanged_History, setIsChanged_History] = useState(true)
+  
+  //Carousel Timing
   useEffect(() => {
-    if (Index < Content.length - 1) {
+    if (CarouselIndex < Content.length - 1) {
       setTimeout(() => {
-        setIndex(Index + 1)
+        setCarouselIndex(CarouselIndex + 1)
       }, 4000)
     }
   })
 
+  //Switch timezone to always let the user first follow the illustrator and then the developer
+ useEffect(() => {
+  if (h > 12 && h < 22){
+    setDeveloperStory(theme.developer.TH)
+    setCountry_1(theme.locations.TH)
+    setIllustratorStory(theme.illustrator.AR)
+    setCountry_2(theme.locations.AR)
+  } else {
+    setDeveloperStory(theme.developer.AR)
+    setCountry_1(theme.locations.AR)
+    setIllustratorStory(theme.illustrator.TH)
+    setCountry_2(theme.locations.TH)
+  }
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+ }, [])
+
+  //Set initial stories' content
   useEffect(() => {
-    theme.story.ch1.storyContent.forEach((element) => {
-      if (element.id === time || element.timespan === Hours) {
+    DeveloperStory.forEach((element) => {
+      if (element.id === time || element.timespan === `${Hours}`) {
         setStory1(element)
       }
     })
-    theme.story.ch2.storyContent.forEach((element) => {
-      if (element.id === time || element.timespan === Hours) {
+    IllustratorStory.forEach((element) => {
+      if (element.id === time || element.timespan === `${Hours}`) {
         setStory2(element)
       }
     })
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
+  //Sped-up Clock
   useEffect(() => {
     setTimeout(() => {
-      if (Minutes === 60) {
+      if (Minutes === 59) {
         setMinutes(0)
         setHours(Hours + 1)
       } else {
@@ -64,23 +118,26 @@ const AppInApp = () => {
       }
       if (Hours === 24) {
         setHours(0)
+        setWeatherIndex(WeatherIndex + 1)
       }
     }, 624) // 24h in 15min, as milliseconds
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [Minutes, Hours])
 
-  function useUpdateContent(target, time) {
+  //Update stories' content according to the internal clock
+  function useUpdateContent(role, target, time) {
     useEffect(() => {
-      target.storyContent.forEach((element) => {
+      target.forEach((element) => {
         if (element.id === time) {
-          switch (target) {
-            case theme.story.ch1:
+          switch (role) {
+            case "developer":
               setStory1(element)
-              setStory1IsChanged("solid")
+              setIsChanged_Story1(true)
               break
 
-            case theme.story.ch2:
+            case "illustrator":
               setStory2(element)
-              setStory2IsChanged("solid")
+              setIsChanged_Story2(true)
               break
 
             default:
@@ -88,11 +145,87 @@ const AppInApp = () => {
           }
         }
       })
-    }, [target, time])
+    }, [role, target, time])
   }
-  useUpdateContent(theme.story.ch1, time)
-  useUpdateContent(theme.story.ch2, time)
+  useUpdateContent("developer", DeveloperStory, time)
+  useUpdateContent("illustrator", IllustratorStory, time)
 
+  // useEffect(() => {
+  //   fetch("https://ipapi.co/json/")
+  //     .then((res) => res.json())
+  //     .then(
+  //       (result) => {
+  //         setIsLoaded_Geo(true)
+  //         if (result.country !== "US") {
+  //           setUserCountry(result.country_name)
+  //         } else {
+  //           setUserCountry(result.region)
+  //         }
+  //         setLon_U(result.longitude)
+  //         setLat_U(result.latitude)
+  //       },
+  //       (error) => {
+  //         setIsLoaded_Geo(true)
+  //         setUserCountry("...")
+  //       }
+  //     )
+  // }, [])
+
+  //API requests to get 48h hourly weather forecast
+  // useEffect(() => {
+  //   fetch(
+  //     `https://api.openweathermap.org/data/2.5/onecall?lat=${Lat_U}&lon=${Lon_U}&exclude={current,minutely,daily,alerts}&appid={API key}`
+  //   ) // TODO add API key
+  //     .then((res) => res.json())
+  //     .then(
+  //       (result) => {
+  //         setIsLoaded_Weather_U(true)
+  //         setWeather_U(result)
+  //       },
+  //       (error) => {
+  //         setIsError_U(true)
+  //         setIsLoaded_Weather_U(true)
+  //         setWeather_U(theme.story.user.weather)
+  //       }
+  //     )
+  // // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [Lon_U, Lat_U])
+
+  // useEffect(() => {
+  //   fetch(
+  //     `https://api.openweathermap.org/data/2.5/onecall?lat=${lat_1}&lon=${lon_1}&exclude={current,minutely,daily,alerts}&appid={API key}`
+  //   ) // TODO add API key
+  //     .then((res) => res.json())
+  //     .then(
+  //       (result) => {
+  //         setIsLoaded_Weather_1(true)
+  //         setWeather_1(result)
+  //       },
+  //       (error) => {
+  //         setIsError_1(true)
+  //         setIsLoaded_Weather_1(true)
+  //         setWeather_1(theme.story.ch1.weather)
+  //       }
+  //     )
+  //   fetch(
+  //     `https://api.openweathermap.org/data/2.5/onecall?lat=${lat_2}&lon=${lon_2}&exclude={current,minutely,daily,alerts}&appid={API key}`
+  //   ) // TODO add API key
+  //     .then((res) => res.json())
+  //     .then(
+  //       (result) => {
+  //         setIsLoaded_Weather_2(true)
+  //         setWeather_2(result)
+  //       },
+  //       (error) => {
+  //         setIsError_2(true)
+  //         setIsLoaded_Weather_2(true)
+  //         setWeather_2(theme.story.ch2.weather)
+  //       }
+  //     )
+  // // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [])
+
+  //Save viewed content to an object to create a history
   function usePrevious(value) {
     const ref = useRef();
     useEffect(() => {
@@ -100,11 +233,11 @@ const AppInApp = () => {
     });
     return ref.current;
   }
-
   let prevStory1 = usePrevious(Story1)
   let prevStory2 = usePrevious(Story2)
   let prevLocation = usePrevious(location.pathname)
   
+  //TODO consider if it is || is the best solution
   useEffect(() => {
     if (location.pathname === "/App/Story") {
       switch (location.hash) {
@@ -119,13 +252,14 @@ const AppInApp = () => {
                   isImg       :  Story1.media.isImg,
                   src         :  Story1.media.src,
                   alt         :  Story1.media.alt,
-                  borderColor :  theme.story.ch1.textBackgroundColor
+                  borderColor :  theme.developer.textBackgroundColor
                 },
               },
             ]
             setHistoryRecord(newHistory)
-            setHistoryIsChanged("solid")
+            setIsChanged_History(true)
           }
+          setIsChanged_Story1(false)
           break
         case "#2":
           if (prevLocation !== location.pathname || prevStory2 !== Story2) {
@@ -138,74 +272,75 @@ const AppInApp = () => {
                   isImg       :  Story2.media.isImg,
                   src         :  Story2.media.src,
                   alt         :  Story2.media.alt,
-                  borderColor :  theme.story.ch2.textBackgroundColor
+                  borderColor :  theme.illustrator.textBackgroundColor
                 },
               },
             ]
             setHistoryRecord(newHistory)
-            setHistoryIsChanged("solid")
+            setIsChanged_History(true)
           }
+          setIsChanged_Story2(false)
           break
 
         default:
           break
       }
     }
-  }, [HistoryRecord, Story1, Story1.media.alt, Story1IsChanged, Story2, Story2.media.alt, Story2IsChanged, ch1Name, ch2Name, location.hash, location.pathname, prevLocation, prevStory1, prevStory2, theme.story.ch1.textBackgroundColor, theme.story.ch2.textBackgroundColor, userTime])
+  }, [HistoryRecord, Story1, Story2, ch1Name, ch2Name, location.hash, location.pathname, prevLocation, prevStory1, prevStory2, theme.developer.textBackgroundColor, theme.illustrator.textBackgroundColor, userTime])
 
-  useEffect(()=>{
-    if (location.pathname === "/App/Story"){
-    switch (location.hash) {
-        case "#1":
-          setStory1IsChanged("transparent")
-          break;
-          
-          case "#2":
-            setStory2IsChanged("transparent")
-         break;
-      
-        default:
-          break;
-      }
-    } else if (location.pathname === "/App/User"){
-      setHistoryIsChanged("transparent")
-    }
-  }, [location.hash, location.pathname])
-
-  useEffect(() => {
-    time === "5:0" && setUserIsVisible(true) 
-    if(time === "6:0" && location.pathname === "/App/User"){history.push('/Considerations')}
-  }, [history, location.pathname, time])
+  //Show user page and end the experience before when stories come to the end
+  // useEffect(() => {
+  //   Hours === (h - 1) && setUserIsVisible(true) 
+  //   if (UserIsVisible) {Hours === h && history.push('/Considerations')}
+  // }, [Hours, UserIsVisible, h, history])
 
   return (
     <ThemeContext.Provider value={theme}>
       <Switch>
         <Route path={"/App/Interface"}>
           <Interface 
-            content          = {Content[Index]}
-            story1IsChanged  = {Story1IsChanged}
-            story2IsChanged  = {Story2IsChanged}
-            historyIsChanged = {HistoryIsChanged}
-            userIsVisible    = {UserIsVisible}
+            content           = {Content[CarouselIndex]}
+            isChanged_Story1  = {IsChanged_Story1}
+            isChanged_Story2  = {IsChanged_Story2}
+            isChanged_History = {IsChanged_History}
+            userIsVisible     = {UserIsVisible}
           />
         </Route>
         <Route path={"/App/Story"}>
           <Story
-            hours            = {Hours}
-            minutes          = {Minutes}
-            story1           = {Story1}
-            story2           = {Story2}
-            story1IsChanged  = {Story1IsChanged}
-            story2IsChanged  = {Story2IsChanged}
-            historyIsChanged = {HistoryIsChanged}
-            userIsVisible    = {UserIsVisible}
+            hours             = {Hours}
+            minutes           = {Minutes}
+            story1            = {Story1}
+            story2            = {Story2}
+            userIsVisible     = {UserIsVisible}
+            isChanged_Story1  = {IsChanged_Story1}
+            isChanged_Story2  = {IsChanged_Story2}
+            isChanged_History = {IsChanged_History}
+            isLoaded_1        = {IsLoaded_Weather_1}
+            isLoaded_2        = {IsLoaded_Weather_2}
+            isError_1         = {IsError_1}
+            isError_2         = {IsError_2}
+            weather_1         = {Weather_1}
+            weather_2         = {Weather_2}
+            weatherIndex      = {WeatherIndex}
+            country1          = {Country_1}
+            country2          = {Country_2}
           />
         </Route>
         <Route path={"/App/User"}>
           <User 
-            history         = {HistoryRecord}
-            story1IsChanged = {Story1IsChanged}
-            story2IsChanged = {Story2IsChanged}/>
+            hours            = {Hours - z}
+            minutes          = {Minutes}
+            history          = {HistoryRecord}
+            isChanged_Story1 = {IsChanged_Story1}
+            isChanged_Story2 = {IsChanged_Story2}
+            isLoaded_Geo     = {IsLoaded_Geo}
+            isLoaded_Weather = {IsLoaded_Weather_U}
+            country          = {UserCountry}
+            weatherReport    = {Weather_U}
+            weatherError     = {IsError_U}
+            weatherIndex     = {WeatherIndex}
+            />
         </Route>
       </Switch>
     </ThemeContext.Provider>

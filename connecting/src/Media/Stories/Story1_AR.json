@@ -1,6 +1,6 @@
 [
   {
-    "id": "12:15",
+    "id": "11:15",
     "text": {
       "text"    :  "You would be scared of my face in the mirror right now.",
       "width"   :  "70%",
@@ -16,8 +16,8 @@
     }
   },
   {
-    "id": "12:30",
-    "timespan": "12",
+    "id": "11:30",
+    "timespan": "11",
     "text": {
       "text"     :  "A shower, some music and a cup of freshly ground coffee: that's my trick to get ready for the day",
       "position" :  "start",
@@ -34,7 +34,8 @@
     }
   },
   {
-    "id": "13:0",
+    "id": "12:01",
+    "timespan": "12",
     "text": {
       "text"     :  "It's time to get some work done...",
       "position" :  "",
@@ -51,7 +52,7 @@
     }
   },
   {
-    "id": "14:0",
+    "id": "12:30",
     "text": {
       "text"     :  "Another day another challenge, they say...let's see what do I have to work on today",
       "position" :  "start",
@@ -66,9 +67,9 @@
     }
   },
   {
-    "id": "14:20",
+    "id": "12:45",
     "text": {
-      "text"     :  "Today is a 'style-day'...let's go!! =)",
+      "text"     :  "Some minor restyling and a new feature for the testing users...let's go!!",
       "position" :  "",
       "padding"  :  "5%"
     },
@@ -82,8 +83,8 @@
     }
   },
   {
-    "id": "14:30",
-    "timespan": "15",
+    "id": "13:01",
+    "timespan": "13",
     "text": {
       "text"     :  "Do I really know what I'm doing??",
       "position" :  "end",
@@ -98,7 +99,8 @@
     }
   },
   {
-    "id": "16:0",
+    "id": "14:30",
+    "timespan": "14",
     "text": {
       "text"     :  "What would I do without these references ?!? What would I do without those who maintain them??",
       "position" :  "end",
@@ -113,9 +115,10 @@
     }
   },
   {
-    "id": "17:10",
+    "id": "15:40",
+    "timespan": "15",
     "text": {
-      "text"    :  "Time for a break",
+      "text"    :  "Lunch break",
       "padding" :  "3%"
     },
     "media": {
@@ -128,10 +131,10 @@
     }
   },
   {
-    "id": "17:35",
-    "timespan": "17",
+    "id": "16:15",
+    "timespan": "16",
     "text": {
-      "text"     :  "Some say it might be an illusion...well, give that developer a rise then because this ** is really good!!",
+      "text"     :  "Some say it might be an illusion...well, give that developer a rise then because this steak is really good!!",
       "position" :  "start",
       "padding"  :  "2%"
     },
@@ -145,8 +148,8 @@
     }
   },
   {
-    "id": "18:0",
-    "timespan": "19",
+    "id": "17:35",
+    "timespan": "17",
     "text": {
       "text"     :  "Let's get back to work. I'd really like to release the restyled version today...",
       "position" :  "end",
@@ -161,7 +164,7 @@
     }
   },
   {
-    "id": "20:1",
+    "id": "17:25",
     "text": {
       "text"     :  "Good thing I don't work alone....John has always a good eye, but this time was really obvious. I forgot to add the user Icon!! oops ':)",
       "position" :  "end",
@@ -177,8 +180,8 @@
     }
   },
   {
-    "id": "20:20",
-    "timespan": "20",
+    "id": "18:5",
+    "timespan": "18",
     "text": {
       "text"    :  "For this project we found a great 3d avatar's library, let's see if I can find some new character...",
       "padding" :  "3%",
@@ -194,7 +197,7 @@
     }
   },
   {
-    "id": "20:40",
+    "id": "18:45",
     "text": {
       "text"     :  "Ahh aesthetic....so much time spent after it",
       "position" :  "start",
@@ -210,8 +213,7 @@
     }
   },
   {
-    "id": "21:20",
-    "timespan": "21",
+    "id": "19:20",
     "text": {
       "text"     :  "That's all for today",
       "position" :  "end",
@@ -226,9 +228,10 @@
     }
   },
   {
-    "id": "21:48",
+    "id": "19:48",
+    "timespan": "19",
     "text": {
-      "text"     :  "The update should be released at midnight...",
+      "text"     :  "The update should be released as soon as it gets accepted",
       "position" :  "",
       "padding"  :  "5%"
     },
@@ -242,7 +245,8 @@
     }
   },
   {
-    "id": "22:0",
+    "id": "20:01",
+    "timespan": "20",
     "text": {
       "text"     :  "Now it's time for some personal project: I have a new idea I want to work on!",
       "position" :  "center",
@@ -259,7 +263,8 @@
     }
   },
   {
-    "id": "22:20",
+    "id": "20:25",
+    "timespan": "22",
     "text": {
       "text"     :  "I love to read and sketch, but I always end up in the dark because I'm to lazy to get to the switch. The solution: a portable book-lamp",
       "position" :  "start",
@@ -276,7 +281,7 @@
     }
   },
   {
-    "id": "22:35",
+    "id": "20:40",
     "text": {
       "text"     :  "But you know how paranoid I am with creating the right ambient with lights. So I decided to build my own book-lamp.",
       "position" :  "end",
@@ -292,7 +297,7 @@
     }
   },
   {
-    "id": "22:50",
+    "id": "20:55",
     "text": {
       "text"     :  "Ok, the design is not mine actually. Yet is such a great design I have to try and rebuild it! I want to use tunable white led because you know...",
       "position" :  "",
@@ -307,8 +312,8 @@
     }
   },
   {
-    "id": "23:0",
-    "timespan": "0",
+    "id": "21:10",
+    "timespan": "21",
     "text": {
       "text"     :  "Let's get to work",
       "position" :  "end",
@@ -323,7 +328,8 @@
     }
   },
   {
-    "id": "1:0",
+    "id": "23:10",
+    "timespan": "23",
     "text": {
       "text"     :  "Now some schematics",
       "position" :  "end",
@@ -338,7 +344,7 @@
     }
   },
   {
-    "id": "1:48",
+    "id": "23:58",
     "text": {
       "text"     :  "The CapacitiveSensors library seem to work. Tomorrow I'm going to work on controlling the leds",
       "position" :  "end",
@@ -353,7 +359,8 @@
     }
   },
   {
-    "id": "2:10",
+    "id": "00:10",
+    "timespan": "0",
     "text": {
       "text"     :  "What will I cook this evening??",
       "position" :  "",
@@ -369,8 +376,8 @@
     }
   },
   {
-    "id": "3:0",
-    "timespan": "4",
+    "id": "1:0",
+    "timespan": "1",
     "text": {
       "text"     :  "What better way to finish the day than watching a movie ?!? Ok there are many, but I'm going for the movie tonight",
       "position" :  "",
@@ -387,7 +394,25 @@
     }
   },
   {
-    "id": "4:40",
+    "id": "1:30",
+    "timespan": "2",
+    "text": {
+      "text"     :  "What better way to finish the day than watching a movie ?!? Ok there are many, but I'm going for the movie tonight",
+      "position" :  "",
+      "padding"  :  "4%",
+      "width"    :  "70%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/rush-9.png",
+      "alt"      :  "old tv screen noise",
+      "message"  :  "decided to watch a movie",
+      "position" :  "",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "2:40",
     "text": {
       "text"     :  "What a great movie!",
       "position" :  "",
@@ -403,8 +428,8 @@
     }
   },
   {
-    "id": "5:0",
-    "timespan": "6",
+    "id": "3:0",
+    "timespan": "3",
     "text": {
       "text"     :  "Time to get some rest",
       "position" :  "start",
@@ -420,7 +445,75 @@
     }
   },
   {
+    "id": "4:0",
+    "timespan": "4",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt"      :  "matrix code rain",
+      "message"  :  "was sleeping",
+      "position" :  "center",
+      "height"   :  "60vh"
+    }
+  },
+  {
+    "id": "5:0",
+    "timespan": "5",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt"      :  "matrix code rain",
+      "message"  :  "was sleeping",
+      "position" :  "center",
+      "height"   :  "60vh"
+    }
+  },
+  {
+    "id": "6:0",
+    "timespan": "6",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt"      :  "matrix code rain",
+      "message"  :  "was sleeping",
+      "position" :  "center",
+      "height"   :  "60vh"
+    }
+  },
+  {
     "id": "7:0",
+    "timespan": "7",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt"      :  "matrix code rain",
+      "message"  :  "was sleeping",
+      "position" :  "center",
+      "height"   :  "60vh"
+    }
+  },
+  {
+    "id": "8:0",
     "timespan": "8",
     "text": {
       "text"     :  "Sleeping",
@@ -438,23 +531,7 @@
   },
   {
     "id": "9:0",
-    "timespan": "10",
-    "text": {
-      "text"     :  "Sleeping",
-      "position" :  "start",
-      "padding"  :  "2%"
-    },
-    "media": {
-      "isImg"    :  "true",
-      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
-      "alt"      :  "matrix code rain",
-      "message"  :  "was sleeping",
-      "position" :  "center",
-      "height"   :  "60vh"
-    }
-  },
-  {
-    "id": "11:0",
+    "timespan": "9",
     "text": {
       "text"     :  "Sleeping",
       "position" :  "start",

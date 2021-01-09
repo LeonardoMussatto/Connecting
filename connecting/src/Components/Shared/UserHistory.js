@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { ThemeContext } from "../../Helpers/Theme"
 import VideoPlayer from "./VideoPlayer"
 
-const Card = (props) => {
+const UserHistory = (props) => {
   const theme = useContext(ThemeContext)
   let card = {
     display             :  "grid",
@@ -20,7 +20,7 @@ const Card = (props) => {
   let p = {
     gridArea        :  "left",
     placeSelf       :  "center center",
-    backgroundColor :  theme.story.user.textBackgroundColor,
+    backgroundColor :  theme.user.textBackgroundColor,
     borderRadius    :  "18px",
     padding         :  "2%",
     width           :  "70%",
@@ -49,4 +49,4 @@ const Card = (props) => {
 
   return historyMessage
 }
-export default Card
+export default UserHistory
