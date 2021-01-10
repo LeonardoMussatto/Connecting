@@ -2,9 +2,6 @@ import React, { useContext, useEffect } from 'react'
 import { ThemeContext }                 from '../Helpers/Theme'
 import { useHistory }                   from "react-router-dom"
 
-//Components
-import Avatar from "../Components/Shared/Avatar"
-
 const Considerations = () => {
   const history = useHistory()
   const theme = useContext(ThemeContext)
@@ -137,30 +134,6 @@ const Considerations = () => {
         </div>
       </article>
       <div style={graphic}>
-        {/* <Avatar
-          src={theme.avatar.female}
-          width={"15%"}
-          position={"relative"}
-          top={"40%"}
-          left={"5%"}
-          selected={theme.developer.textBackgroundColor}
-        />
-        <Avatar
-          src={theme.avatar.male}
-          width={"15%"}
-          position={"relative"}
-          top={"40%"}
-          left={"30%"}
-          selected={theme.illustrator.textBackgroundColor}
-        />
-        <Avatar
-          src={theme.avatar.male}
-          width={"15%"}
-          position={"relative"}
-          top={"40%"}
-          left={"50%"}
-          selected={theme.user.textBackgroundColor}
-        /> */}
         <img style={avatar.ch1} src={theme.avatar.female} alt="female avatar"/>
         <img style={avatar.ch2} src={theme.avatar.male} alt="male avatar"/>
         <img style={avatar.ch3} src={theme.avatar.user_male} alt="user avatar"/>
