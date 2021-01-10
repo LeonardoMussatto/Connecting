@@ -22,5 +22,14 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# not ready
-Clock.js
+# tests & others
+ClockTest.js
+Questions.txt
+Landing.txt
+Interface.txt
+
+# stories prep texts
+Story1.txt
+Story2.txt
+Story3.txt
+Story4.txt

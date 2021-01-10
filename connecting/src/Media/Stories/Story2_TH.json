@@ -1,0 +1,575 @@
+[
+  {
+    "id": "2:5",
+    "text": {
+      "text"     :  "BEEEB  BEEEEB  BEEEEB  BEEEEB ...",
+      "position" :  "start",
+      "padding"  :  "7%",
+      "width"    :  "100%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "",
+      "alt"      :  "",
+      "message"  :  "heard the alarm",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "2:20",
+    "timespan": "2",
+    "text": {
+      "text"    :  "yaaaaawn",
+      "padding" :  "3%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-41.png",
+      "alt"      :  "window",
+      "message"  :  "woke up",
+      "position" :  "right",
+      "width"    :  "60%"
+    }
+  },
+  {
+    "id": "2:35",
+    "text": {
+      "text"     :  "",
+      "position" :  "",
+      "padding"  :  ""
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/Eastwood_Slippers.png",
+      "alt"      :  "slippers",
+      "message"  :  "went to the kitchen",
+      "position" :  "center",
+      "width"    :  "80%"
+    }
+  },
+  {
+    "id": "3:5",
+    "text": {
+      "text"    :  "I really am not one of those people who talks a lot in the morning... Actually I don't talk a lot...maybe this is why I love so much illustrations",
+      "padding" :  "3%",
+      "width"   :  "50%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "",
+      "alt"      :  "",
+      "message"  :  "doesn't talk much in the morning and loves to create illustration",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "3:20",
+    "timespan": "3",
+    "text": {
+      "text"     :  "I woke up late as usual... Time to work on some icons for the library",
+      "position" :  "end",
+      "padding"  :  "3%",
+      "width"    :  "21vw"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-36.png",
+      "alt"      :  "man watching the clock",
+      "message"  :  "was about to start working on the 3d icons library",
+      "position" :  "center",
+      "width"    :  "50%"
+    }
+  },
+  {
+    "id": "3:35",
+    "text": {
+      "text"    :  "I definitely need a cup of tea before being able to get anything done",
+      "padding" :  "3%",
+      "width"   :  "60%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/tea_S_1k.gif",
+      "alt"      :  "cup of tea",
+      "message"  :  "decided to make a cup of tea",
+      "position" :  "right",
+      "width"    :  "60%"
+    }
+  },
+  {
+    "id": "3:40",
+    "text": {
+      "text"     :  "Let's start with an alarm clock",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/498728199",
+      "alt"      :  "Working on 3d illustrations",
+      "message"  :  "was working on illustrations",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "4:28",
+    "timespan": "4",
+    "text": {
+      "text"     :  "Time to give it some color",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/498727866",
+      "alt"      :  "Working on 3d illustrations",
+      "message"  :  "was working on illustrations",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "4:13",
+    "timespan": "5",
+    "text": {
+      "text"     :  "Let's try a first render",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/498727977",
+      "alt"      :  "Working on 3d illustrations",
+      "message"  :  "was working on illustrations",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "6:02",
+    "text": {
+      "text"     :  "Tomorrow I'm going to work on more color variations. But now I have to eat: it's getting late. ..again",
+      "position" :  "",
+      "padding"  :  "3%",
+      "width"    :  "75%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-279.png",
+      "alt"      :  "burger",
+      "message"  :  "ate lunch late, as usual",
+      "position" :  "right",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "6:30",
+    "timespan": "6",
+    "text": {
+      "text"     :  "Back to work",
+      "padding"  :  "2%",
+      "position" :  "end"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497657369",
+      "alt"      :  "working on a campfire illustration",
+      "message"  :  "was working on a 3d campfire",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "7:0",
+    "timespan": "7",
+    "text": {
+      "text"     :  "Perhaps I'll make myself a cup of coffee too",
+      "padding"  :  "2%",
+      "position" :  "end"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497657624",
+      "alt"      :  "working on mug's illustration",
+      "message"  :  "was working on a 3d mug",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "7:40",
+    "text": {
+      "text"     :  "I really do overthink everything",
+      "padding"  :  "2%",
+      "position" :  "end"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497656984",
+      "alt"      :  "working on books' illustration",
+      "message"  :  "started working again",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "8:25",
+    "text": {
+      "text"     :  "I need more coffee",
+      "position" :  "",
+      "padding"  :  "5%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/Mug_Shadows.png",
+      "alt"      :  "mug",
+      "message"  :  "took another break",
+      "position" :  "right",
+      "width"    :  "90%"
+    }
+  },
+  {
+    "id": "8:30",
+    "timespan": "8",
+    "text": {
+      "text"     :  "Let's work on a new character",
+      "padding"  :  "2%",
+      "position" :  "end"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497655081",
+      "alt"      :  "working on a male 3d character",
+      "message"  :  "started working on a male 3d character",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "9:44",
+    "timespan": "9",
+    "text": {
+      "text"     :  "These characters are not realistic at all, but I like their 'softness'...",
+      "padding"  :  "2%",
+      "position" :  "end"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497654203",
+      "alt"      :  "working on 3d character",
+      "message"  :  "likes to design soft characters",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "10:45",
+    "text": {
+      "text"    :  "I tend to always design them happy. I should really implement more expressions in the library... still I like them happy",
+      "padding" :  "3%",
+      "width"   :  "60%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/e548d986ea693a6b0132e06be7b7d8c718a19c29/connecting/src/Media/Icons/Avatars/Avatar-01.svg",
+      "alt"      :  "Male character's happy face",
+      "message"  :  "often designs happy characters",
+      "position" :  "right",
+      "width"    :  "60%"
+    }
+  },
+  {
+    "id": "10:59",
+    "timespan": "10",
+    "text": {
+      "text"    :  "It's time to cook some food",
+      "padding" :  "5%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/1o1ogaRhGOp9lQBR9d/source.gif",
+      "alt"      :  "rice bowl",
+      "message"  :  "started cooking dinner",
+      "position" :  "right",
+      "width"    :  "90%"
+    }
+  },
+  {
+    "id": "11:30",
+    "timespan": "11",
+    "text": {
+      "text"     :  "I want to work on today's characters a bit more. Let's start with some clothes",
+      "padding"  :  "2%",
+      "position" :  "end"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497653767",
+      "alt"      :  "working on 3d character's clothes",
+      "message"  :  "decided to work again on the characters",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "12:15",
+    "timespan": "12",
+    "text": {
+      "text"     :  "Then the shoes",
+      "padding"  :  "2%",
+      "position" :  "end"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497655612",
+      "alt"      :  "working on 3d character's shoes",
+      "message"  :  "was working on character's shoes",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "13:29",
+    "timespan": "13",
+    "text": {
+      "text"     :  "Finally, let's see the render",
+      "padding"  :  "2%",
+      "position" :  "end"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497654667",
+      "alt"      :  "working on 3d character",
+      "message"  :  "rendered the character",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "14:15",
+    "timespan": "14",
+    "text": {
+      "text"     :  "I lost track of time once more... let's save the work and get some rest",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-design.png",
+      "alt"      :  "man looking at the clock while drawing on a tablet",
+      "message"  :  "lost track of time and decided stop working for today",
+      "position" :  "center",
+      "width"    :  "60%"
+    }
+  },
+  {
+    "id": "14:45",
+    "text": {
+      "text"     :  "I love reading. Be it novels, poems or drama - even essays - I always get carried away in another dimension...which in the end is often not far from ours...",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-109.png",
+      "alt"      :  "books",
+      "message"  :  "loves reading",
+      "position" :  "center",
+      "width"    :  "60%"
+    }
+  },
+  {
+    "id": "15:15",
+    "timespan": "15",
+    "text": {
+      "text"     :  "Reading",
+      "position" :  "end",
+      "padding"  :  "1%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/l1J9HWBKLp20YfNAY/source.gif",
+      "alt"      :  "reading",
+      "message"  :  "was reading",
+      "position" :  "center",
+      "width"    :  "60%"
+    }
+  },
+  {
+    "id": "16:05",
+    "text": {
+      "text"    :  "Sometimes people ask me what my favourite book is. Who knows me asks me what my favourite book is at the moment: how am I supposed to choose an overall winner?? There are so many interesting books! And often they are so different it doesn't make any sense to compare them !!",
+      "padding" :  "4%",
+      "width"   :  "70%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/Books_QuestionMark.png",
+      "alt"      :  "pile of books",
+      "message"  :  "can't choose a favourite book",
+      "position" :  "right",
+      "width"    :  "60%"
+    }
+  },
+  {
+    "id": "16:40",
+    "timespan": "16",
+    "text": {
+      "text"     :  "At the moment two are the titles that come immediately to my mind: 'Six Memos for the Next Millennium' by Calvino and 'Fictions' by Borges",
+      "position" :  "",
+      "padding"  :  "3%",
+      "width"    :  "70%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/eastwood-111.png",
+      "alt"      :  "books",
+      "message"  :  "at the moment his the favourite books are by Calvino and Borges",
+      "position" :  "right",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "17:0",
+    "timespan": "17",
+    "text": {
+      "text"     :  "Reading",
+      "position" :  "end",
+      "padding"  :  "1%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/l1J9HWBKLp20YfNAY/source.gif",
+      "alt"      :  "reading",
+      "message"  :  "was reading",
+      "position" :  "center",
+      "width"    :  "60%"
+    }
+  },
+  {
+    "id": "18:20",
+    "timespan": "18",
+    "text": {
+      "text"     :  "It's getting late. Tomorrow I'll get up late again I guess...",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "went to sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "19:0",
+    "timespan": "19",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "was sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "20:0",
+    "timespan": "20",
+    "text": {
+      "text"     :  "Sleeping....maybe",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "was sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "21:0",
+    "timespan": "21",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "was sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "22:0",
+    "timespan": "22",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "went to sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "23:0",
+    "timespan": "23",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "went to sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "0:0",
+    "timespan": "0",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "went to sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "1:0",
+    "timespan": "1",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3IEfdwhGij8mDJn1vM/source.gif",
+      "alt"      :  "werewolf gif",
+      "message"  :  "went to sleep",
+      "position" :  "center",
+      "width"    :  "70%"
+    }
+  }
+]

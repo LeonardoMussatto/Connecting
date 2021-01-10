@@ -1,31 +1,35 @@
-import "./App.css"
 import { ThemeContext, theme } from "./Helpers/Theme"
 import { Switch, Route }       from "react-router-dom"
 
 //Pages
-import Interface from "./Pages/Interface"
-import Story     from "./Pages/Story"
-import Landing   from "./Pages/Landing"
+import AppInApp       from "./Pages/AppInApp"
+import Landing        from "./Pages/Landing"
+import Credits        from "./Pages/Credits"
+import Considerations from "./Pages/Considerations"
 
-//TODO insert actual components
-//ENHANCEMENT - STYLE #12 consider adding responsive effects
+// TODO add 404 error handling - <Route path="*> always matches
 
 function App() {
   return (
     <Switch>
-      <Route path="/app">
-        <ThemeContext.Provider value={theme.interface}>
-          <Interface />
+      <Route path="/App">
+        <ThemeContext.Provider value={theme.app}>
+          <AppInApp />
         </ThemeContext.Provider>
       </Route>
-      <Route path="/story">
-        <ThemeContext.Provider value={theme.story}>
-          <Story />
+      <Route path="/Considerations">
+        <ThemeContext.Provider value={theme.app}>
+          <Considerations />
         </ThemeContext.Provider>
       </Route>
-      <Route>
+      <Route path="/Credits">
         <ThemeContext.Provider value={theme.landing}>
-          <Landing path="/" />
+          <Credits />
+        </ThemeContext.Provider>
+      </Route>
+      <Route path="/">
+        <ThemeContext.Provider value={theme.landing}>
+          <Landing />
         </ThemeContext.Provider>
       </Route>
     </Switch>

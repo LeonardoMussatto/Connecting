@@ -1,0 +1,32 @@
+Name:
+Age:
+Nationality: 
+Residence: India
+Work: Engineer
+Hobby: Photography
+Relation:
+
+//ideas
+ 
+
+
+//MORNING
+ - wakes up
+ 
+
+//COMMUTING
+ Vehicles:
+ Travel time:
+ Surroundings
+ Others:
+
+//WORK
+ 
+ 
+ - LUNCH
+ 
+
+//COMMUTING
+ 
+
+//EVENING

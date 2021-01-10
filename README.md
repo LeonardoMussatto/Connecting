@@ -1,6 +1,8 @@
 # Connecting
 Web Storytelling Project developed with React.js, Context API, React Router and Create-React-App
 
+[See the website](https://leonardomussatto.github.io/Connecting/) _still under development, but functioning...most of the times_
+
 **[TL;DR]**
 I am a university student and this project is meant to allow us to put our storytelling skills into practice through the creation of a website. **Connecting**, even though it sounds like a state, is actually the title of the website. This project, indeed, aims to raise some reflections on how we think - or don't think - about others and the scope of our actions. The website is developed using React.js, Context API, and React Router, leveraging on the Create-React-App toolkit.
 

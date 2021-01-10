@@ -7,128 +7,148 @@ import Location from "../Components/Stories/Location"
 import Weather  from "../Components/Stories/Weather"
 import Time     from "../Components/Stories/Time"
 
-//Placeholders
-import Ch   from "../Components/Shared/ChPlaceholder"
-import Card from "../Components/Stories/Card"
-
+//Components
+import Avatar from "../Components/Shared/Avatar"
+import Card   from "../Components/Shared/Card"
+import img    from "../Media/Icons/Social/Logo-04.svg"
 
 //ENHANCEMENT #18 make the page responsive - add support for mobile devices
-// TODO #5 find a way to organize content - NOTE it seems to me that the content is to case-related to be actually managed by a component, however I also have to
-// TODO #6 find a way to conditionally display section of content based on timing
+//STYLE #12 add card exit animation
+//FIX add missing element to stories' JSONs
 
+const Story = (props) => {
+  let   location                          = useLocation()
+  const theme                             = useContext(ThemeContext)
+  const [character, setCharacter]         = useState(theme.developer)
+  const [CardContent, setCardContent]     = useState(props.story1)
+  const [TimeZone, setTimeZone]           = useState(0)
+  const [Country, setCountry]             = useState("Everywhere and nowhere")
+  const [WeatherReport, setWeatherReport] = useState(character.weather)
+  const [WeatherIndex, setWeatherIndex]   = useState(0)
+  const [IsLoaded, setIsLoaded]           = useState(false)
+  const [IsError, setIsError]             = useState(false)
 
-const Story = () => {
-  const theme = useContext(ThemeContext)
-  const [story, setStory] = useState(theme.ch3)
-
-  let location = useLocation()
   useEffect(() => {
     switch (location.hash) {
       case "#1":
-        setStory(theme.ch1)
+        setCharacter(theme.developer)
+        setCardContent(props.story1)
+        setCountry(props.country1.name)
+        setTimeZone(props.country1.timeZone)
+        setIsLoaded(props.isLoaded_1)
+        setIsError(props.isError_1)
+        setWeatherReport(props.weather_1)
+        setWeatherIndex(props.weatherIndex)
         break
       case "#2":
-        setStory(theme.ch2)
+        setCharacter(theme.illustrator)
+        setCardContent(props.story2)
+        setCountry(props.country2.name)
+        setTimeZone(props.country2.timeZone)
+        setIsLoaded(props.isLoaded_2)
+        setIsError(props.isError_2)
+        setWeatherReport(props.weather_2)
+        setWeatherIndex(props.weatherIndex)
         break
-      case "#3":
-        setStory(theme.ch3)
-        break
-      case "#4":
-        setStory(theme.ch4)
-        break
-
       default:
         break
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location.hash])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.hash, props.minutes])
 
   let page = {
-    ...theme.page,
-    padding             :  "0",
-    display             :  "grid",
-    gridTemplateColumns :  "minmax(80px, 14vw) auto",
-    gridTemplateRows: "100vh",
-    gridTemplateAreas   :  `
-      "nav story"
-    `
+    ...theme.page
+  }
+  let logo = {
+    ...theme.logo
   }
   let nav = {
-    padding    :  "10% 5%",
-    gridArea   :  "nav",
-    display    :  "grid",
-    placeItems :  "center center"
+    ...theme.nav
+  }
+  let nav2 = {
+    ...theme.nav,
+    padding: "10% 5%"
   }
   let content = {
     div: {
-      display: "grid",
-      gridTemplateRows    :  "4rem calc(100vh - 4rem)",
-      gridTemplateColumns :  "1fr",
-      gridTemplateAreas   : `
-        "header"
-        "cards"
-        `,
-      margin          :  "2%",
-      borderRadius    :  "18px",
-      backgroundColor :  story.backgroundColor,
-      color           :  story.color,
-      overflow        :  "auto"
+      ...theme.content,
+      overflow        :  "clip"
     },
     header: {
-      backgroundColor     :  story.backgroundColor,
-      margin              :  "0 2%",
-      gridArea            :  "header",
-      display             :  "grid",
-      placeItems          :  "center center",
-      gridTemplateColumns :  "repeat(1fr)",
-      gridAutoFlow        :  "column",
-      position            :  "sticky",
-      top                 :  "2%",
-      borderRadius        :  "18px",
-      borderStyle         :  "solid",
-      borderWidth         :  "4px",
-      borderColor         :  story.borderColor,
+      ...theme.header
     },
     cards: {
-      gridArea        :  "cards",
-      display         :  "grid",
-      placeItems      :  "center start",
-      rowGap          :  "10vh",
-      padding         :  "0 5%",
-    },
+      ...theme.cards
+    }
   }
+
   return (
     <div style={page}>
-      <nav style={nav}>
-        <Ch width={"60%"} link={location.hash === "#1" ? "/app" : "/story#1"} selected={location.hash === "#1" ? story.backgroundColor : theme.page.backgroundColor}/>
-        <Ch width={"60%"} link={location.hash === "#2" ? "/app" : "/story#2"} selected={location.hash === "#2" ? story.backgroundColor : theme.page.backgroundColor}/>
-        <Ch width={"60%"} link={location.hash === "#3" ? "/app" : "/story#3"} selected={location.hash === "#3" ? story.backgroundColor : theme.page.backgroundColor}/>
-        <Ch width={"60%"} link={location.hash === "#4" ? "/app" : "/story#4"} selected={location.hash === "#4" ? story.backgroundColor : theme.page.backgroundColor}/>
+      <img src={img} alt="" style={logo}/>
+      <nav style={props.userIsVisible ? nav2 : nav}>
+        <Avatar
+          src      = {theme.avatar.female}
+          link     = {location.hash === "#1" ? "/App/Interface" : "/App/Story#1"}
+          selected = {
+            location.hash === "#1"
+              ? character.textBackgroundColor
+              : theme.page.backgroundColor
+          }
+          borderColor = {theme.developer.textBackgroundColor}
+          isChanged   = {props.isChanged_Story1}
+        />
+        <Avatar
+          src      = {theme.avatar.male}
+          link     = {location.hash === "#2" ? "/App/Interface" : "/App/Story#2"}
+          selected = {
+            location.hash === "#2"
+              ? character.textBackgroundColor
+              : theme.page.backgroundColor
+          }
+          borderColor = {theme.illustrator.textBackgroundColor}
+          isChanged   = {props.isChanged_Story2}
+        />
+        {props.userIsVisible && 
+        <Avatar
+          src      = {theme.avatar.user_male}
+          link     = {"/App/User"}
+          selected = {theme.page.backgroundColor}
+          borderColor = {theme.user.textBackgroundColor}
+          isChanged   = {props.isChanged_History}
+        />}
       </nav>
       <div style={content.div}>
         <header style={content.header}>
-          <Location />
-          <Weather />
-          <Time />
+          <Location 
+            isLoaded = {true}
+            location = {Country}
+          />
+          <Weather 
+            isLoaded = {IsLoaded}
+            isError  = {IsError}
+            report   = {WeatherReport}
+            index    = {WeatherIndex}
+          />
+          <Time
+            hours    = {props.hours}
+            minutes  = {props.minutes}
+            timeZone = {TimeZone}
+          />
         </header>
         <main style={content.cards}>
           <Card
-            txtLength = {"long"}
-            imgWidth  = {"400"}
-            imgHeight = {"200"}
-            imgColor  = {"f2f2f2"}
-          />
-          <Card
-            txtLength = {"short"}
-            imgWidth  = {"1000"}
-            imgHeight = {"500"}
-            imgColor  = {"f2f2f2"}
-          />
-          <Card
-            txtLength = {"long"}
-            imgWidth  = {"60%"}
-            imgHeight = {"60%"}
-            imgColor  = {"f2f2f2"}
+            key                 = {CardContent.text.text}
+            text                = {CardContent.text.text}
+            textPosition        = {CardContent.text.position}
+            textWidth           = {CardContent.text.width}
+            padding             = {CardContent.text.padding}
+            isImg               = {CardContent.media.isImg}
+            src                 = {CardContent.media.src}
+            alt                 = {CardContent.media.alt}
+            width               = {CardContent.media.width}
+            height              = {CardContent.media.height}
+            mediaPosition       = {CardContent.media.position}
+            textBackgroundColor = {character.textBackgroundColor}
           />
         </main>
       </div>

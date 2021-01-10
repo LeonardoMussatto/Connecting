@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react"
 
 const PlaceholderImage = (props) => {
-    return (
-        <div>
-            <img src={`https://fakeimg.pl/${props.width}x${props.height}/${props.color}`} alt="[Placeholder]"/>
-        </div>
-    )
+  return (
+    <>
+      <img
+        src={`https://fakeimg.pl/${props.width}x${props.height}/${props.color}`}
+        alt="[Placeholder]"
+      />
+    </>
+  )
 }
 
 export default PlaceholderImage

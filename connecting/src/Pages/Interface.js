@@ -1,64 +1,81 @@
 import React, { useContext } from "react"
-import { ThemeContext } from "../Helpers/Theme"
+import { ThemeContext }     from "../Helpers/Theme"
 
-//Placeholders
-import PlaceholderText from "../Components/Shared/PlaceholderText"
-import Ch              from "../Components/Shared/ChPlaceholder"
+//Components
+import Avatar from "../Components/Shared/Avatar"
+import Card   from "../Components/Shared/Card"
+import img    from "../Media/Icons/Social/Logo-04.svg"
 
-// TODO #8 create a reusable component for characters icons - they should also contain routes and notification style/logic
 //STYLE #23 make Interface page responsive - add support for mobile devices
-//ENHANCEMENT #24 STYLE add subtle y-axis animation to the icons - make the page more lively
+//ENHANCE STYLE implement "Hello, Salut!" - https://fourtonfish.com/project/hellosalut-api/
+//ENHANCE #24 STYLE add smooth transition between carousel cards and interface => story
+//ENHANCE STYLE add smooth opening transition
 
-const Interface = () => {
+const Interface = (props) => {
   const theme = useContext(ThemeContext)
+  let Content = props.content
   let page = {
-    ...theme,
-    padding             :  "0",
-    height              :  "100vh",
-    gridTemplateRows    :  "minmax(min-content, 40vh) minmax(min-content, 90vh)",
-    gridTemplateColumns :  "100vw",
-    overflow: "auto"
+    ...theme.page
   }
-  let header = {
-    display    :  "grid",
-    placeItems :  "center",
-    visibility :  "visible"  //REM when invisible, the icons have to be re-centred
+  let logo = {
+    ...theme.logo
+  }
+  let nav = {
+    ...theme.nav,
+  }
+  let nav2 = {
+    ...theme.nav,
+    padding: "10% 5%"
   }
   let main = {
-    display        :  "flex",
-    justifyContent :  "space-evenly",
-    alignItems     :  "center"
+    ...theme.text,
+    gridArea     :  "story",
+    display      :  "grid",
+    placeItems   :  "center center",
+    borderRadius :  "18px"
   }
   return (
     <div style={page}>
-      <header style={header}>
-        <PlaceholderText marginTB={"2%"} marginLR={"30%"} length={"long"} />
-      </header>
+      <img src={img} alt="" style={logo}/>
+      <nav style={!props.userIsVisible ? nav : nav2}>
+        <Avatar
+          src         = {theme.avatar.female}
+          width       = {"60%"}
+          link        = {"/App/Story#1"}
+          borderColor = {theme.developer.textBackgroundColor}
+          isChanged   = {props.isChanged_Story1}
+        />
+        <Avatar
+          src         = {theme.avatar.male}
+          width       = {"60%"}
+          link        = {"/App/Story#2"}
+          borderColor = {theme.illustrator.textBackgroundColor}
+          isChanged   = {props.isChanged_Story2}
+        />
+        {props.userIsVisible &&
+        <Avatar
+          src         = {theme.avatar.user_male}
+          width       = {"60%"}
+          link        = {"/App/User"}
+          borderColor = {theme.user.textBackgroundColor}
+          isChanged   = {props.isChanged_History}
+        />}
+      </nav>
       <main style={main}>
-        <Ch
-          position = {"relative"}
-          top      = {"-10vh"}
-          width    = {"25vh"}
-          link     = {"/story#1"}
-        />
-        <Ch
-          position = {"relative"}
-          top      = {"-10vh"}
-          width    = {"25vh"}
-          link     = {"/story#2"}
-        />
-        <Ch
-          position = {"relative"}
-          top      = {"-10vh"}
-          width    = {"25vh"}
-          link     = {"/story#3"}
-        />
-        <Ch
-          position = {"relative"}
-          top      = {"-10vh"}
-          width    = {"25vh"}
-          link     = {"/story#4"}
-        />
+          <Card 
+            key                 = {Content.id}
+            text                = {Content.text.text}
+            src                 = {Content.media.src}
+            alt                 = {Content.media.alt}
+            textBackgroundColor = {theme.content.backgroundColor}
+            isImg               = {"true"}
+            textPosition        = {"start"}
+            height              = {"50vh"}
+            width               = {"40vw"}
+            backgroundColor     = {"#F5FFFE"}
+            mediaPosition       = {"center"}
+            padding             = {"3%"}
+          />
       </main>
     </div>
   )
