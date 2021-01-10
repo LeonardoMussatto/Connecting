@@ -41,21 +41,21 @@ const Landing = () => {
     padding      :  "2.5vh 2vw",
     margin       :  "0",
     borderRadius :  "18px",
-    background: "#4D426D",
-    boxShadow:  "inset 5px 5px 10px #3f3659, inset -5px -5px 10px #5b4e81"
+    background   :  "#4D426D",
+    boxShadow    :  "inset 5px 5px 10px #3f3659, inset -5px -5px 10px #5b4e81"
   }
   let logo ={
     gridArea     :  "side",
     placeSelf    :  "center center",
+    padding      :  "2%",
     width        :  "50%",
     minWidth     :  "10ch",
     minHeight    :  "44px",
     borderRadius :  "100%",
+    background   :  "linear-gradient(315deg, #524775, #453b62)",
+    boxShadow    :  "-14px -14px 28px #3f3659, 14px 14px 28px #5b4e81",
     // background: "#4D426D",
     // boxShadow:  "5px 5px 10px #3f3659, -5px -5px 10px #5b4e81",
-    background: "linear-gradient(315deg, #524775, #453b62)",
-    boxShadow:  "-14px -14px 28px #3f3659, 14px 14px 28px #5b4e81",
-    padding: "2%"
   }
 
   const content = [
