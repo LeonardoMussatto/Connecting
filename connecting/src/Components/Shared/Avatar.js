@@ -13,7 +13,7 @@ const ChPlaceholder = (props) => {
         borderWidth     :  "4px",
         backgroundColor :  props.selected,
         borderColor     :  props.borderColor,
-        boxShadow: "-8px -8px 16px #362d4f, 8px 8px 16px #40355d"
+        boxShadow       : "-8px -8px 16px #362d4f, 8px 8px 16px #40355d"
       }
       setStyle(style)
     } else {
@@ -25,7 +25,7 @@ const ChPlaceholder = (props) => {
         borderWidth     :  "4px",
         backgroundColor :  props.selected,
         borderColor     :  props.borderColor,
-        boxShadow: "-8px -8px 16px #362d4f, 8px 8px 16px #40355d"
+        boxShadow       : "-8px -8px 16px #362d4f, 8px 8px 16px #40355d"
       }
       setStyle(style)
     }
