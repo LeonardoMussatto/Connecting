@@ -7,6 +7,7 @@ import Landing        from "./Pages/Landing"
 import Credits        from "./Pages/Credits"
 import Considerations from "./Pages/Considerations"
 
+// TODO add 404 error handling - <Route path="*> always matches
 
 function App() {
   return (
