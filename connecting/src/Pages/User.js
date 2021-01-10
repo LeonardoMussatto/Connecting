@@ -47,21 +47,21 @@ const User = (props) => {
       <img src={img} alt="" style={logo}/>
       <nav style={nav}>
         <Avatar
-          src={theme.avatar.female}
-          link={"/App/Story#1"}
-          isChanged = {props.isChanged_Story1}
+          src  = {theme.avatar.female}
+          link = {"/App/Story#1"}
+          isChanged   = {props.isChanged_Story1}
           borderColor = {theme.developer.textBackgroundColor}
         />
         <Avatar
-          src={theme.avatar.male}
-          link={"/App/Story#2"}
-          isChanged = {props.isChanged_Story2}
+          src  = {theme.avatar.male}
+          link = {"/App/Story#2"}
+          isChanged   = {props.isChanged_Story2}
           borderColor = {theme.illustrator.textBackgroundColor}
         />
         <Avatar
-        src={theme.avatar.user_male}
-          link={"/App/Interface"}
-          selected = {theme.user.textBackgroundColor}
+          src  = {theme.avatar.user_male}
+          link = {"/App/Interface"}
+          selected  = {theme.user.textBackgroundColor}
           isChanged = {false}
           borderColor = {"#00000000"}
         />
