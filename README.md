@@ -1,4 +1,4 @@
-![GitHub](https://img.shields.io/github/license/LeonardoMussatto/Connecting?style=flat-square) 
+![GitHub](https://img.shields.io/github/license/LeonardoMussatto/Connecting?style=flat-square) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/LeonardoMussatto/Connecting/CI)
 
 # Connecting
 Web Storytelling Project developed with React.js, Context API, React Router and Create-React-App
