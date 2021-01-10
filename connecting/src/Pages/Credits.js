@@ -20,8 +20,7 @@ const Credits = () => {
     gridTemplateAreas   :  `
             "header"
             "main"
-            "footer"  
-        `,
+            "footer"`,
   }
   let title = {
     ...theme.title,
@@ -48,7 +47,7 @@ const Credits = () => {
     backgroundColor :  "#4D426D",
     padding         :  "4%",
     borderRadius    :  "18px",
-    boxShadow:  "inset 5px 5px 10px #3f3659, inset -5px -5px 10px #5b4e81"
+    boxShadow       :  "inset 5px 5px 10px #3f3659, inset -5px -5px 10px #5b4e81"
 
   }
   let aside = {
@@ -58,7 +57,7 @@ const Credits = () => {
     backgroundColor :  "#4D426D",
     padding         :  "5%",
     borderRadius    :  "18px",
-    boxShadow:  "inset 5px 5px 10px #3f3659, inset -5px -5px 10px #5b4e81"
+    boxShadow       :  "inset 5px 5px 10px #3f3659, inset -5px -5px 10px #5b4e81"
   }
   let footer = {
     gridArea      :  "footer",
