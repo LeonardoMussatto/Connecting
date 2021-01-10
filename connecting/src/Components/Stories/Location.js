@@ -1,13 +1,11 @@
-import React from 'react'
-
-//ENHANCEMENT consider using Geolocation for user position - https://github.com/public-apis/public-apis#geocoding
+import React from "react"
 
 const Location = (props) => {
-    return (
-        <p>
-            Current location: {props.location}
-        </p>
-    )
+  if (!props.isLoaded) {
+    return <p>...</p>
+  } else {
+    return <p>{props.location}</p>
+  }
 }
 
 export default Location

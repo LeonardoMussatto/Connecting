@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect, useRef } from "react"
-import { Switch, Route, useLocation, useHistory }         from "react-router-dom"
-import { ThemeContext }                                   from "../Helpers/Theme"
+import { Switch, Route, useLocation, useHistory } from "react-router-dom"
+import { ThemeContext }               from "../Helpers/Theme"
 
 //Components
 import Content        from "../Media/Content/Interface.json"
@@ -11,7 +11,6 @@ import User           from "./User"
 // FIX notification style/logic
 // FIX history duplication when switching between stories
 // STYLE add transitions between pages
-// STYLE add LOGO
 // REM reactivate end of experience check
 
 const AppInApp = () => {
@@ -23,7 +22,7 @@ const AppInApp = () => {
   const [Lat_U, setLat_U]               = useState("51.494720")
   const [Lon_U, setLon_U]               = useState("-0.135278")
 
-  //FIX Weather API
+  // Weather API
   const [IsLoaded_Weather_U, setIsLoaded_Weather_U] = useState(true)
   const [IsLoaded_Weather_1, setIsLoaded_Weather_1] = useState(true)
   const [IsLoaded_Weather_2, setIsLoaded_Weather_2] = useState(true)
@@ -51,7 +50,8 @@ const AppInApp = () => {
   let   userTime              = `${Hours - z}:${Minutes}`
   const [CarouselIndex, setCarouselIndex] = useState(0)
   const [WeatherIndex, setWeatherIndex]   = useState(0)
-  const [UserIsVisible, setUserIsVisible] = useState(true)
+  const [PartialIdx, setPartialIdx]       = useState(0)
+  const [UserIsVisible, setUserIsVisible] = useState(false)
 
   //Stories' content
   let ch1Name = "Annie"
@@ -60,7 +60,7 @@ const AppInApp = () => {
   const [IllustratorStory, setIllustratorStory] = useState(theme.illustrator.AR)
   const [Story1, setStory1] = useState(DeveloperStory[0])
   const [Story2, setStory2] = useState(IllustratorStory[0])
-  const [HistoryRecord, setHistoryRecord] = useState([{id: userTime, text: "The user started the demo", media: { src: "https://fakeimg.pl/800x500/f2f2f2", alt: "placeholder image" }}]) //STYLE add screenshot of Interface.js
+  const [HistoryRecord, setHistoryRecord] = useState([{id: userTime, text: "The user started the demo", media: { src: "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/2b5c49e287e7dfa60e0b4bb2c72ddc56f501e4ad/connecting/src/Media/Icons/Social/Logo-04.svg", alt: "placeholder image" }}]) //STYLE add screenshot of Interface.js
 
   //Notifications
   const [IsChanged_Story1, setIsChanged_Story1]   = useState(false)
@@ -113,11 +113,14 @@ const AppInApp = () => {
       if (Minutes === 59) {
         setMinutes(0)
         setHours(Hours + 1)
+        setPartialIdx(PartialIdx + 1)
       } else {
         setMinutes(Minutes + 1)
       }
       if (Hours === 24) {
         setHours(0)
+      }
+      if (PartialIdx === 3){
         setWeatherIndex(WeatherIndex + 1)
       }
     }, 624) // 24h in 15min, as milliseconds
@@ -150,80 +153,81 @@ const AppInApp = () => {
   useUpdateContent("developer", DeveloperStory, time)
   useUpdateContent("illustrator", IllustratorStory, time)
 
-  // useEffect(() => {
-  //   fetch("https://ipapi.co/json/")
-  //     .then((res) => res.json())
-  //     .then(
-  //       (result) => {
-  //         setIsLoaded_Geo(true)
-  //         if (result.country !== "US") {
-  //           setUserCountry(result.country_name)
-  //         } else {
-  //           setUserCountry(result.region)
-  //         }
-  //         setLon_U(result.longitude)
-  //         setLat_U(result.latitude)
-  //       },
-  //       (error) => {
-  //         setIsLoaded_Geo(true)
-  //         setUserCountry("...")
-  //       }
-  //     )
-  // }, [])
+  //API request to get geolocation
+  useEffect(() => {
+    fetch("https://ipapi.co/json/")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setIsLoaded_Geo(true)
+          if (result.country !== "US") {
+            setUserCountry(result.country_name)
+          } else {
+            setUserCountry(result.region)
+          }
+          setLon_U(result.longitude)
+          setLat_U(result.latitude)
+        },
+        (error) => {
+          setIsLoaded_Geo(true)
+          setUserCountry("...")
+        }
+      )
+  }, [])
 
   //API requests to get 48h hourly weather forecast
-  // useEffect(() => {
-  //   fetch(
-  //     `https://api.openweathermap.org/data/2.5/onecall?lat=${Lat_U}&lon=${Lon_U}&exclude={current,minutely,daily,alerts}&appid={API key}`
-  //   ) // TODO add API key
-  //     .then((res) => res.json())
-  //     .then(
-  //       (result) => {
-  //         setIsLoaded_Weather_U(true)
-  //         setWeather_U(result)
-  //       },
-  //       (error) => {
-  //         setIsError_U(true)
-  //         setIsLoaded_Weather_U(true)
-  //         setWeather_U(theme.story.user.weather)
-  //       }
-  //     )
-  // // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [Lon_U, Lat_U])
+  useEffect(() => {
+    fetch(
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${Lat_U}&lon=${Lon_U}&exclude={current,minutely,daily,alerts}&appid={abb09cb21d3e3b380dbbcb1b47802918}`
+    ) // TODO add API key
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setIsLoaded_Weather_U(true)
+          setWeather_U(result)
+        },
+        (error) => {
+          setIsError_U(true)
+          setIsLoaded_Weather_U(true)
+          setWeather_U(theme.story.user.weather)
+        }
+      )
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [Lon_U, Lat_U])
 
-  // useEffect(() => {
-  //   fetch(
-  //     `https://api.openweathermap.org/data/2.5/onecall?lat=${lat_1}&lon=${lon_1}&exclude={current,minutely,daily,alerts}&appid={API key}`
-  //   ) // TODO add API key
-  //     .then((res) => res.json())
-  //     .then(
-  //       (result) => {
-  //         setIsLoaded_Weather_1(true)
-  //         setWeather_1(result)
-  //       },
-  //       (error) => {
-  //         setIsError_1(true)
-  //         setIsLoaded_Weather_1(true)
-  //         setWeather_1(theme.story.ch1.weather)
-  //       }
-  //     )
-  //   fetch(
-  //     `https://api.openweathermap.org/data/2.5/onecall?lat=${lat_2}&lon=${lon_2}&exclude={current,minutely,daily,alerts}&appid={API key}`
-  //   ) // TODO add API key
-  //     .then((res) => res.json())
-  //     .then(
-  //       (result) => {
-  //         setIsLoaded_Weather_2(true)
-  //         setWeather_2(result)
-  //       },
-  //       (error) => {
-  //         setIsError_2(true)
-  //         setIsLoaded_Weather_2(true)
-  //         setWeather_2(theme.story.ch2.weather)
-  //       }
-  //     )
-  // // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [])
+  useEffect(() => {
+    fetch(
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${Country_1.lat}&lon=${Country_1.lon}&exclude={current,minutely,daily,alerts}&appid={abb09cb21d3e3b380dbbcb1b47802918}`
+    ) // TODO add API key
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setIsLoaded_Weather_1(true)
+          setWeather_1(result)
+        },
+        (error) => {
+          setIsError_1(true)
+          setIsLoaded_Weather_1(true)
+          setWeather_1(theme.story.ch1.weather)
+        }
+      )
+    fetch(
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${Country_1.lat}&lon=${Country_1.lon}&exclude={current,minutely,daily,alerts}&appid={abb09cb21d3e3b380dbbcb1b47802918}`
+    ) // TODO add API key
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setIsLoaded_Weather_2(true)
+          setWeather_2(result)
+        },
+        (error) => {
+          setIsError_2(true)
+          setIsLoaded_Weather_2(true)
+          setWeather_2(theme.story.ch2.weather)
+        }
+      )
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   //Save viewed content to an object to create a history
   function usePrevious(value) {
@@ -289,10 +293,10 @@ const AppInApp = () => {
   }, [HistoryRecord, Story1, Story2, ch1Name, ch2Name, location.hash, location.pathname, prevLocation, prevStory1, prevStory2, theme.developer.textBackgroundColor, theme.illustrator.textBackgroundColor, userTime])
 
   //Show user page and end the experience before when stories come to the end
-  // useEffect(() => {
-  //   Hours === (h - 1) && setUserIsVisible(true) 
-  //   if (UserIsVisible) {Hours === h && history.push('/Considerations')}
-  // }, [Hours, UserIsVisible, h, history])
+  useEffect(() => {
+    Hours === (h - 1) && setUserIsVisible(true) 
+    if (UserIsVisible) {Hours === h && history.push('/Considerations')}
+  }, [Hours, UserIsVisible, h, history])
 
   return (
     <ThemeContext.Provider value={theme}>
