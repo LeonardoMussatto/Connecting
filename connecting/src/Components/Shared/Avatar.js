@@ -1,23 +1,39 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 const ChPlaceholder = (props) => {
-  let icon = {
-    display         :  "inline-block",
-    width           :  props.width,
-    position        :  props.position,
-    top             :  props.top,
-    left            :  props.left,
-    borderRadius    :  "100%",
-    backgroundColor :  props.selected,
-    borderStyle     :  props.isChanged,
-    borderWidth     :  "4px",
-    borderColor     :  props.borderColor
-  }
+  const [Style, setStyle] = useState()
+  useEffect(() => {
+    if (props.isChanged){
+      let style = {
+        display         :  "inline-block",
+        width           :  "60%",
+        borderRadius    :  "100%",
+        borderStyle     :  "solid",
+        borderWidth     :  "4px",
+        backgroundColor :  props.selected,
+        borderColor     :  props.borderColor,
+        boxShadow: "-8px -8px 16px #362d4f, 8px 8px 16px #40355d"
+      }
+      setStyle(style)
+    } else {
+      let style = {
+        display         :  "inline-block",
+        width           :  "60%",
+        borderRadius    :  "100%",
+        borderStyle     :  "transparent",
+        borderWidth     :  "4px",
+        backgroundColor :  props.selected,
+        borderColor     :  props.borderColor,
+        boxShadow: "-8px -8px 16px #362d4f, 8px 8px 16px #40355d"
+      }
+      setStyle(style)
+    }
+  }, [props.borderColor, props.isChanged, props.selected])
 
   return (
-    <Link to={props.link} style={icon}>
-      <img src={props.src} alt={"avatar"} />
+    <Link to={props.link} style={Style}>
+      <img src={props.src} alt={"avatar"}/>
     </Link>
   )
 }

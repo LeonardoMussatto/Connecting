@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 import { ThemeContext }      from "../Helpers/Theme"
-import { useLocation }       from "react-router-dom"
 
 //Header
 import Location from "../Components/Stories/Location"
@@ -10,105 +9,85 @@ import Time     from "../Components/Stories/Time"
 //Components
 import Avatar      from "../Components/Shared/Avatar"
 import UserHistory from "../Components/Shared/UserHistory"
+import img         from "../Media/Icons/Social/Logo-04.svg"
+
 
 const User = (props) => {
-  let theme    = useContext(ThemeContext)
-  let location = useLocation()
+  const theme  = useContext(ThemeContext)
+  
   let page = {
     ...theme.page
   }
+  let logo = {
+    ...theme.logo
+  }
   let nav = {
     ...theme.nav,
-    padding    :  "10% 5%",
+    padding:  "10% 5%"
   }
   let content = {
     div: {
-      gridArea            :  "story",
-      display             :  "grid",
-      gridTemplateRows    :  "6rem calc(100% - 6rem)",
-      gridTemplateColumns :  "1fr",
-      gridTemplateAreas   :  `
-        "header"
-        "cards"
-        `,
-      margin          :  "3% 3% 3% 0",
-      borderRadius    :  "18px",
-      backgroundColor :  theme.story.user.backgroundColor,
-      color           :  theme.story.user.color
+      ...theme.content
     },
     header: {
-      backgroundColor     :  theme.story.user.backgroundColor,
-      margin              :  "2% 2% 0",
-      gridArea            :  "header",
-      display             :  "grid",
-      placeItems          :  "center",
-      gap                 :  "1%",
-      gridTemplateColumns :  "1fr 1fr 1fr",
-      gridAutoFlow        :  "column",
-      position            :  "sticky",
-      top                 :  "7%",
-      borderRadius        :  "18px",
-      borderStyle         :  "solid",
-      borderWidth         :  "4px",
-      borderColor         :  theme.story.user.borderColor,
-      ...theme.text
+      ...theme.header
     },
     cards: {
-      gridArea         :  "cards",
-      display          :  "grid",
+      ...theme.cards,
       gridTemplateRows :  "repeat(20vh)",
-      placeItems       :  "center center",
-      margin           :  "3%",
       overflowY        :  "scroll",
       overflowX        :  "clip",
       scrollBehavior   :  "smooth",
-      scrollbarWidth   :  "thin",
-      ...theme.story.user.text
-    },
+      scrollbarWidth   :  "thin"
+    }
   }
   
   return (
     <div style={page}>
+      <img src={img} alt="" style={logo}/>
       <nav style={nav}>
         <Avatar
           src={theme.avatar.female}
-          width={"60%"}
-          link={location.hash === "#1" ? "/App/Interface" : "/App/Story#1"}
-          isChanged = {props.story1IsChanged}
-          borderColor = {theme.story.ch1.textBackgroundColor}
+          link={"/App/Story#1"}
+          isChanged = {props.isChanged_Story1}
+          borderColor = {theme.developer.textBackgroundColor}
         />
         <Avatar
           src={theme.avatar.male}
-          width={"60%"}
-          link={location.hash === "#2" ? "/App/Interface" : "/App/Story#2"}
-          isChanged = {props.story2IsChanged}
-          borderColor = {theme.story.ch2.textBackgroundColor}
+          link={"/App/Story#2"}
+          isChanged = {props.isChanged_Story2}
+          borderColor = {theme.illustrator.textBackgroundColor}
         />
         <Avatar
-        src={theme.avatar.male}
-          width={"60%"}
-          link={location.pathname === "/App/User" ? "/App/Interface" : "/App/User"}
-          selected={
-            location.pathname === "/App/User"
-              ? theme.story.user.textBackgroundColor
-              : theme.page.backgroundColor
-          }
+        src={theme.avatar.user_male}
+          link={"/App/Interface"}
+          selected = {theme.user.textBackgroundColor}
+          isChanged = {false}
+          borderColor = {"#00000000"}
         />
       </nav>
       <div style={content.div}>
         <header style={content.header}>
-          <Location />
-          <Weather />
+          <Location 
+            isLoaded = {props.isLoaded_Geo}
+            location = {props.country}
+          />
+          <Weather 
+            isLoaded     = {props.isLoaded_Weather}
+            isError      = {props.weatherError}
+            report       = {props.weatherReport}
+            weatherIndex = {props.weatherIndex}
+          />
           <Time
             hours    = {props.hours}
             minutes  = {props.minutes}
-            timeZone = {props.timeZone}
+            timeZone = {0}
           />
         </header>
         <main style={content.cards}>
           <UserHistory
             history = {props.history}
-            textBackgroundColor = {theme.story.user.textBackgroundColor}
+            textBackgroundColor = {theme.user.textBackgroundColor}
           />
         </main>
       </div>

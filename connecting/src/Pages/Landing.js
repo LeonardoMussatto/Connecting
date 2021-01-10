@@ -1,13 +1,12 @@
 import React, { useContext } from "react"
 import { ThemeContext }      from "../Helpers/Theme"
-import { useHistory }        from "react-router-dom"
+import { Link }              from "react-router-dom"
 
 //Components
-import Button                from "../Components/Shared/Button"
+import img from "../Media/Icons/Social/Logo-04.svg"
 
 //ENHANCEMENT #17 make the page responsive - support for mobile devices
 //ENHANCEMENT add delayed display to landing text
-//STYLE reconsider text background color
 
 const Landing = () => {
   const theme = useContext(ThemeContext)
@@ -41,7 +40,22 @@ const Landing = () => {
     ...theme.text,
     padding      :  "2.5vh 2vw",
     margin       :  "0",
-    borderRadius :  "18px"
+    borderRadius :  "18px",
+    background: "#4D426D",
+    boxShadow:  "inset 5px 5px 10px #3f3659, inset -5px -5px 10px #5b4e81"
+  }
+  let logo ={
+    gridArea     :  "side",
+    placeSelf    :  "center center",
+    width        :  "50%",
+    minWidth     :  "10ch",
+    minHeight    :  "44px",
+    borderRadius :  "100%",
+    // background: "#4D426D",
+    // boxShadow:  "5px 5px 10px #3f3659, -5px -5px 10px #5b4e81",
+    background: "linear-gradient(315deg, #524775, #453b62)",
+    boxShadow:  "-14px -14px 28px #3f3659, 14px 14px 28px #5b4e81",
+    padding: "2%"
   }
 
   const content = [
@@ -67,10 +81,6 @@ const Landing = () => {
     },
   ]
   
-  const history = useHistory()
-  const handleClick = () => {
-    history.push('App/Interface')
-  }
   return (
     <div style={page}>
       <header style={title}>Connecting...</header>
@@ -81,12 +91,7 @@ const Landing = () => {
           </section>
         ))}
       </main>
-      <Button
-        gridPosition = {"side"}
-        place        = {"center center"}
-        text         = {"Test Button"}
-        onClick      = {handleClick}
-      />
+      <Link to="/App/Interface" style={logo}><img src={img} alt=""/></Link>
     </div>
   )
 }

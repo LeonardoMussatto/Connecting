@@ -1,21 +1,24 @@
 import React, { useContext} from "react"
-import { ThemeContext } from "../Helpers/Theme"
-import Card from "../Components/Shared/Card"
+import { ThemeContext }     from "../Helpers/Theme"
 
-//Placeholders
+//Components
 import Avatar from "../Components/Shared/Avatar"
+import Card   from "../Components/Shared/Card"
+import img    from "../Media/Icons/Social/Logo-04.svg"
 
-
-// TODO #8 create a reusable component for characters icons - they should also contain routes and notification style/logic
 //STYLE #23 make Interface page responsive - add support for mobile devices
-//ENHANCEMENT #24 STYLE add subtle y-axis animation to the icons - make the page more lively
-
+//ENHANCE STYLE implement "Hello, Salut!" - https://fourtonfish.com/project/hellosalut-api/
+//ENHANCE #24 STYLE add smooth transition between carousel cards and interface => story
+//ENHANCE STYLE add smooth opening transition
 
 const Interface = (props) => {
   const theme = useContext(ThemeContext)
   let Content = props.content
   let page = {
     ...theme.page
+  }
+  let logo = {
+    ...theme.logo
   }
   let nav = {
     ...theme.nav,
@@ -33,28 +36,29 @@ const Interface = (props) => {
   }
   return (
     <div style={page}>
-      <nav style={props.userIsVisible ? nav2 : nav}>
+      <img src={img} alt="" style={logo}/>
+      <nav style={!props.userIsVisible ? nav : nav2}>
         <Avatar
-          src={theme.avatar.female}
-          width = {"60%"}
-          link  = {"/App/Story#1"}
-          borderColor = {theme.story.ch1.textBackgroundColor}
-          isChanged = {props.story1IsChanged}
+          src         = {theme.avatar.female}
+          width       = {"60%"}
+          link        = {"/App/Story#1"}
+          borderColor = {theme.developer.textBackgroundColor}
+          isChanged   = {props.isChanged_Story1}
         />
         <Avatar
-          src={theme.avatar.male}
-          width = {"60%"}
-          link  = {"/App/Story#2"}
-          borderColor = {theme.story.ch2.textBackgroundColor}
-          isChanged = {props.story2IsChanged}
+          src         = {theme.avatar.male}
+          width       = {"60%"}
+          link        = {"/App/Story#2"}
+          borderColor = {theme.illustrator.textBackgroundColor}
+          isChanged   = {props.isChanged_Story2}
         />
         {props.userIsVisible &&
         <Avatar
-          src={theme.avatar.male}
-          width = {"60%"}
-          link  = {"/App/User"}
-          borderColor = {theme.story.user.textBackgroundColor}
-          isChanged = {props.historyIsChanged}
+          src         = {theme.avatar.user_male}
+          width       = {"60%"}
+          link        = {"/App/User"}
+          borderColor = {theme.user.textBackgroundColor}
+          isChanged   = {props.isChanged_History}
         />}
       </nav>
       <main style={main}>
@@ -63,14 +67,14 @@ const Interface = (props) => {
             text                = {Content.text.text}
             src                 = {Content.media.src}
             alt                 = {Content.media.alt}
-            textBackgroundColor = {theme.text.textBackgroundColor}
+            textBackgroundColor = {theme.content.backgroundColor}
             isImg               = {"true"}
             textPosition        = {"start"}
             height              = {"50vh"}
             width               = {"40vw"}
             backgroundColor     = {"#F5FFFE"}
             mediaPosition       = {"center"}
-            padding             = {"2%"}
+            padding             = {"3%"}
           />
       </main>
     </div>

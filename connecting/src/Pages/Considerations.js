@@ -20,25 +20,55 @@ const Considerations = () => {
   }
   let textArea = {
     ...theme.text,
-    gridArea        :  "text",
-    display         :  "grid",
-    margin          :  "3%",
-    padding         :  "10%",
-    height          :  "74vh",
-    backgroundColor :  "#2C2A5C",
-    borderRadius    :  "18px",
-    overflowY       :  "scroll",
-    scrollBehavior  :  "smooth",
-    scrollbarWidth  :  "thin",
+    gridArea               :  "text",
+    display                :  "grid",
+    margin                 :  "3%",
+    padding                :  "10%",
+    height                 :  "74vh",
+    backgroundColor        :  "#2C2A5C",
+    borderRadius           :  "18px",
+    overflowY              :  "scroll",
+    scrollBehavior         :  "smooth",
+    scrollbarWidth         :  "thin",
+    boxShadow              :  "12px 12px 24px #332b4b, -12px -12px 24px #433761"
   }
   let graphic = {
-    gridArea        :  "image",
-    margin          :  "3%",
-    padding         :  "10%",
-    borderRadius    :  "18px",
-    backgroundColor :  "#4D426D",
-    overflow        :  "clip",
-    height          :  "60vh",
+    gridArea               :  "image",
+    margin                 :  "3%",
+    padding                :  "10%",
+    borderRadius           :  "18px",
+    borderTopLeftRadius    :  "0",
+    borderBottomLeftRadius :  "0",
+    backgroundColor        :  "#4D426D",
+    overflow               :  "clip",
+    height                 :  "60vh",
+    boxShadow              :  "12px 12px 24px #332b4b, -12px -12px 24px #433761"
+  }
+  let avatar = {
+    ch1: {
+      width: "15%",
+      position: "relative",
+      top: "20%",
+      left: "27%",
+      borderRadius: "100%",
+      backgroundColor: theme.developer.textBackgroundColor
+    },
+    ch2: {
+      width: "15%",
+      position: "relative",
+      top: "35%",
+      left: "43%",
+      borderRadius: "100%",
+      backgroundColor: theme.illustrator.textBackgroundColor
+    },
+    ch3: {
+      width: "15%",
+      position: "relative",
+      top: "65%",
+      left: "5%",
+      borderRadius: "100%",
+      backgroundColor: theme.user.textBackgroundColor
+    }
   }
 
   useEffect(() => {
@@ -131,30 +161,9 @@ const Considerations = () => {
           left={"50%"}
           selected={theme.user.textBackgroundColor}
         /> */}
-        <Avatar
-          src={theme.avatar.female}
-          width={"15%"}
-          position={"relative"}
-          top={"20%"}
-          left={"27%"}
-          selected={theme.developer.textBackgroundColor}
-        />
-        <Avatar
-          src={theme.avatar.male}
-          width={"15%"}
-          position={"relative"}
-          top={"35%"}
-          left={"43%"}
-          selected={theme.illustrator.textBackgroundColor}
-        />
-        <Avatar
-          src={theme.avatar.user_male}
-          width={"15%"}
-          position={"relative"}
-          top={"65%"}
-          left={"5%"}
-          selected={theme.user.textBackgroundColor}
-        />
+        <img style={avatar.ch1} src={theme.avatar.female} alt="female avatar"/>
+        <img style={avatar.ch2} src={theme.avatar.male} alt="male avatar"/>
+        <img style={avatar.ch3} src={theme.avatar.user_male} alt="user avatar"/>
       </div>
     </main>
   )

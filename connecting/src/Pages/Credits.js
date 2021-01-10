@@ -47,7 +47,8 @@ const Credits = () => {
     width           :  "70%",
     backgroundColor :  "#4D426D",
     padding         :  "4%",
-    borderRadius    :  "18px"
+    borderRadius    :  "18px",
+    boxShadow:  "inset 5px 5px 10px #3f3659, inset -5px -5px 10px #5b4e81"
 
   }
   let aside = {
@@ -56,7 +57,8 @@ const Credits = () => {
     width           :  "50%",
     backgroundColor :  "#4D426D",
     padding         :  "5%",
-    borderRadius    :  "18px"
+    borderRadius    :  "18px",
+    boxShadow:  "inset 5px 5px 10px #3f3659, inset -5px -5px 10px #5b4e81"
   }
   let footer = {
     gridArea      :  "footer",

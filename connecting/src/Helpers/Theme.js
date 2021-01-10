@@ -102,7 +102,17 @@ theme.app = {
     borderWidth     :  "4px",
     borderColor     :  "#1C1B3A",
     backgroundColor :  "#4D426D",
+    // boxShadow: "inset 5px 5px 10px #2c2440, inset -5px -5px 10px #4a3e6c"
   },
+  logo: {
+    gridArea: "logo",
+    placeSelf: "center center",
+    width        :  "5%",
+    borderRadius :  "100%",
+    padding: "0.2%",
+    marginTop: "2%",
+    background: "linear-gradient(315deg, #524775, #453b62)",
+    boxSizing: "border-box"},
   header: {
     margin              :  "2% 2% 0",
     gridArea            :  "header",
@@ -120,6 +130,7 @@ theme.app = {
     borderColor         :  "#1C1B3A",
     color               :  "#F5FFFE",
     // backgroundColor     :  "#9992b3",       // #4059AD
+    boxShadow: "7px 7px 14px #473d64, -7px -7px 14px #534776",
     ...theme.common.text,
   },
   cards: {

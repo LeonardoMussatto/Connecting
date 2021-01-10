@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react"
 import VideoPlayer                    from "./VideoPlayer"
 
 const Card = (props) => {
-  const [CardStyle, setCardStyle] = useState()
+  const [CardStyle, setCardStyle]   = useState()
   const [MediaStyle, setMediaStyle] = useState()
   
   useEffect(() => {
     if (props.mediaPosition === "center") {
       let card = {
         display    :  "grid",
-        placeItems :  "center center"
+        placeItems :  "center center",
       }
       setCardStyle(card)
       let media = {
@@ -18,7 +18,7 @@ const Card = (props) => {
         borderRadius    :  "18px",
         height          :  props.height,
         width           :  props.width,
-        backgroundColor :  props.backgroundColor
+        backgroundColor :  props.backgroundColor,
       }
       setMediaStyle(media)
     } else {
