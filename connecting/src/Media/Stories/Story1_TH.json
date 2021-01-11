@@ -151,7 +151,7 @@
     "id": "7:35",
     "timespan": "7",
     "text": {
-      "text"     :  "Let's get back to work. I'd really like to release the restyled version today...",
+      "text"     :  "Let's get back to work. I still have to work on the interface",
       "position" :  "end",
       "padding"  :  "2%"
     },
@@ -188,7 +188,7 @@
       "width"   :  "80%"
     },
     "media": {
-      "isImg"    :  "true",
+      "isImg"    :  "false",
       "src"      :  "https://vimeo.com/498727664",
       "alt"      :  "looking through library icons",
       "message"  :  "uses a 3d icons library from a young illustrator",
