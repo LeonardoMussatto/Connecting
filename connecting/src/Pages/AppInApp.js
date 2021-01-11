@@ -1,11 +1,11 @@
 import React, { useContext, useState, useEffect, useRef } from "react"
-import { Switch, Route, useLocation, useHistory } from "react-router-dom"
-import { ThemeContext }               from "../Helpers/Theme"
+import { Switch, Route, useLocation, useHistory }         from "react-router-dom"
+import { ThemeContext }                                   from "../Helpers/Theme"
 
 //Components
-import Interface      from "./Interface"
-import Story          from "./Story"
-import User           from "./User"
+import Interface from "./Interface"
+import Story     from "./Story"
+import User      from "./User"
 
 //STYLE add transitions between pages
 //REM reactivate end of experience check
@@ -22,12 +22,12 @@ const AppInApp = () => {
   // const [Salut, setSalut] = useState("Hi")
 
   // Weather API
-  const [IsLoaded_Weather_U, setIsLoaded_Weather_U] = useState(true)
-  const [IsLoaded_Weather_1, setIsLoaded_Weather_1] = useState(true)
-  const [IsLoaded_Weather_2, setIsLoaded_Weather_2] = useState(true)
-  const [IsError_U, setIsError_U] = useState(true)
-  const [IsError_1, setIsError_1] = useState(true)
-  const [IsError_2, setIsError_2] = useState(true)
+  const [IsLoaded_Weather_U, setIsLoaded_Weather_U] = useState()
+  const [IsLoaded_Weather_1, setIsLoaded_Weather_1] = useState()
+  const [IsLoaded_Weather_2, setIsLoaded_Weather_2] = useState()
+  const [IsError_U, setIsError_U] = useState()
+  const [IsError_1, setIsError_1] = useState()
+  const [IsError_2, setIsError_2] = useState()
   const [Weather_U, setWeather_U] = useState(theme.user.weather)
   const [Weather_1, setWeather_1] = useState(theme.developer.weather)
   const [Weather_2, setWeather_2] = useState(theme.illustrator.weather)
@@ -54,10 +54,10 @@ const AppInApp = () => {
   //Stories' content
   let ch1Name = "Annie"
   let ch2Name = "John"
-  const [DeveloperStory, setDeveloperStory] = useState(theme.developer.TH)
+  const [DeveloperStory, setDeveloperStory]     = useState(theme.developer.TH)
   const [IllustratorStory, setIllustratorStory] = useState(theme.illustrator.AR)
-  const [Story1, setStory1] = useState(DeveloperStory[0])
   const [Story2, setStory2] = useState(IllustratorStory[0])
+  const [Story1, setStory1] = useState(DeveloperStory[0])
   const [HistoryRecord, setHistoryRecord] = useState([{id: userTime, text: "The user started the demo", media: { src: "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/2b5c49e287e7dfa60e0b4bb2c72ddc56f501e4ad/connecting/src/Media/Icons/Social/Logo-04.svg", alt: "placeholder image" }}]) //STYLE add screenshot of Interface.js
 
   //Notifications
@@ -195,11 +195,12 @@ const AppInApp = () => {
         (result) => {
           setIsLoaded_Weather_U(true)
           setWeather_U(result)
+          setIsError_U(false)
         },
         (error) => {
-          setIsError_U(true)
-          setIsLoaded_Weather_U(true)
           setWeather_U(theme.user.weather)
+          setIsLoaded_Weather_U(true)
+          setIsError_U(true)
         }
       )
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -214,11 +215,12 @@ const AppInApp = () => {
         (result) => {
           setIsLoaded_Weather_1(true)
           setWeather_1(result)
+          setIsError_1(false)
         },
         (error) => {
-          setIsError_1(true)
-          setIsLoaded_Weather_1(true)
           setWeather_1(theme.developer.weather)
+          setIsLoaded_Weather_1(true)
+          setIsError_1(true)
         }
       )
     fetch(
@@ -229,15 +231,16 @@ const AppInApp = () => {
         (result) => {
           setIsLoaded_Weather_2(true)
           setWeather_2(result)
+          setIsError_2(false)
         },
         (error) => {
-          setIsError_2(true)
-          setIsLoaded_Weather_2(true)
           setWeather_2(theme.illustrator.weather)
+          setIsLoaded_Weather_2(true)
+          setIsError_2(true)
         }
       )
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [Country_1, Country_2])
 
   //Save viewed content to an object to create a history
   function usePrevious(value) {

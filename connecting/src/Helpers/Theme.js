@@ -155,14 +155,14 @@ theme.app = {
   locations: {
     TH: {
       name     :  "Thailand",
-      lat      :  13.742395,
-      lon      :  100.549215,
+      lat      :  "13.742395",
+      lon      :  "100.549215",
       timeZone :  +7
     },
     AR: {
       name     :  "Argentina",
-      lat      :  -34.68259,
-      lon      :  -58.34208,
+      lat      :  "-34.68259",
+      lon      :  "-58.34208",
       timeZone :  -3
     }
   },
