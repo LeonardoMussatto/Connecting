@@ -67,10 +67,10 @@
     }
   },
   {
-    "id": "12:45",
+    "id": "12:50",
     "text": {
       "text"     :  "Some minor restyling and a new feature for the testing users...let's go!!",
-      "position" :  "",
+      "width"    :  "80%",
       "padding"  :  "5%"
     },
     "media": {

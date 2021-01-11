@@ -3,14 +3,12 @@ import { Switch, Route, useLocation, useHistory } from "react-router-dom"
 import { ThemeContext }               from "../Helpers/Theme"
 
 //Components
-import Content        from "../Media/Content/Interface.json"
 import Interface      from "./Interface"
 import Story          from "./Story"
 import User           from "./User"
 
-// FIX notification style/logic
-// STYLE add transitions between pages
-// REM reactivate end of experience check
+//STYLE add transitions between pages
+//REM reactivate end of experience check
 
 const AppInApp = () => {
   const theme = useContext(ThemeContext)
@@ -20,13 +18,15 @@ const AppInApp = () => {
   const [UserCountry, setUserCountry]   = useState("United Kingdom")
   const [Lat_U, setLat_U]               = useState("51.494720")
   const [Lon_U, setLon_U]               = useState("-0.135278")
+  // const [CountryCode, setCountryCode]   = useState("TH")
+  // const [Salut, setSalut] = useState("Hi")
 
   // Weather API
   const [IsLoaded_Weather_U, setIsLoaded_Weather_U] = useState(true)
   const [IsLoaded_Weather_1, setIsLoaded_Weather_1] = useState(true)
   const [IsLoaded_Weather_2, setIsLoaded_Weather_2] = useState(true)
   const [IsError_U, setIsError_U] = useState(true)
-  const [IsError_1, setIsError_1] = useState(false)
+  const [IsError_1, setIsError_1] = useState(true)
   const [IsError_2, setIsError_2] = useState(true)
   const [Weather_U, setWeather_U] = useState(theme.user.weather)
   const [Weather_1, setWeather_1] = useState(theme.developer.weather)
@@ -67,7 +67,7 @@ const AppInApp = () => {
   
   //Carousel Timing
   useEffect(() => {
-    if (CarouselIndex < Content.length - 1) {
+    if (CarouselIndex < 3) {
       setTimeout(() => {
         setCarouselIndex(CarouselIndex + 1)
       }, 4000)
@@ -160,6 +160,7 @@ const AppInApp = () => {
           } else {
             setUserCountry(result.region)
           }
+          // setCountryCode(result.country_code)
           setLon_U(result.longitude)
           setLat_U(result.latitude)
         },
@@ -170,7 +171,21 @@ const AppInApp = () => {
       )
   }, [])
 
-  //API requests to get 48h hourly weather forecast
+  //API call to SalutAPI
+  // useEffect(() => {
+  //   fetch(`https://fourtonfish.com/hellosalut/?cc=${CountryCode}`)
+  //     .then((res) => res.json())
+  //     .then(
+  //       (result) => {
+  //         setSalut(result.hello)
+  //       },
+  //       (error) => {
+  //         setSalut("error")
+  //       }
+  //     )
+  // })
+
+  // //API requests to get 48h hourly weather forecast
   useEffect(() => {
     fetch(
       `https://api.openweathermap.org/data/2.5/onecall?lat=${Lat_U}&lon=${Lon_U}&exclude=current,minutely,daily,alerts&appid=abb09cb21d3e3b380dbbcb1b47802918`
@@ -192,7 +207,7 @@ const AppInApp = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${Country_1.lat}&lon=${Country_2.lon}&exclude=current,minutely,daily,alerts&appid=abb09cb21d3e3b380dbbcb1b47802918`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${Country_1.lat}&lon=${Country_1.lon}&exclude=current,minutely,daily,alerts&appid=abb09cb21d3e3b380dbbcb1b47802918`
     )
       .then((res) => res.json())
       .then(
@@ -285,7 +300,8 @@ const AppInApp = () => {
           break
       }
     }
-  }, [HistoryRecord, Story1, Story2, ch1Name, ch2Name, location.hash, location.pathname, prevLocation, prevStory1, prevStory2, theme.developer.textBackgroundColor, theme.illustrator.textBackgroundColor, userTime])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location.hash, location.pathname, Story1, Story2])
 
   //Show user page and end the experience before when stories come to the end
   useEffect(() => {
@@ -298,7 +314,8 @@ const AppInApp = () => {
       <Switch>
         <Route path={"/App/Interface"}>
           <Interface 
-            content           = {Content[CarouselIndex]}
+            // salut             = {Salut}
+            index             = {CarouselIndex}
             isChanged_Story1  = {IsChanged_Story1}
             isChanged_Story2  = {IsChanged_Story2}
             isChanged_History = {IsChanged_History}

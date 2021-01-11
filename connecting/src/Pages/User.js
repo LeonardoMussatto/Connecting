@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import { ThemeContext }      from "../Helpers/Theme"
 
 //Header
@@ -14,6 +14,8 @@ import img         from "../Media/Icons/Social/Logo-04.svg"
 
 const User = (props) => {
   const theme  = useContext(ThemeContext)
+  const [BorderColor_1, setBorderColor_1] = useState(theme.developer.textBackgroundColor + "00")
+  const [BorderColor_2, setBorderColor_2] = useState(theme.illustrator.textBackgroundColor + "00")
   
   let page = {
     ...theme.page
@@ -41,6 +43,12 @@ const User = (props) => {
       scrollbarWidth   :  "thin"
     }
   }
+
+  useEffect(() => {
+    props.isChanged_Story1  ? setBorderColor_1(theme.developer.textBackgroundColor)   :  setBorderColor_1(theme.developer.textBackgroundColor + "00")
+    props.isChanged_Story2  ? setBorderColor_2(theme.illustrator.textBackgroundColor) :  setBorderColor_2(theme.illustrator.textBackgroundColor + "00")
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[props.isChanged_History, props.isChanged_Story1, props.isChanged_Story2])
   
   return (
     <div style={page}>
@@ -49,20 +57,17 @@ const User = (props) => {
         <Avatar
           src  = {theme.avatar.female}
           link = {"/App/Story#1"}
-          isChanged   = {props.isChanged_Story1}
-          borderColor = {theme.developer.textBackgroundColor}
+          borderColor = {BorderColor_1}
         />
         <Avatar
           src  = {theme.avatar.male}
           link = {"/App/Story#2"}
-          isChanged   = {props.isChanged_Story2}
-          borderColor = {theme.illustrator.textBackgroundColor}
+          borderColor = {BorderColor_2}
         />
         <Avatar
           src  = {theme.avatar.user_male}
           link = {"/App/Interface"}
           selected  = {theme.user.textBackgroundColor}
-          isChanged = {false}
           borderColor = {"#00000000"}
         />
       </nav>

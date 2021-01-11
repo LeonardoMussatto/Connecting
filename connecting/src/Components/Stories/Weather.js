@@ -10,6 +10,7 @@ const Weather = (props) => {
   }
   let img = {
     width           :  "2.3em",
+    padding         :  "1%",
     borderRadius    :  "100%",
     backgroundColor :  "#9992b3"
   }

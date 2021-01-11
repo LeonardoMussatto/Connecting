@@ -14,7 +14,6 @@ import img    from "../Media/Icons/Social/Logo-04.svg"
 
 //ENHANCEMENT #18 make the page responsive - add support for mobile devices
 //STYLE #12 add card exit animation
-//FIX add missing element to stories' JSONs
 
 const Story = (props) => {
   let   location                          = useLocation()
@@ -26,6 +25,9 @@ const Story = (props) => {
   const [WeatherReport, setWeatherReport] = useState(character.weather)
   const [IsLoaded, setIsLoaded]           = useState(false)
   const [IsError, setIsError]             = useState(true)
+  const [BorderColor_1, setBorderColor_1] = useState(theme.developer.textBackgroundColor + "00")
+  const [BorderColor_2, setBorderColor_2] = useState(theme.illustrator.textBackgroundColor + "00")
+  const [BorderColor_U, setBorderColor_U] = useState(theme.user.textBackgroundColor + "00")
 
   useEffect(() => {
     switch (location.hash) {
@@ -50,8 +52,15 @@ const Story = (props) => {
       default:
         break
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.hash, props.minutes])
+
+  useEffect(() => {
+    props.isChanged_Story1  ? setBorderColor_1(theme.developer.textBackgroundColor)   :  setBorderColor_1(theme.developer.textBackgroundColor + "00")
+    props.isChanged_Story2  ? setBorderColor_2(theme.illustrator.textBackgroundColor) :  setBorderColor_2(theme.illustrator.textBackgroundColor + "00")
+    props.isChanged_History ? setBorderColor_U(theme.user.textBackgroundColor)        :  setBorderColor_U(theme.user.textBackgroundColor + "00")
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[props.isChanged_History, props.isChanged_Story1, props.isChanged_Story2])
 
   let page = {
     ...theme.page
@@ -91,8 +100,7 @@ const Story = (props) => {
               ? character.textBackgroundColor
               : theme.page.backgroundColor
           }
-          borderColor = {theme.developer.textBackgroundColor}
-          isChanged   = {props.isChanged_Story1}
+          borderColor = {BorderColor_1}
         />
         <Avatar
           src      = {theme.avatar.male}
@@ -102,16 +110,14 @@ const Story = (props) => {
               ? character.textBackgroundColor
               : theme.page.backgroundColor
           }
-          borderColor = {theme.illustrator.textBackgroundColor}
-          isChanged   = {props.isChanged_Story2}
+          borderColor = {BorderColor_2}
         />
         {props.userIsVisible && 
         <Avatar
-          src      = {theme.avatar.user_male}
-          link     = {"/App/User"}
-          selected = {theme.page.backgroundColor}
-          borderColor = {theme.user.textBackgroundColor}
-          isChanged   = {props.isChanged_History}
+          src         = {theme.avatar.user_male}
+          link        = {"/App/User"}
+          selected    = {theme.page.backgroundColor}
+          borderColor = {BorderColor_U}
         />}
       </nav>
       <div style={content.div}>
