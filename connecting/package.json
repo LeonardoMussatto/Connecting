@@ -1,12 +1,12 @@
 {
-  "name": "Connecting",
+  "name": "connecting",
   "version": "0.1.0",
   "private": false,
-  "description": "web experience bild with react.js"
-  "git repository": "LeonardoMussatto/Connecting"
-  "keywords": "website, web experience, react, social, learning, university"
-  "author": "Leonardo Mussatto"
-  "license": "(MPL-2.0)"
+  "description": "web experience bild with react.js",
+  "git repository": "LeonardoMussatto/Connecting",
+  "keywords": "website, web experience, react, social, learning, university",
+  "author": "Leonardo Mussatto",
+  "license": "(MPL-2.0)",
   "homepage": "https://LeonardoMussatto.github.io/Connecting",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
