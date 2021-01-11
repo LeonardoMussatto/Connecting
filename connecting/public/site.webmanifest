@@ -1,0 +1,25 @@
+{
+  "name": "Connecting...: a web experience",
+  "short_name": "Connecting...",
+  "icons": [
+    {
+      "src": "%PUBLIC_URL%/favicon.ico",
+      "sizes": "16x16, 32x32, 48x48",
+      "type": "icon/ico"
+    },
+    {
+      "src": "%PUBLIC_URL%/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "%PUBLIC_URL%/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://leonardomussatto.github.io/Connecting/",
+  "background_color": "#4D426D",
+  "theme_color": "#3B3156",
+  "display": "fullscreen"
+}
