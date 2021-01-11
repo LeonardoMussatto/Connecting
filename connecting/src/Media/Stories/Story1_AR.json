@@ -1,0 +1,548 @@
+[
+  {
+    "id": "11:15",
+    "text": {
+      "text"    :  "You would be scared of my face in the mirror right now.",
+      "width"   :  "70%",
+      "padding" :  "5%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/soap.png",
+      "alt"      :  "soap",
+      "message"  :  "looked into the mirror",
+      "position" :  "right",
+      "width"    :  "60%"
+    }
+  },
+  {
+    "id": "11:30",
+    "timespan": "11",
+    "text": {
+      "text"     :  "A shower, some music and a cup of freshly ground coffee: that's my trick to get ready for the day",
+      "position" :  "start",
+      "width"    :  "60%",
+      "padding"  :  "3%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/Morning-03.png",
+      "alt"      :  "a grinder, an espresso machine and a cup",
+      "message"  :  "uses this trick to wake up",
+      "position" :  "center",
+      "width"    :  "80%"
+    }
+  },
+  {
+    "id": "12:01",
+    "timespan": "12",
+    "text": {
+      "text"     :  "It's time to get some work done...",
+      "position" :  "",
+      "width"    :  "60%",
+      "padding"  :  "5%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/Computer.png",
+      "alt"      :  "computer",
+      "message"  :  "was about to start working",
+      "position" :  "right",
+      "height"   :  "90%"
+    }
+  },
+  {
+    "id": "12:30",
+    "text": {
+      "text"     :  "Another day another challenge, they say...let's see what do I have to work on today",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/498738612",
+      "alt"      :  "opening apps",
+      "message"  :  "was about to find out the tasks for the day",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "12:50",
+    "text": {
+      "text"     :  "Some minor restyling and a new feature for the testing users...let's go!!",
+      "width"    :  "80%",
+      "padding"  :  "5%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/pixeltrue-web-design-1.png",
+      "alt"      :  "todo-list",
+      "message"  :  "had to work on styling the webapp",
+      "position" :  "",
+      "width"    :  "80%"
+    }
+  },
+  {
+    "id": "13:01",
+    "timespan": "13",
+    "text": {
+      "text"     :  "Do I really know what I'm doing??",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497692800",
+      "alt"      :  "writing code",
+      "message"  :  "started working",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "14:30",
+    "timespan": "14",
+    "text": {
+      "text"     :  "What would I do without these references ?!? What would I do without those who maintain them??",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497693860",
+      "alt"      :  "looking up coding references",
+      "message"  :  "uses of then references maintained by other people",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "15:40",
+    "timespan": "15",
+    "text": {
+      "text"    :  "Lunch break",
+      "padding" :  "3%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://media.giphy.com/media/3OqB2QYGyAPan8KYXn/source.gif",
+      "alt"      :  "eating",
+      "message"  :  "took a break",
+      "position" :  "right",
+      "width"    :  "80%"
+    }
+  },
+  {
+    "id": "16:15",
+    "timespan": "16",
+    "text": {
+      "text"     :  "Some say it might be an illusion...well, give that developer a rise then because this steak is really good!!",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixSteak.gif",
+      "alt"      :  "matrix scene",
+      "message"  :  "ate lunch",
+      "position" :  "center",
+      "height"   :  "60vh"
+    }
+  },
+  {
+    "id": "17:35",
+    "timespan": "17",
+    "text": {
+      "text"     :  "Let's get back to work. I'd really like to release the restyled version today...",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497694522",
+      "alt"      :  "working on website UI with VisualStudioCode",
+      "message"  :  "went back to work",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "17:25",
+    "text": {
+      "text"     :  "Good thing I don't work alone....John has always a good eye, but this time was really obvious. I forgot to add the user Icon!! oops ':)",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/Bug.png",
+      "alt"      :  "GitHub Issue",
+      "message"  :  "forgot to add an icon fot the user",
+      "position" :  "center",
+      "height"   :  "100%"
+    }
+  },
+  {
+    "id": "18:5",
+    "timespan": "18",
+    "text": {
+      "text"    :  "For this project we found a nice 3d avatar's library, let's see if I can find some new character...",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/498727664",
+      "alt"      :  "looking through library icons",
+      "message"  :  "uses a 3d icons library from a young illustrator",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "18:45",
+    "text": {
+      "text"     :  "Ahh aesthetic....so much time spent after it",
+      "position" :  "start",
+      "padding"  :  "3%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/cyborg-16.png",
+      "alt"      :  "web development illustration",
+      "message"  :  "went back to work",
+      "position" :  "center",
+      "height"   :  "70vh"
+    }
+  },
+  {
+    "id": "19:20",
+    "text": {
+      "text"     :  "That's all for today",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497692586",
+      "alt"      :  "commit to GitHub",
+      "message"  :  "saved the progress",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "19:48",
+    "timespan": "19",
+    "text": {
+      "text"     :  "The update should be released as soon as it gets accepted",
+      "position" :  "",
+      "padding"  :  "5%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/pixeltrue-time-management-1.png",
+      "alt"      :  "hourglass",
+      "message"  :  "planned the new version to be released at midnight",
+      "position" :  "",
+      "width"    :  "80%"
+    }
+  },
+  {
+    "id": "20:01",
+    "timespan": "20",
+    "text": {
+      "text"     :  "Now it's time for some personal project: I have a new idea I want to work on!",
+      "position" :  "center",
+      "width"    :  "57%",
+      "padding"  :  "5%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/Idea-04.png",
+      "alt"      :  "a notebook with a light bulb on top",
+      "message"  :  "was about to start working a new personal project",
+      "position" :  "right",
+      "height"   :  "70%"
+    }
+  },
+  {
+    "id": "20:25",
+    "timespan": "22",
+    "text": {
+      "text"     :  "I love to read and sketch, but I always end up in the dark because I'm to lazy to get to the switch. The solution: a portable book-lamp",
+      "position" :  "start",
+      "padding"  :  "2%",
+      "width"    :  "73%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/LumioLamp.png",
+      "alt"      :  "book lamp",
+      "message"  :  "loves to read but always ends up in the dark",
+      "position" :  "center",
+      "size"     :  ""
+    }
+  },
+  {
+    "id": "20:40",
+    "text": {
+      "text"     :  "But you know how paranoid I am with creating the right ambient with lights. So I decided to build my own book-lamp.",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/LumioLamp.png",
+      "alt"      :  "book lamp",
+      "message"  :  "decided to create a lamp",
+      "position" :  "center",
+      "size"     :  ""
+    }
+  },
+  {
+    "id": "20:55",
+    "text": {
+      "text"     :  "Ok, the design is not mine actually. Yet is such a great design I have to try and rebuild it! I want to use tunable white led because you know...",
+      "position" :  "",
+      "padding"  :  "5%",
+      "width"    :  "70%"
+    },
+    "media": {
+      "isImg"   :  "true",
+      "src"     :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/LightMeme.png",
+      "alt"     :  "meme abut light temperature",
+      "message" :  "was inspired by the design of Lumio"
+    }
+  },
+  {
+    "id": "21:10",
+    "timespan": "21",
+    "text": {
+      "text"     :  "Let's get to work",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497691007",
+      "alt"      :  "designing the lamp with SketchUp",
+      "message"  :  "started working on the project",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "23:10",
+    "timespan": "23",
+    "text": {
+      "text"     :  "Now some schematics",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497692224",
+      "alt"      :  "creating schematics on Autodesk Eagle",
+      "message"  :  "started working on the circuit",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "23:58",
+    "text": {
+      "text"     :  "The CapacitiveSensors library seem to work. Tomorrow I'm going to work on controlling the leds",
+      "position" :  "end",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "false",
+      "src"      :  "https://vimeo.com/497692089",
+      "alt"      :  "testing the arduino library",
+      "message"  :  "plans to work on the led controller in the next days",
+      "position" :  "center"
+    }
+  },
+  {
+    "id": "00:10",
+    "timespan": "0",
+    "text": {
+      "text"     :  "What will I cook this evening??",
+      "position" :  "",
+      "padding"  :  "3%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/Pan_Small.png",
+      "alt"      :  "pan",
+      "message"  :  "was cooking",
+      "position" :  "right",
+      "width"    :  "60%"
+    }
+  },
+  {
+    "id": "1:0",
+    "timespan": "1",
+    "text": {
+      "text"     :  "What better way to finish the day than watching a movie ?!? Ok there are many, but I'm going for the movie tonight",
+      "position" :  "",
+      "padding"  :  "4%",
+      "width"    :  "70%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/rush-9.png",
+      "alt"      :  "old tv screen noise",
+      "message"  :  "decided to watch a movie",
+      "position" :  "",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "1:30",
+    "timespan": "2",
+    "text": {
+      "text"     :  "What better way to finish the day than watching a movie ?!? Ok there are many, but I'm going for the movie tonight",
+      "position" :  "",
+      "padding"  :  "4%",
+      "width"    :  "70%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/rush-9.png",
+      "alt"      :  "old tv screen noise",
+      "message"  :  "decided to watch a movie",
+      "position" :  "",
+      "width"    :  "70%"
+    }
+  },
+  {
+    "id": "2:40",
+    "text": {
+      "text"     :  "What a great movie!",
+      "position" :  "",
+      "padding"  :  "4%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Icons/Handz/White-in-Basic9.png",
+      "alt"      :  "ok sign",
+      "message"  :  "enjoyed the movie",
+      "position" :  "right",
+      "width"    :  "100%"
+    }
+  },
+  {
+    "id": "3:0",
+    "timespan": "3",
+    "text": {
+      "text"     :  "Time to get some rest",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt"      :  "matrix code rain",
+      "message"  :  "went to sleep",
+      "position" :  "center",
+      "height"   :  "60vh"
+    }
+  },
+  {
+    "id": "4:0",
+    "timespan": "4",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt"      :  "matrix code rain",
+      "message"  :  "was sleeping",
+      "position" :  "center",
+      "height"   :  "60vh"
+    }
+  },
+  {
+    "id": "5:0",
+    "timespan": "5",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt"      :  "matrix code rain",
+      "message"  :  "was sleeping",
+      "position" :  "center",
+      "height"   :  "60vh"
+    }
+  },
+  {
+    "id": "6:0",
+    "timespan": "6",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt"      :  "matrix code rain",
+      "message"  :  "was sleeping",
+      "position" :  "center",
+      "height"   :  "60vh"
+    }
+  },
+  {
+    "id": "7:0",
+    "timespan": "7",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt"      :  "matrix code rain",
+      "message"  :  "was sleeping",
+      "position" :  "center",
+      "height"   :  "60vh"
+    }
+  },
+  {
+    "id": "8:0",
+    "timespan": "8",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt"      :  "matrix code rain",
+      "message"  :  "was sleeping",
+      "position" :  "center",
+      "height"   :  "60vh"
+    }
+  },
+  {
+    "id": "9:0",
+    "timespan": "9",
+    "text": {
+      "text"     :  "Sleeping",
+      "position" :  "start",
+      "padding"  :  "2%"
+    },
+    "media": {
+      "isImg"    :  "true",
+      "src"      :  "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/MatrixRain.gif",
+      "alt"      :  "matrix code rain",
+      "message"  :  "was sleeping",
+      "position" :  "center",
+      "height"   :  "60vh"
+    }
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "text": {
+      "text": "Hi, welcome to The Hub"
+    },
+    "media": {
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/4b7db8966bd483629998e5f0e04ebcea84d037da/connecting/src/Media/Icons/Handz/InterfaceCarousel-01.svg",
+      "alt": "Hi"
+    }
+  },
+  {
+    "id": "2",
+    "text": {
+      "text": "Thank you for participating in the evaluation program"
+    },
+    "media": {
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/7bdce2d454f9202cf5127503523d11150e5ae179/connecting/src/Media/Icons/Handz/InterfaceCarousel-02.svg",
+      "alt": "hand"
+    }
+  },
+  {
+    "id": "3",
+    "text": {
+      "text": "You are joining the community as an observer"
+    },
+    "media": {
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/Content/connecting/src/Media/Images/InterfaceCarousel-03-01.png",
+      "alt": "man using a spyglass"
+    }
+  },
+  {
+    "id": "4",
+    "text": {
+      "text": "Click on the icons to watch the streams from random picked full members"
+    },
+    "media": {
+      "src": "https://raw.githubusercontent.com/LeonardoMussatto/Connecting/7bdce2d454f9202cf5127503523d11150e5ae179/connecting/src/Media/Icons/Handz/InterfaceCarousel-04.svg",
+      "alt": "hand pointing left"
+    }
+  }
+]
