@@ -63,8 +63,8 @@
       content="A web experience that aims to raise some reflections on how we think - or don't - about others and our actions' scope.  Started as an assignment for the University of Westminster and a way to learn react.js"
     />
     <meta property="twitter:image" content="%PUBLIC_URL%/favicons/ConnectingLanding.png" />
-  </head>
-  <body>
+    
+    <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages
       // MIT License
@@ -76,23 +76,20 @@
       // When the single page app is loaded further down in this file,
       // the correct url will be waiting in the browser's history for
       // the single page app to route accordingly.
-      ;(function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&")
-            })
-            .join("?")
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          )
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
         }
-      })(window.location)
+      }(window.location))
     </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+  </head>
+  <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
