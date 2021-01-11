@@ -9,7 +9,6 @@ import Story          from "./Story"
 import User           from "./User"
 
 // FIX notification style/logic
-// FIX history duplication when switching between stories
 // STYLE add transitions between pages
 // REM reactivate end of experience check
 
@@ -27,7 +26,7 @@ const AppInApp = () => {
   const [IsLoaded_Weather_1, setIsLoaded_Weather_1] = useState(true)
   const [IsLoaded_Weather_2, setIsLoaded_Weather_2] = useState(true)
   const [IsError_U, setIsError_U] = useState(true)
-  const [IsError_1, setIsError_1] = useState(true)
+  const [IsError_1, setIsError_1] = useState(false)
   const [IsError_2, setIsError_2] = useState(true)
   const [Weather_U, setWeather_U] = useState(theme.user.weather)
   const [Weather_1, setWeather_1] = useState(theme.developer.weather)
@@ -50,7 +49,6 @@ const AppInApp = () => {
   let   userTime              = `${Hours - z}:${Minutes}`
   const [CarouselIndex, setCarouselIndex] = useState(0)
   const [WeatherIndex, setWeatherIndex]   = useState(0)
-  const [PartialIdx, setPartialIdx]       = useState(0)
   const [UserIsVisible, setUserIsVisible] = useState(false)
 
   //Stories' content
@@ -113,15 +111,12 @@ const AppInApp = () => {
       if (Minutes === 59) {
         setMinutes(0)
         setHours(Hours + 1)
-        setPartialIdx(PartialIdx + 1)
+        setWeatherIndex(WeatherIndex + 1)
       } else {
         setMinutes(Minutes + 1)
       }
       if (Hours === 24) {
         setHours(0)
-      }
-      if (PartialIdx === 3){
-        setWeatherIndex(WeatherIndex + 1)
       }
     }, 624) // 24h in 15min, as milliseconds
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -170,7 +165,7 @@ const AppInApp = () => {
         },
         (error) => {
           setIsLoaded_Geo(true)
-          setUserCountry("...")
+          setUserCountry("somewhere...")
         }
       )
   }, [])
@@ -178,8 +173,8 @@ const AppInApp = () => {
   //API requests to get 48h hourly weather forecast
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${Lat_U}&lon=${Lon_U}&exclude={current,minutely,daily,alerts}&appid={abb09cb21d3e3b380dbbcb1b47802918}`
-    ) // TODO add API key
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${Lat_U}&lon=${Lon_U}&exclude=current,minutely,daily,alerts&appid=abb09cb21d3e3b380dbbcb1b47802918`
+    )
       .then((res) => res.json())
       .then(
         (result) => {
@@ -189,7 +184,7 @@ const AppInApp = () => {
         (error) => {
           setIsError_U(true)
           setIsLoaded_Weather_U(true)
-          setWeather_U(theme.story.user.weather)
+          setWeather_U(theme.user.weather)
         }
       )
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -197,8 +192,8 @@ const AppInApp = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${Country_1.lat}&lon=${Country_1.lon}&exclude={current,minutely,daily,alerts}&appid={abb09cb21d3e3b380dbbcb1b47802918}`
-    ) // TODO add API key
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${Country_1.lat}&lon=${Country_2.lon}&exclude=current,minutely,daily,alerts&appid=abb09cb21d3e3b380dbbcb1b47802918`
+    )
       .then((res) => res.json())
       .then(
         (result) => {
@@ -208,12 +203,12 @@ const AppInApp = () => {
         (error) => {
           setIsError_1(true)
           setIsLoaded_Weather_1(true)
-          setWeather_1(theme.story.ch1.weather)
+          setWeather_1(theme.developer.weather)
         }
       )
     fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${Country_1.lat}&lon=${Country_1.lon}&exclude={current,minutely,daily,alerts}&appid={abb09cb21d3e3b380dbbcb1b47802918}`
-    ) // TODO add API key
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${Country_2.lat}&lon=${Country_2.lon}&exclude=current,minutely,daily,alerts&appid=abb09cb21d3e3b380dbbcb1b47802918`
+    )
       .then((res) => res.json())
       .then(
         (result) => {
@@ -223,7 +218,7 @@ const AppInApp = () => {
         (error) => {
           setIsError_2(true)
           setIsLoaded_Weather_2(true)
-          setWeather_2(theme.story.ch2.weather)
+          setWeather_2(theme.illustrator.weather)
         }
       )
   // eslint-disable-next-line react-hooks/exhaustive-deps

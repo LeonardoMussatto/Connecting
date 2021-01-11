@@ -73,10 +73,10 @@ const User = (props) => {
             location = {props.country}
           />
           <Weather 
-            isLoaded     = {props.isLoaded_Weather}
-            isError      = {props.weatherError}
-            report       = {props.weatherReport}
-            weatherIndex = {props.weatherIndex}
+            isLoaded = {props.isLoaded_Weather}
+            isError  = {props.weatherError}
+            report   = {props.weatherReport}
+            index    = {props.weatherIndex}
           />
           <Time
             hours    = {props.hours}

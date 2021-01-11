@@ -24,9 +24,8 @@ const Story = (props) => {
   const [TimeZone, setTimeZone]           = useState(0)
   const [Country, setCountry]             = useState("Everywhere and nowhere")
   const [WeatherReport, setWeatherReport] = useState(character.weather)
-  const [WeatherIndex, setWeatherIndex]   = useState(0)
   const [IsLoaded, setIsLoaded]           = useState(false)
-  const [IsError, setIsError]             = useState(false)
+  const [IsError, setIsError]             = useState(true)
 
   useEffect(() => {
     switch (location.hash) {
@@ -38,7 +37,6 @@ const Story = (props) => {
         setIsLoaded(props.isLoaded_1)
         setIsError(props.isError_1)
         setWeatherReport(props.weather_1)
-        setWeatherIndex(props.weatherIndex)
         break
       case "#2":
         setCharacter(theme.illustrator)
@@ -48,7 +46,6 @@ const Story = (props) => {
         setIsLoaded(props.isLoaded_2)
         setIsError(props.isError_2)
         setWeatherReport(props.weather_2)
-        setWeatherIndex(props.weatherIndex)
         break
       default:
         break
@@ -127,7 +124,7 @@ const Story = (props) => {
             isLoaded = {IsLoaded}
             isError  = {IsError}
             report   = {WeatherReport}
-            index    = {WeatherIndex}
+            index    = {props.weatherIndex}
           />
           <Time
             hours    = {props.hours}

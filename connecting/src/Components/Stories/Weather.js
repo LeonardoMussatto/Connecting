@@ -1,19 +1,29 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
 const Weather = (props) => {
+  const [Main, setMain] = useState()
+  const [Icon, setIcon] = useState()
   let style = {
     display             :  "grid",
     gridTemplateColumns :  "2fr 1fr",
     placeItems          :  "center center"
   }
   let img = {
-    width           :  "2em",
+    width           :  "2.3em",
     borderRadius    :  "100%",
     backgroundColor :  "#9992b3"
   }
   let p = {
     paddingRight: "0.75em"
   }
+
+
+  useEffect(() => {
+    if(!props.isError){
+    setMain(props.report.hourly[props.index].weather[0].main)
+    setIcon(props.report.hourly[props.index].weather[0].icon)
+    }
+  }, [props.index, props.isError, props.report])
   
   if (!props.isLoaded){
    return (<div>...</div>)
@@ -27,10 +37,8 @@ const Weather = (props) => {
   } else {
     return (
       <div style={style}>
-        <p style={p}>{props.report.hourly.weather[props.weatherIndex].main}</p>
-        <div style={img}>
-         <img src={`http://openweathermap.org/img/wn/${props.report.hourly.weather[props.weatherIndex].icon}.png`} alt=""/>
-        </div>
+        <p style={p}>{Main}</p>
+        <img style={img} src={`http://openweathermap.org/img/wn/${Icon}.png`} alt=""/>
       </div>
     )
   }
